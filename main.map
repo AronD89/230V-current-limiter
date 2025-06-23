@@ -1,0 +1,1092 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                              main.o (__addsf3)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o) (__addsf3x)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                              main.o (__divsf3)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o) (__divsf3x)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                              main.o (__fixunssfsi)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                              main.o (__floatunsisf)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_inf)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_nan)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_pscA)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_pscB)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o) (__fp_round)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_split3)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_zero)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                              main.o (__mulsf3)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o) (__mulsf3x)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(sqrt.o)
+                              main.o (sqrt)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(sqrt.o) (__fp_mpack)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_norm2.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(sqrt.o) (__fp_norm2)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                              main.o (__udivmodhi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              main.o (__do_copy_data)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              main.o (__do_clear_bss)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcpy.o)
+                              FreeRTOS/Source/queue.o (memcpy)
+
+Allocating common symbols
+Common symbol       size              file
+
+set2                0x2               main.o
+converted           0x1               main.o
+meas3               0x2               main.o
+meas2               0x2               main.o
+adc_value           0x2               main.o
+binaris             0x2               main.o
+set3                0x2               main.o
+meas4               0x2               main.o
+meas1               0x2               main.o
+set1                0x2               main.o
+set4                0x2               main.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+LOAD main.o
+LOAD FreeRTOS/Source/tasks.o
+LOAD FreeRTOS/Source/queue.o
+LOAD FreeRTOS/Source/list.o
+LOAD FreeRTOS/Source/croutine.o
+LOAD FreeRTOS/Source/portable/MemMang/heap_1.o
+LOAD FreeRTOS/Source/portable/GCC/ATMega323/port.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x4302
+ *(.vectors)
+ .vectors       0x00000000       0x7c c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x0000007c                . = ALIGN (0x2)
+                0x0000007c                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000007c        0x0 linker stubs
+ *(.trampolines*)
+                0x0000007c                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000007c                __ctors_start = .
+ *(.ctors)
+                0x0000007c                __ctors_end = .
+                0x0000007c                __dtors_start = .
+ *(.dtors)
+                0x0000007c                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000007c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+                0x0000007c                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000007c        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000088       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000088                __do_copy_data
+ .init4         0x0000009e       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x0000009e                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000ae        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+ *(.init9)
+ *(.text)
+ .text          0x000000b6        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+                0x000000b6                __vector_22
+                0x000000b6                __vector_28
+                0x000000b6                __vector_1
+                0x000000b6                __vector_12
+                0x000000b6                __bad_interrupt
+                0x000000b6                __vector_6
+                0x000000b6                __vector_3
+                0x000000b6                __vector_23
+                0x000000b6                __vector_30
+                0x000000b6                __vector_25
+                0x000000b6                __vector_11
+                0x000000b6                __vector_17
+                0x000000b6                __vector_19
+                0x000000b6                __vector_7
+                0x000000b6                __vector_27
+                0x000000b6                __vector_5
+                0x000000b6                __vector_4
+                0x000000b6                __vector_9
+                0x000000b6                __vector_2
+                0x000000b6                __vector_21
+                0x000000b6                __vector_15
+                0x000000b6                __vector_29
+                0x000000b6                __vector_8
+                0x000000b6                __vector_26
+                0x000000b6                __vector_14
+                0x000000b6                __vector_10
+                0x000000b6                __vector_16
+                0x000000b6                __vector_20
+ .text          0x000000ba     0x1530 main.o
+                0x0000029c                UP_pressed
+                0x000002b2                RESET_pressed
+                0x000003ea                __vector_24
+                0x0000017c                SEGs4
+                0x000012ae                LCD_Update
+                0x00000344                sleep
+                0x000002a8                DOWN_pressed
+                0x00000230                SEGs9
+                0x00000110                SEGs1
+                0x000002f8                initADC
+                0x00000158                SEGs3
+                0x00000332                adc_read
+                0x000000ec                SEGs0
+                0x00000254                OVERLOAD
+                0x000011a4                Cehck_buttons
+                0x0000020c                SEGs8
+                0x00000134                SEGs2
+                0x0000110c                main
+                0x000001a0                SEGs5
+                0x000000ba                setSegments
+                0x0000041c                LCD_print
+                0x000002d0                stop_timer0
+                0x00000278                decimal
+                0x00001452                ADC_conversion
+                0x000002c0                start_timer0
+                0x000001c4                SEGs6
+                0x00000350                __vector_18
+                0x000002d8                initPORTs
+                0x000001e8                SEGs7
+ .text          0x000015ea     0x1544 FreeRTOS/Source/tasks.o
+                0x000026a6                vTaskPlaceOnUnorderedEventList
+                0x000015ea                uxTaskPriorityGet
+                0x000026fe                xTaskDelayUntil
+                0x00001816                ulTaskGenericNotifyValueClear
+                0x00001650                pcTaskGetName
+                0x000022ec                vTaskPrioritySet
+                0x000016fa                vTaskInternalSetTimeOutState
+                0x00002788                vTaskEndScheduler
+                0x00002764                vTaskPlaceOnEventList
+                0x00001c2a                vTaskRemoveFromUnorderedEventList
+                0x000025be                ulTaskGenericNotifyTake
+                0x00001e98                xTaskResumeFromISR
+                0x00001608                uxTaskPriorityGetFromISR
+                0x00001628                xTaskGetTickCount
+                0x0000187e                vTaskGenericNotifyGiveFromISR
+                0x00001b02                xTaskPriorityDisinherit
+                0x00001c8e                xTaskRemoveFromEventList
+                0x000027f2                vTaskDelete
+                0x000017c4                pvTaskIncrementMutexHeldCount
+                0x00001710                xTaskCheckForTimeOut
+                0x00001b6c                xTaskPriorityInherit
+                0x0000247e                xTaskGenericNotifyWait
+                0x0000161c                vTaskSuspendAll
+                0x0000163e                xTaskGetTickCountFromISR
+                0x0000218c                vTaskResume
+                0x00001666                vTaskSwitchContext
+                0x0000221c                vTaskSuspend
+                0x00002168                xTaskCatchUpTicks
+                0x0000164a                uxTaskGetNumberOfTasks
+                0x00001f32                xTaskGenericNotify
+                0x00001788                xTaskGetCurrentTaskHandle
+                0x0000193a                xTaskGenericNotifyFromISR
+                0x00002054                xTaskResumeAll
+                0x00002ada                vTaskStartScheduler
+                0x00001780                vTaskMissedYield
+                0x00001d0e                xTaskIncrementTick
+                0x000028d6                xTaskCreate
+                0x000017ea                xTaskGenericNotifyStateClear
+                0x000026d8                vTaskDelay
+                0x00001a7e                vTaskPriorityDisinheritAfterTimeout
+                0x000016da                vTaskSetTimeOutState
+                0x00001794                uxTaskResetEventItemValue
+ .text          0x00002b2e      0xb68 FreeRTOS/Source/queue.o
+                0x00002be0                xQueueCRReceiveFromISR
+                0x00002ede                xQueueGenericSendFromISR
+                0x00002d02                xQueueCRSendFromISR
+                0x00002bb6                xQueuePeekFromISR
+                0x000033c0                xQueueSemaphoreTake
+                0x00003114                xQueueReceive
+                0x00002dca                xQueueCRSend
+                0x00002e36                vQueueDelete
+                0x0000326a                xQueueGenericSend
+                0x00002fc2                xQueuePeek
+                0x00002d40                xQueueCRReceive
+                0x00002e3c                xQueueReceiveFromISR
+                0x00003602                xQueueGenericCreate
+                0x00003648                xQueueCreateCountingSemaphore
+                0x00002b3e                uxQueueSpacesAvailable
+                0x00002b68                xQueueIsQueueFullFromISR
+                0x00002b2e                uxQueueMessagesWaiting
+                0x0000357e                xQueueGenericReset
+                0x00002b52                uxQueueMessagesWaitingFromISR
+                0x00002b58                xQueueIsQueueEmptyFromISR
+                0x00003662                xQueueCreateMutex
+                0x00002e98                xQueueGiveFromISR
+ .text          0x00003696      0x120 FreeRTOS/Source/list.o
+                0x000036be                vListInsertEnd
+                0x000036b6                vListInitialiseItem
+                0x00003696                vListInitialise
+                0x00003760                uxListRemove
+                0x000036fc                vListInsert
+ .text          0x000037b6      0x38c FreeRTOS/Source/croutine.o
+                0x000037b6                xCoRoutineRemoveFromEventList
+                0x00003a4e                xCoRoutineCreate
+                0x00003806                vCoRoutineSchedule
+                0x000039d4                vCoRoutineAddToDelayedList
+ .text          0x00003b42       0x88 FreeRTOS/Source/portable/MemMang/heap_1.o
+                0x00003b4e                xPortGetFreeHeapSize
+                0x00003b42                vPortFree
+                0x00003b62                pvPortMalloc
+                0x00003b44                vPortInitialiseBlocks
+ .text          0x00003bca      0x278 FreeRTOS/Source/portable/GCC/ATMega323/port.o
+                0x00003c5a                xPortStartScheduler
+                0x00003cd0                vPortYieldFromTick
+                0x00003cce                vPortEndScheduler
+                0x00003d8a                __vector_13
+                0x00003d90                vPortYield
+                0x00003bca                pxPortInitialiseStack
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(sqrt.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_norm2.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00003e42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcpy.o)
+                0x00003e42                . = ALIGN (0x2)
+ *(.text.*)
+ .text.avr-libc.fplib
+                0x00003e42        0xa c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                0x00003e42                __subsf3
+                0x00003e44                __addsf3
+ .text.avr-libc.fplib
+                0x00003e4c       0xc0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+                0x00003e66                __addsf3x
+ .text.avr-libc.fplib
+                0x00003f0c        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                0x00003f0c                __divsf3
+ .text.avr-libc.fplib
+                0x00003f10       0xcc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                0x00003f26                __divsf3x
+                0x00003f2a                __divsf3_pse
+ .text.avr-libc.fplib
+                0x00003fdc       0x58 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                0x00003fdc                __fixunssfsi
+ .text.avr-libc.fplib
+                0x00004034       0x7a c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                0x00004038                __floatsisf
+                0x00004034                __floatunsisf
+ .text.avr-libc.fplib
+                0x000040ae        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                0x000040ae                __fp_inf
+ .text.avr-libc.fplib
+                0x000040ba        0x6 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                0x000040ba                __fp_nan
+ .text.avr-libc.fplib
+                0x000040c0        0xe c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                0x000040c0                __fp_pscA
+ .text.avr-libc.fplib
+                0x000040ce        0xe c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                0x000040ce                __fp_pscB
+ .text.avr-libc.fplib
+                0x000040dc       0x22 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                0x000040dc                __fp_round
+ .text.avr-libc.fplib
+                0x000040fe       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                0x000040fe                __fp_split3
+                0x0000410e                __fp_splitA
+ .text.avr-libc.fplib
+                0x00004142        0xe c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                0x00004142                __fp_zero
+                0x00004144                __fp_szero
+ .text.avr-libc.fplib
+                0x00004150        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                0x00004150                __mulsf3
+ .text.avr-libc.fplib
+                0x00004154       0xc2 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                0x0000416c                __mulsf3_pse
+                0x00004168                __mulsf3x
+ .text.avr-libc.fplib
+                0x00004216       0x84 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(sqrt.o)
+                0x0000421e                sqrt
+ .text.avr-libc.fplib
+                0x0000429a       0x1c c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
+                0x0000429e                __fp_mpack_finite
+                0x0000429a                __fp_mpack
+ .text.avr-libc.fplib
+                0x000042b6        0xe c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_norm2.o)
+                0x000042b6                __fp_norm2
+ .text.libgcc   0x000042c4       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x000042c4                __udivmodhi4
+ .text.libgcc   0x000042ec        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x000042ec        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x000042ec        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x000042ec       0x12 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcpy.o)
+                0x000042ec                memcpy
+                0x000042fe                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000042fe        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x000042fe                exit
+                0x000042fe                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000042fe        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00004302                _etext = .
+
+.data           0x00800100       0x2c load address 0x00004302
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+ .data          0x00800100       0x25 main.o
+                0x00800111                LoadSEGs
+                0x0080010f                set_value
+ .data          0x00800125        0x6 FreeRTOS/Source/tasks.o
+                0x0080012a                uxTopUsedPriority
+ .data          0x0080012b        0x0 FreeRTOS/Source/queue.o
+ .data          0x0080012b        0x0 FreeRTOS/Source/list.o
+ .data          0x0080012b        0x0 FreeRTOS/Source/croutine.o
+ .data          0x0080012b        0x0 FreeRTOS/Source/portable/MemMang/heap_1.o
+ .data          0x0080012b        0x0 FreeRTOS/Source/portable/GCC/ATMega323/port.o
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(sqrt.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_norm2.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x0080012b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcpy.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0080012c                . = ALIGN (0x2)
+ *fill*         0x0080012b        0x1 00
+                0x0080012c                _edata = .
+                0x0080012c                PROVIDE (__data_end, .)
+
+.bss            0x0080012c      0x6c1
+                0x0080012c                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080012c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+ .bss           0x0080012c       0x2b main.o
+                0x0080013e                display
+                0x00800144                avg_voltage
+                0x00800148                rms_voltage
+                0x00800156                i
+                0x00800155                overload
+                0x00800154                button_action
+                0x00800150                adc_voltage
+                0x0080012c                Segments
+                0x0080013c                overflows
+                0x00800142                meas_avg
+                0x00800140                meas_value
+                0x0080014c                rms_current
+ .bss           0x00800157       0x67 FreeRTOS/Source/tasks.o
+                0x00800157                pxCurrentTCB
+ .bss           0x008001be        0x0 FreeRTOS/Source/queue.o
+ .bss           0x008001be        0x0 FreeRTOS/Source/list.o
+ .bss           0x008001be       0x3a FreeRTOS/Source/croutine.o
+                0x008001be                pxCurrentCoRoutine
+ .bss           0x008001f8      0x5e0 FreeRTOS/Source/portable/MemMang/heap_1.o
+ .bss           0x008007d8        0x0 FreeRTOS/Source/portable/GCC/ATMega323/port.o
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(sqrt.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_norm2.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x008007d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcpy.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x008007d8       0x15 main.o
+                0x008007d8                set2
+                0x008007da                converted
+                0x008007db                meas3
+                0x008007dd                meas2
+                0x008007df                adc_value
+                0x008007e1                binaris
+                0x008007e3                set3
+                0x008007e5                meas4
+                0x008007e7                meas1
+                0x008007e9                set1
+                0x008007eb                set4
+                0x008007ed                PROVIDE (__bss_end, .)
+                0x00004302                __data_load_start = LOADADDR (.data)
+                0x0000432e                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008007ed        0x0
+                0x008007ed                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008007ed                PROVIDE (__noinit_end, .)
+                0x008007ed                _end = .
+                0x008007ed                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xe0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 main.o
+ .debug_aranges
+                0x00000020       0x20 FreeRTOS/Source/tasks.o
+ .debug_aranges
+                0x00000040       0x20 FreeRTOS/Source/queue.o
+ .debug_aranges
+                0x00000060       0x20 FreeRTOS/Source/list.o
+ .debug_aranges
+                0x00000080       0x20 FreeRTOS/Source/croutine.o
+ .debug_aranges
+                0x000000a0       0x20 FreeRTOS/Source/portable/MemMang/heap_1.o
+ .debug_aranges
+                0x000000c0       0x20 FreeRTOS/Source/portable/GCC/ATMega323/port.o
+
+.debug_pubnames
+                0x00000000      0xb50
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x2c5 main.o
+ .debug_pubnames
+                0x000002c5      0x469 FreeRTOS/Source/tasks.o
+ .debug_pubnames
+                0x0000072e      0x226 FreeRTOS/Source/queue.o
+ .debug_pubnames
+                0x00000954       0x72 FreeRTOS/Source/list.o
+ .debug_pubnames
+                0x000009c6       0x96 FreeRTOS/Source/croutine.o
+ .debug_pubnames
+                0x00000a5c       0x64 FreeRTOS/Source/portable/MemMang/heap_1.o
+ .debug_pubnames
+                0x00000ac0       0x90 FreeRTOS/Source/portable/GCC/ATMega323/port.o
+
+.debug_info     0x00000000     0x3e85
+ *(.debug_info)
+ .debug_info    0x00000000      0xc69 main.o
+ .debug_info    0x00000c69     0x1663 FreeRTOS/Source/tasks.o
+ .debug_info    0x000022cc     0x109a FreeRTOS/Source/queue.o
+ .debug_info    0x00003366      0x2c0 FreeRTOS/Source/list.o
+ .debug_info    0x00003626      0x516 FreeRTOS/Source/croutine.o
+ .debug_info    0x00003b3c      0x15b FreeRTOS/Source/portable/MemMang/heap_1.o
+ .debug_info    0x00003c97      0x1ee FreeRTOS/Source/portable/GCC/ATMega323/port.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0xb93
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x24d main.o
+ .debug_abbrev  0x0000024d      0x2a7 FreeRTOS/Source/tasks.o
+ .debug_abbrev  0x000004f4      0x1dc FreeRTOS/Source/queue.o
+ .debug_abbrev  0x000006d0       0xe6 FreeRTOS/Source/list.o
+ .debug_abbrev  0x000007b6      0x1d4 FreeRTOS/Source/croutine.o
+ .debug_abbrev  0x0000098a       0xfa FreeRTOS/Source/portable/MemMang/heap_1.o
+ .debug_abbrev  0x00000a84      0x10f FreeRTOS/Source/portable/GCC/ATMega323/port.o
+
+.debug_line     0x00000000     0x3377
+ *(.debug_line)
+ .debug_line    0x00000000      0xa58 main.o
+ .debug_line    0x00000a58     0x1155 FreeRTOS/Source/tasks.o
+ .debug_line    0x00001bad      0xd94 FreeRTOS/Source/queue.o
+ .debug_line    0x00002941      0x250 FreeRTOS/Source/list.o
+ .debug_line    0x00002b91      0x374 FreeRTOS/Source/croutine.o
+ .debug_line    0x00002f05      0x16f FreeRTOS/Source/portable/MemMang/heap_1.o
+ .debug_line    0x00003074      0x303 FreeRTOS/Source/portable/GCC/ATMega323/port.o
+
+.debug_frame    0x00000000      0x7c0
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x1e0 main.o
+ .debug_frame   0x000001e0      0x2d0 FreeRTOS/Source/tasks.o
+ .debug_frame   0x000004b0      0x1a0 FreeRTOS/Source/queue.o
+ .debug_frame   0x00000650       0x60 FreeRTOS/Source/list.o
+ .debug_frame   0x000006b0       0x50 FreeRTOS/Source/croutine.o
+ .debug_frame   0x00000700       0x50 FreeRTOS/Source/portable/MemMang/heap_1.o
+ .debug_frame   0x00000750       0x70 FreeRTOS/Source/portable/GCC/ATMega323/port.o
+
+.debug_str      0x00000000     0x182e
+ *(.debug_str)
+ .debug_str     0x00000000      0x2c5 main.o
+                                0x307 (size before relaxing)
+ .debug_str     0x000002c5      0xbe8 FreeRTOS/Source/tasks.o
+                                0xce4 (size before relaxing)
+ .debug_str     0x00000ead      0x4f1 FreeRTOS/Source/queue.o
+                                0x75c (size before relaxing)
+ .debug_str     0x0000139e       0xab FreeRTOS/Source/list.o
+                                0x200 (size before relaxing)
+ .debug_str     0x00001449      0x260 FreeRTOS/Source/croutine.o
+                                0x420 (size before relaxing)
+ .debug_str     0x000016a9       0xa5 FreeRTOS/Source/portable/MemMang/heap_1.o
+                                0x15a (size before relaxing)
+ .debug_str     0x0000174e       0xe0 FreeRTOS/Source/portable/GCC/ATMega323/port.o
+                                0x1e0 (size before relaxing)
+
+.debug_loc      0x00000000     0x2526
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x2d7 main.o
+ .debug_loc     0x000002d7     0x109d FreeRTOS/Source/tasks.o
+ .debug_loc     0x00001374      0xe12 FreeRTOS/Source/queue.o
+ .debug_loc     0x00002186      0x138 FreeRTOS/Source/list.o
+ .debug_loc     0x000022be      0x1e0 FreeRTOS/Source/croutine.o
+ .debug_loc     0x0000249e       0x60 FreeRTOS/Source/portable/MemMang/heap_1.o
+ .debug_loc     0x000024fe       0x28 FreeRTOS/Source/portable/GCC/ATMega323/port.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(main.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000       0xe0
+ .debug_ranges  0x00000000       0x48 main.o
+ .debug_ranges  0x00000048       0x50 FreeRTOS/Source/tasks.o
+ .debug_ranges  0x00000098       0x48 FreeRTOS/Source/queue.o
+
+Cross Reference Table
+
+Symbol                                            File
+ADC_conversion                                    main.o
+Cehck_buttons                                     main.o
+DOWN_pressed                                      main.o
+LCD_Update                                        main.o
+LCD_print                                         main.o
+LoadSEGs                                          main.o
+OVERLOAD                                          main.o
+RESET_pressed                                     main.o
+SEGs0                                             main.o
+SEGs1                                             main.o
+SEGs2                                             main.o
+SEGs3                                             main.o
+SEGs4                                             main.o
+SEGs5                                             main.o
+SEGs6                                             main.o
+SEGs7                                             main.o
+SEGs8                                             main.o
+SEGs9                                             main.o
+Segments                                          main.o
+UP_pressed                                        main.o
+__addsf3                                          c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                                                  main.o
+__addsf3x                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+__bad_interrupt                                   c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__bss_end                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+__bss_start                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+__data_end                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__data_load_start                                 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__data_start                                      c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__divsf3                                          c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                                                  main.o
+__divsf3_pse                                      c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+__divsf3x                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o)
+__do_clear_bss                                    c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                                                  FreeRTOS/Source/portable/MemMang/heap_1.o
+                                                  FreeRTOS/Source/croutine.o
+                                                  FreeRTOS/Source/tasks.o
+                                                  main.o
+__do_copy_data                                    c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                                                  FreeRTOS/Source/tasks.o
+                                                  main.o
+__fixunssfsi                                      c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                                                  main.o
+__floatsisf                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+__floatunsisf                                     c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                                                  main.o
+__fp_inf                                          c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__fp_mpack                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(sqrt.o)
+__fp_mpack_finite                                 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
+__fp_nan                                          c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(sqrt.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__fp_norm2                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_norm2.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(sqrt.o)
+__fp_pscA                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__fp_pscB                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__fp_round                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+__fp_split3                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__fp_splitA                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(sqrt.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+__fp_szero                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+__fp_zero                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__heap_end                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__init                                            c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__mulsf3                                          c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                                                  main.o
+__mulsf3_pse                                      c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+__mulsf3x                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+__stack                                           c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__subsf3                                          c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+__udivmodhi4                                      c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                                                  main.o
+__vector_1                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_10                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_11                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_12                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_13                                       FreeRTOS/Source/portable/GCC/ATMega323/port.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_14                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_15                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_16                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_17                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_18                                       main.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_19                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_2                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_20                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_21                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_22                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_23                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_24                                       main.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_25                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_26                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_27                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_28                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_29                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_3                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_30                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_4                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_5                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_6                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_7                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_8                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_9                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vector_default                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+__vectors                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+_exit                                             c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+adc_read                                          main.o
+adc_value                                         main.o
+adc_voltage                                       main.o
+avg_voltage                                       main.o
+binaris                                           main.o
+button_action                                     main.o
+converted                                         main.o
+decimal                                           main.o
+display                                           main.o
+exit                                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+i                                                 main.o
+initADC                                           main.o
+initPORTs                                         main.o
+main                                              main.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm324pa.o
+meas1                                             main.o
+meas2                                             main.o
+meas3                                             main.o
+meas4                                             main.o
+meas_avg                                          main.o
+meas_value                                        main.o
+memcpy                                            c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcpy.o)
+                                                  FreeRTOS/Source/queue.o
+overflows                                         main.o
+overload                                          main.o
+pcTaskGetName                                     FreeRTOS/Source/tasks.o
+pvPortMalloc                                      FreeRTOS/Source/portable/MemMang/heap_1.o
+                                                  FreeRTOS/Source/croutine.o
+                                                  FreeRTOS/Source/queue.o
+                                                  FreeRTOS/Source/tasks.o
+pvTaskIncrementMutexHeldCount                     FreeRTOS/Source/tasks.o
+                                                  FreeRTOS/Source/queue.o
+pxCurrentCoRoutine                                FreeRTOS/Source/croutine.o
+pxCurrentTCB                                      FreeRTOS/Source/tasks.o
+                                                  FreeRTOS/Source/portable/GCC/ATMega323/port.o
+pxPortInitialiseStack                             FreeRTOS/Source/portable/GCC/ATMega323/port.o
+                                                  FreeRTOS/Source/tasks.o
+rms_current                                       main.o
+rms_voltage                                       main.o
+set1                                              main.o
+set2                                              main.o
+set3                                              main.o
+set4                                              main.o
+setSegments                                       main.o
+set_value                                         main.o
+sleep                                             main.o
+sqrt                                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(sqrt.o)
+                                                  main.o
+start_timer0                                      main.o
+stop_timer0                                       main.o
+ulTaskGenericNotifyTake                           FreeRTOS/Source/tasks.o
+ulTaskGenericNotifyValueClear                     FreeRTOS/Source/tasks.o
+uxListRemove                                      FreeRTOS/Source/list.o
+                                                  FreeRTOS/Source/croutine.o
+                                                  FreeRTOS/Source/tasks.o
+uxQueueMessagesWaiting                            FreeRTOS/Source/queue.o
+uxQueueMessagesWaitingFromISR                     FreeRTOS/Source/queue.o
+uxQueueSpacesAvailable                            FreeRTOS/Source/queue.o
+uxTaskGetNumberOfTasks                            FreeRTOS/Source/tasks.o
+uxTaskPriorityGet                                 FreeRTOS/Source/tasks.o
+uxTaskPriorityGetFromISR                          FreeRTOS/Source/tasks.o
+uxTaskResetEventItemValue                         FreeRTOS/Source/tasks.o
+uxTopUsedPriority                                 FreeRTOS/Source/tasks.o
+vCoRoutineAddToDelayedList                        FreeRTOS/Source/croutine.o
+                                                  FreeRTOS/Source/queue.o
+vCoRoutineSchedule                                FreeRTOS/Source/croutine.o
+vListInitialise                                   FreeRTOS/Source/list.o
+                                                  FreeRTOS/Source/croutine.o
+                                                  FreeRTOS/Source/queue.o
+                                                  FreeRTOS/Source/tasks.o
+vListInitialiseItem                               FreeRTOS/Source/list.o
+                                                  FreeRTOS/Source/croutine.o
+                                                  FreeRTOS/Source/tasks.o
+vListInsert                                       FreeRTOS/Source/list.o
+                                                  FreeRTOS/Source/croutine.o
+                                                  FreeRTOS/Source/tasks.o
+vListInsertEnd                                    FreeRTOS/Source/list.o
+                                                  FreeRTOS/Source/croutine.o
+                                                  FreeRTOS/Source/tasks.o
+vPortEndScheduler                                 FreeRTOS/Source/portable/GCC/ATMega323/port.o
+                                                  FreeRTOS/Source/tasks.o
+vPortFree                                         FreeRTOS/Source/portable/MemMang/heap_1.o
+                                                  FreeRTOS/Source/queue.o
+                                                  FreeRTOS/Source/tasks.o
+vPortInitialiseBlocks                             FreeRTOS/Source/portable/MemMang/heap_1.o
+vPortYield                                        FreeRTOS/Source/portable/GCC/ATMega323/port.o
+                                                  FreeRTOS/Source/queue.o
+                                                  FreeRTOS/Source/tasks.o
+vPortYieldFromTick                                FreeRTOS/Source/portable/GCC/ATMega323/port.o
+vQueueDelete                                      FreeRTOS/Source/queue.o
+vTaskDelay                                        FreeRTOS/Source/tasks.o
+vTaskDelete                                       FreeRTOS/Source/tasks.o
+vTaskEndScheduler                                 FreeRTOS/Source/tasks.o
+vTaskGenericNotifyGiveFromISR                     FreeRTOS/Source/tasks.o
+vTaskInternalSetTimeOutState                      FreeRTOS/Source/tasks.o
+                                                  FreeRTOS/Source/queue.o
+vTaskMissedYield                                  FreeRTOS/Source/tasks.o
+                                                  FreeRTOS/Source/queue.o
+vTaskPlaceOnEventList                             FreeRTOS/Source/tasks.o
+                                                  FreeRTOS/Source/queue.o
+vTaskPlaceOnUnorderedEventList                    FreeRTOS/Source/tasks.o
+vTaskPriorityDisinheritAfterTimeout               FreeRTOS/Source/tasks.o
+                                                  FreeRTOS/Source/queue.o
+vTaskPrioritySet                                  FreeRTOS/Source/tasks.o
+vTaskRemoveFromUnorderedEventList                 FreeRTOS/Source/tasks.o
+vTaskResume                                       FreeRTOS/Source/tasks.o
+vTaskSetTimeOutState                              FreeRTOS/Source/tasks.o
+vTaskStartScheduler                               FreeRTOS/Source/tasks.o
+                                                  main.o
+vTaskSuspend                                      FreeRTOS/Source/tasks.o
+vTaskSuspendAll                                   FreeRTOS/Source/tasks.o
+                                                  FreeRTOS/Source/portable/MemMang/heap_1.o
+                                                  FreeRTOS/Source/queue.o
+vTaskSwitchContext                                FreeRTOS/Source/tasks.o
+                                                  FreeRTOS/Source/portable/GCC/ATMega323/port.o
+xCoRoutineCreate                                  FreeRTOS/Source/croutine.o
+xCoRoutineRemoveFromEventList                     FreeRTOS/Source/croutine.o
+                                                  FreeRTOS/Source/queue.o
+xPortGetFreeHeapSize                              FreeRTOS/Source/portable/MemMang/heap_1.o
+xPortStartScheduler                               FreeRTOS/Source/portable/GCC/ATMega323/port.o
+                                                  FreeRTOS/Source/tasks.o
+xQueueCRReceive                                   FreeRTOS/Source/queue.o
+xQueueCRReceiveFromISR                            FreeRTOS/Source/queue.o
+xQueueCRSend                                      FreeRTOS/Source/queue.o
+xQueueCRSendFromISR                               FreeRTOS/Source/queue.o
+xQueueCreateCountingSemaphore                     FreeRTOS/Source/queue.o
+xQueueCreateMutex                                 FreeRTOS/Source/queue.o
+xQueueGenericCreate                               FreeRTOS/Source/queue.o
+                                                  main.o
+xQueueGenericReset                                FreeRTOS/Source/queue.o
+xQueueGenericSend                                 FreeRTOS/Source/queue.o
+                                                  main.o
+xQueueGenericSendFromISR                          FreeRTOS/Source/queue.o
+xQueueGiveFromISR                                 FreeRTOS/Source/queue.o
+xQueueIsQueueEmptyFromISR                         FreeRTOS/Source/queue.o
+xQueueIsQueueFullFromISR                          FreeRTOS/Source/queue.o
+xQueuePeek                                        FreeRTOS/Source/queue.o
+xQueuePeekFromISR                                 FreeRTOS/Source/queue.o
+xQueueReceive                                     FreeRTOS/Source/queue.o
+xQueueReceiveFromISR                              FreeRTOS/Source/queue.o
+xQueueSemaphoreTake                               FreeRTOS/Source/queue.o
+                                                  main.o
+xTaskCatchUpTicks                                 FreeRTOS/Source/tasks.o
+xTaskCheckForTimeOut                              FreeRTOS/Source/tasks.o
+                                                  FreeRTOS/Source/queue.o
+xTaskCreate                                       FreeRTOS/Source/tasks.o
+                                                  main.o
+xTaskDelayUntil                                   FreeRTOS/Source/tasks.o
+xTaskGenericNotify                                FreeRTOS/Source/tasks.o
+xTaskGenericNotifyFromISR                         FreeRTOS/Source/tasks.o
+xTaskGenericNotifyStateClear                      FreeRTOS/Source/tasks.o
+xTaskGenericNotifyWait                            FreeRTOS/Source/tasks.o
+xTaskGetCurrentTaskHandle                         FreeRTOS/Source/tasks.o
+xTaskGetTickCount                                 FreeRTOS/Source/tasks.o
+                                                  FreeRTOS/Source/croutine.o
+xTaskGetTickCountFromISR                          FreeRTOS/Source/tasks.o
+xTaskIncrementTick                                FreeRTOS/Source/tasks.o
+                                                  FreeRTOS/Source/portable/GCC/ATMega323/port.o
+xTaskPriorityDisinherit                           FreeRTOS/Source/tasks.o
+                                                  FreeRTOS/Source/queue.o
+xTaskPriorityInherit                              FreeRTOS/Source/tasks.o
+                                                  FreeRTOS/Source/queue.o
+xTaskRemoveFromEventList                          FreeRTOS/Source/tasks.o
+                                                  FreeRTOS/Source/queue.o
+xTaskResumeAll                                    FreeRTOS/Source/tasks.o
+                                                  FreeRTOS/Source/portable/MemMang/heap_1.o
+                                                  FreeRTOS/Source/queue.o
+xTaskResumeFromISR                                FreeRTOS/Source/tasks.o

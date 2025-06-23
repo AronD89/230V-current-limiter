@@ -1,0 +1,4088 @@
+   1               		.file	"tasks.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	uxTaskPriorityGet
+  18               	uxTaskPriorityGet:
+  19               	.LFB8:
+  20               	.LM1:
+  21               	.LVL0:
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24               	.LM2:
+  25               	/* #APP */
+  26               	 ;  1490 "FreeRTOS/Source/tasks.c" 1
+  27 0000 0FB6      		in		__tmp_reg__, __SREG__
+  28               	 ;  0 "" 2
+  29               	 ;  1490 "FreeRTOS/Source/tasks.c" 1
+  30 0002 F894      		cli
+  31               	 ;  0 "" 2
+  32               	 ;  1490 "FreeRTOS/Source/tasks.c" 1
+  33 0004 0F92      		push	__tmp_reg__
+  34               	 ;  0 "" 2
+  35               	.LM3:
+  36               	/* #NOAPP */
+  37 0006 0097      		sbiw r24,0
+  38 0008 01F0      		breq .L2
+  39 000a FC01      		movw r30,r24
+  40               	.LVL1:
+  41 000c 00C0      		rjmp .L3
+  42               	.LVL2:
+  43               	.L2:
+  44 000e E091 0000 		lds r30,pxCurrentTCB
+  45 0012 F091 0000 		lds r31,(pxCurrentTCB)+1
+  46               	.LVL3:
+  47               	.L3:
+  48               	.LM4:
+  49               	/* #APP */
+  50               	 ;  1497 "FreeRTOS/Source/tasks.c" 1
+  51 0016 0F90      		pop		__tmp_reg__
+  52               	 ;  0 "" 2
+  53               	 ;  1497 "FreeRTOS/Source/tasks.c" 1
+  54 0018 0FBE      		out		__SREG__, __tmp_reg__
+  55               	 ;  0 "" 2
+  56               	.LM5:
+  57               	/* #NOAPP */
+  58 001a 8689      		ldd r24,Z+22
+  59               	.LVL4:
+  60               	/* epilogue start */
+  61 001c 0895      		ret
+  62               	.LFE8:
+  64               	.global	uxTaskPriorityGetFromISR
+  66               	uxTaskPriorityGetFromISR:
+  67               	.LFB9:
+  68               	.LM6:
+  69               	.LVL5:
+  70               	/* prologue: function */
+  71               	/* frame size = 0 */
+  72               	.LM7:
+  73 001e 0097      		sbiw r24,0
+  74 0020 01F0      		breq .L6
+  75 0022 FC01      		movw r30,r24
+  76               	.LVL6:
+  77 0024 00C0      		rjmp .L7
+  78               	.LVL7:
+  79               	.L6:
+  80 0026 E091 0000 		lds r30,pxCurrentTCB
+  81 002a F091 0000 		lds r31,(pxCurrentTCB)+1
+  82               	.LVL8:
+  83               	.L7:
+  84               	.LM8:
+  85 002e 8689      		ldd r24,Z+22
+  86               	.LVL9:
+  87               	/* epilogue start */
+  88 0030 0895      		ret
+  89               	.LFE9:
+  91               	.global	vTaskSuspendAll
+  93               	vTaskSuspendAll:
+  94               	.LFB17:
+  95               	.LM9:
+  96               	/* prologue: function */
+  97               	/* frame size = 0 */
+  98               	.LM10:
+  99 0032 8091 0000 		lds r24,uxSchedulerSuspended
+ 100 0036 8F5F      		subi r24,lo8(-(1))
+ 101 0038 8093 0000 		sts uxSchedulerSuspended,r24
+ 102               	/* epilogue start */
+ 103               	.LM11:
+ 104 003c 0895      		ret
+ 105               	.LFE17:
+ 107               	.global	xTaskGetTickCount
+ 109               	xTaskGetTickCount:
+ 110               	.LFB19:
+ 111               	.LM12:
+ 112               	/* prologue: function */
+ 113               	/* frame size = 0 */
+ 114               	.LM13:
+ 115               	/* #APP */
+ 116               	 ;  2333 "FreeRTOS/Source/tasks.c" 1
+ 117 003e 0FB6      		in		__tmp_reg__, __SREG__
+ 118               	 ;  0 "" 2
+ 119               	 ;  2333 "FreeRTOS/Source/tasks.c" 1
+ 120 0040 F894      		cli
+ 121               	 ;  0 "" 2
+ 122               	 ;  2333 "FreeRTOS/Source/tasks.c" 1
+ 123 0042 0F92      		push	__tmp_reg__
+ 124               	 ;  0 "" 2
+ 125               	.LM14:
+ 126               	/* #NOAPP */
+ 127 0044 2091 0000 		lds r18,xTickCount
+ 128 0048 3091 0000 		lds r19,(xTickCount)+1
+ 129               	.LVL10:
+ 130               	.LM15:
+ 131               	/* #APP */
+ 132               	 ;  2337 "FreeRTOS/Source/tasks.c" 1
+ 133 004c 0F90      		pop		__tmp_reg__
+ 134               	 ;  0 "" 2
+ 135               	 ;  2337 "FreeRTOS/Source/tasks.c" 1
+ 136 004e 0FBE      		out		__SREG__, __tmp_reg__
+ 137               	 ;  0 "" 2
+ 138               	.LM16:
+ 139               	/* #NOAPP */
+ 140 0050 C901      		movw r24,r18
+ 141               	.LVL11:
+ 142               	/* epilogue start */
+ 143 0052 0895      		ret
+ 144               	.LFE19:
+ 146               	.global	xTaskGetTickCountFromISR
+ 148               	xTaskGetTickCountFromISR:
+ 149               	.LFB20:
+ 150               	.LM17:
+ 151               	/* prologue: function */
+ 152               	/* frame size = 0 */
+ 153               	.LM18:
+ 154 0054 2091 0000 		lds r18,xTickCount
+ 155 0058 3091 0000 		lds r19,(xTickCount)+1
+ 156               	.LVL12:
+ 157               	.LM19:
+ 158 005c C901      		movw r24,r18
+ 159               	.LVL13:
+ 160               	/* epilogue start */
+ 161 005e 0895      		ret
+ 162               	.LFE20:
+ 164               	.global	uxTaskGetNumberOfTasks
+ 166               	uxTaskGetNumberOfTasks:
+ 167               	.LFB21:
+ 168               	.LM20:
+ 169               	/* prologue: function */
+ 170               	/* frame size = 0 */
+ 171               	.LM21:
+ 172 0060 8091 0000 		lds r24,uxCurrentNumberOfTasks
+ 173               	/* epilogue start */
+ 174               	.LM22:
+ 175 0064 0895      		ret
+ 176               	.LFE21:
+ 178               	.global	pcTaskGetName
+ 180               	pcTaskGetName:
+ 181               	.LFB22:
+ 182               	.LM23:
+ 183               	.LVL14:
+ 184               	/* prologue: function */
+ 185               	/* frame size = 0 */
+ 186               	.LM24:
+ 187 0066 0097      		sbiw r24,0
+ 188 0068 01F4      		brne .L19
+ 189 006a 8091 0000 		lds r24,pxCurrentTCB
+ 190 006e 9091 0000 		lds r25,(pxCurrentTCB)+1
+ 191               	.LVL15:
+ 192               	.L19:
+ 193 0072 9C01      		movw r18,r24
+ 194 0074 275E      		subi r18,lo8(-(25))
+ 195 0076 3F4F      		sbci r19,hi8(-(25))
+ 196               	.LM25:
+ 197 0078 C901      		movw r24,r18
+ 198               	.LVL16:
+ 199               	/* epilogue start */
+ 200 007a 0895      		ret
+ 201               	.LFE22:
+ 203               	.global	vTaskSwitchContext
+ 205               	vTaskSwitchContext:
+ 206               	.LFB25:
+ 207               	.LM26:
+ 208               	/* prologue: function */
+ 209               	/* frame size = 0 */
+ 210               	.LM27:
+ 211 007c 8091 0000 		lds r24,uxSchedulerSuspended
+ 212 0080 8823      		tst r24
+ 213 0082 01F0      		breq .L22
+ 214               	.LM28:
+ 215 0084 81E0      		ldi r24,lo8(1)
+ 216 0086 8093 0000 		sts xYieldPending,r24
+ 217 008a 0895      		ret
+ 218               	.L22:
+ 219               	.LM29:
+ 220 008c 1092 0000 		sts xYieldPending,__zero_reg__
+ 221               	.LBB47:
+ 222               	.LM30:
+ 223 0090 2091 0000 		lds r18,uxTopReadyPriority
+ 224               	.LVL17:
+ 225 0094 99E0      		ldi r25,lo8(9)
+ 226 0096 00C0      		rjmp .L24
+ 227               	.L25:
+ 228 0098 2150      		subi r18,lo8(-(-1))
+ 229               	.L24:
+ 230 009a 299F      		mul r18,r25
+ 231 009c D001      		movw r26,r0
+ 232 009e 1124      		clr r1
+ 233 00a0 A050      		subi r26,lo8(-(pxReadyTasksLists))
+ 234 00a2 B040      		sbci r27,hi8(-(pxReadyTasksLists))
+ 235 00a4 8C91      		ld r24,X
+ 236 00a6 8823      		tst r24
+ 237 00a8 01F0      		breq .L25
+ 238               	.LBB48:
+ 239 00aa 1196      		adiw r26,1
+ 240 00ac ED91      		ld r30,X+
+ 241 00ae FC91      		ld r31,X
+ 242 00b0 1297      		sbiw r26,1+1
+ 243 00b2 0280      		ldd __tmp_reg__,Z+2
+ 244 00b4 F381      		ldd r31,Z+3
+ 245 00b6 E02D      		mov r30,__tmp_reg__
+ 246 00b8 1296      		adiw r26,1+1
+ 247 00ba FC93      		st X,r31
+ 248 00bc EE93      		st -X,r30
+ 249 00be 1197      		sbiw r26,1
+ 250 00c0 CD01      		movw r24,r26
+ 251 00c2 0396      		adiw r24,3
+ 252 00c4 E817      		cp r30,r24
+ 253 00c6 F907      		cpc r31,r25
+ 254 00c8 01F4      		brne .L26
+ 255 00ca 8281      		ldd r24,Z+2
+ 256 00cc 9381      		ldd r25,Z+3
+ 257 00ce 1296      		adiw r26,1+1
+ 258 00d0 9C93      		st X,r25
+ 259 00d2 8E93      		st -X,r24
+ 260 00d4 1197      		sbiw r26,1
+ 261               	.L26:
+ 262 00d6 1196      		adiw r26,1
+ 263 00d8 ED91      		ld r30,X+
+ 264 00da FC91      		ld r31,X
+ 265 00dc 1297      		sbiw r26,1+1
+ 266 00de 8681      		ldd r24,Z+6
+ 267 00e0 9781      		ldd r25,Z+7
+ 268 00e2 9093 0000 		sts (pxCurrentTCB)+1,r25
+ 269 00e6 8093 0000 		sts pxCurrentTCB,r24
+ 270               	.LBE48:
+ 271 00ea 2093 0000 		sts uxTopReadyPriority,r18
+ 272 00ee 0895      		ret
+ 273               	.LBE47:
+ 274               	.LFE25:
+ 276               	.global	vTaskSetTimeOutState
+ 278               	vTaskSetTimeOutState:
+ 279               	.LFB30:
+ 280               	.LM31:
+ 281               	.LVL18:
+ 282               	/* prologue: function */
+ 283               	/* frame size = 0 */
+ 284 00f0 FC01      		movw r30,r24
+ 285               	.LM32:
+ 286               	/* #APP */
+ 287               	 ;  3292 "FreeRTOS/Source/tasks.c" 1
+ 288 00f2 0FB6      		in		__tmp_reg__, __SREG__
+ 289               	 ;  0 "" 2
+ 290               	 ;  3292 "FreeRTOS/Source/tasks.c" 1
+ 291 00f4 F894      		cli
+ 292               	 ;  0 "" 2
+ 293               	 ;  3292 "FreeRTOS/Source/tasks.c" 1
+ 294 00f6 0F92      		push	__tmp_reg__
+ 295               	 ;  0 "" 2
+ 296               	.LM33:
+ 297               	/* #NOAPP */
+ 298 00f8 8091 0000 		lds r24,xNumOfOverflows
+ 299               	.LVL19:
+ 300 00fc 8083      		st Z,r24
+ 301               	.LM34:
+ 302 00fe 8091 0000 		lds r24,xTickCount
+ 303 0102 9091 0000 		lds r25,(xTickCount)+1
+ 304 0106 9283      		std Z+2,r25
+ 305 0108 8183      		std Z+1,r24
+ 306               	.LM35:
+ 307               	/* #APP */
+ 308               	 ;  3297 "FreeRTOS/Source/tasks.c" 1
+ 309 010a 0F90      		pop		__tmp_reg__
+ 310               	 ;  0 "" 2
+ 311               	 ;  3297 "FreeRTOS/Source/tasks.c" 1
+ 312 010c 0FBE      		out		__SREG__, __tmp_reg__
+ 313               	 ;  0 "" 2
+ 314               	/* epilogue start */
+ 315               	.LM36:
+ 316               	/* #NOAPP */
+ 317 010e 0895      		ret
+ 318               	.LFE30:
+ 320               	.global	vTaskInternalSetTimeOutState
+ 322               	vTaskInternalSetTimeOutState:
+ 323               	.LFB31:
+ 324               	.LM37:
+ 325               	.LVL20:
+ 326               	/* prologue: function */
+ 327               	/* frame size = 0 */
+ 328 0110 FC01      		movw r30,r24
+ 329               	.LM38:
+ 330 0112 8091 0000 		lds r24,xNumOfOverflows
+ 331               	.LVL21:
+ 332 0116 8083      		st Z,r24
+ 333               	.LM39:
+ 334 0118 8091 0000 		lds r24,xTickCount
+ 335 011c 9091 0000 		lds r25,(xTickCount)+1
+ 336 0120 9283      		std Z+2,r25
+ 337 0122 8183      		std Z+1,r24
+ 338               	/* epilogue start */
+ 339               	.LM40:
+ 340 0124 0895      		ret
+ 341               	.LFE31:
+ 343               	.global	xTaskCheckForTimeOut
+ 345               	xTaskCheckForTimeOut:
+ 346               	.LFB32:
+ 347               	.LM41:
+ 348               	.LVL22:
+ 349               	/* prologue: function */
+ 350               	/* frame size = 0 */
+ 351 0126 DC01      		movw r26,r24
+ 352 0128 FB01      		movw r30,r22
+ 353               	.LM42:
+ 354               	/* #APP */
+ 355               	 ;  3317 "FreeRTOS/Source/tasks.c" 1
+ 356 012a 0FB6      		in		__tmp_reg__, __SREG__
+ 357               	 ;  0 "" 2
+ 358               	 ;  3317 "FreeRTOS/Source/tasks.c" 1
+ 359 012c F894      		cli
+ 360               	 ;  0 "" 2
+ 361               	 ;  3317 "FreeRTOS/Source/tasks.c" 1
+ 362 012e 0F92      		push	__tmp_reg__
+ 363               	 ;  0 "" 2
+ 364               	/* #NOAPP */
+ 365               	.LBB49:
+ 366               	.LM43:
+ 367 0130 6091 0000 		lds r22,xTickCount
+ 368 0134 7091 0000 		lds r23,(xTickCount)+1
+ 369               	.LVL23:
+ 370               	.LM44:
+ 371 0138 1196      		adiw r26,1
+ 372 013a 4D91      		ld r20,X+
+ 373 013c 5C91      		ld r21,X
+ 374 013e 1297      		sbiw r26,1+1
+ 375               	.LM45:
+ 376 0140 2081      		ld r18,Z
+ 377 0142 3181      		ldd r19,Z+1
+ 378 0144 8FEF      		ldi r24,hi8(-1)
+ 379 0146 2F3F      		cpi r18,lo8(-1)
+ 380 0148 3807      		cpc r19,r24
+ 381               	.LVL24:
+ 382 014a 01F0      		breq .L38
+ 383               	.L33:
+ 384               	.LM46:
+ 385 014c 9091 0000 		lds r25,xNumOfOverflows
+ 386 0150 8C91      		ld r24,X
+ 387 0152 9817      		cp r25,r24
+ 388 0154 01F0      		breq .L35
+ 389 0156 6417      		cp r22,r20
+ 390 0158 7507      		cpc r23,r21
+ 391 015a 00F4      		brsh .L36
+ 392               	.L35:
+ 393               	.LM47:
+ 394 015c CB01      		movw r24,r22
+ 395               	.LVL25:
+ 396 015e 841B      		sub r24,r20
+ 397 0160 950B      		sbc r25,r21
+ 398               	.LM48:
+ 399 0162 8217      		cp r24,r18
+ 400 0164 9307      		cpc r25,r19
+ 401 0166 00F4      		brsh .L36
+ 402               	.LM49:
+ 403 0168 281B      		sub r18,r24
+ 404 016a 390B      		sbc r19,r25
+ 405 016c 3183      		std Z+1,r19
+ 406 016e 2083      		st Z,r18
+ 407               	.LBB50:
+ 408               	.LBB51:
+ 409               	.LM50:
+ 410 0170 8091 0000 		lds r24,xNumOfOverflows
+ 411               	.LVL26:
+ 412 0174 8C93      		st X,r24
+ 413               	.LM51:
+ 414 0176 8091 0000 		lds r24,xTickCount
+ 415 017a 9091 0000 		lds r25,(xTickCount)+1
+ 416 017e 1296      		adiw r26,1+1
+ 417 0180 9C93      		st X,r25
+ 418 0182 8E93      		st -X,r24
+ 419 0184 1197      		sbiw r26,1
+ 420               	.L38:
+ 421 0186 80E0      		ldi r24,lo8(0)
+ 422               	.LVL27:
+ 423 0188 00C0      		rjmp .L34
+ 424               	.LVL28:
+ 425               	.L36:
+ 426               	.LBE51:
+ 427               	.LBE50:
+ 428               	.LM52:
+ 429 018a 1182      		std Z+1,__zero_reg__
+ 430 018c 1082      		st Z,__zero_reg__
+ 431 018e 81E0      		ldi r24,lo8(1)
+ 432               	.LVL29:
+ 433               	.L34:
+ 434               	.LBE49:
+ 435               	.LM53:
+ 436               	/* #APP */
+ 437               	 ;  3368 "FreeRTOS/Source/tasks.c" 1
+ 438 0190 0F90      		pop		__tmp_reg__
+ 439               	 ;  0 "" 2
+ 440               	 ;  3368 "FreeRTOS/Source/tasks.c" 1
+ 441 0192 0FBE      		out		__SREG__, __tmp_reg__
+ 442               	 ;  0 "" 2
+ 443               	.LVL30:
+ 444               	/* epilogue start */
+ 445               	.LM54:
+ 446               	/* #NOAPP */
+ 447 0194 0895      		ret
+ 448               	.LFE32:
+ 450               	.global	vTaskMissedYield
+ 452               	vTaskMissedYield:
+ 453               	.LFB33:
+ 454               	.LM55:
+ 455               	/* prologue: function */
+ 456               	/* frame size = 0 */
+ 457               	.LM56:
+ 458 0196 81E0      		ldi r24,lo8(1)
+ 459 0198 8093 0000 		sts xYieldPending,r24
+ 460               	/* epilogue start */
+ 461               	.LM57:
+ 462 019c 0895      		ret
+ 463               	.LFE33:
+ 465               	.global	xTaskGetCurrentTaskHandle
+ 467               	xTaskGetCurrentTaskHandle:
+ 468               	.LFB39:
+ 469               	.LM58:
+ 470               	/* prologue: function */
+ 471               	/* frame size = 0 */
+ 472               	.LM59:
+ 473 019e 2091 0000 		lds r18,pxCurrentTCB
+ 474 01a2 3091 0000 		lds r19,(pxCurrentTCB)+1
+ 475               	.LVL31:
+ 476               	.LM60:
+ 477 01a6 C901      		movw r24,r18
+ 478               	.LVL32:
+ 479               	/* epilogue start */
+ 480 01a8 0895      		ret
+ 481               	.LFE39:
+ 483               	.global	uxTaskResetEventItemValue
+ 485               	uxTaskResetEventItemValue:
+ 486               	.LFB43:
+ 487               	.LM61:
+ 488               	/* prologue: function */
+ 489               	/* frame size = 0 */
+ 490               	.LM62:
+ 491 01aa E091 0000 		lds r30,pxCurrentTCB
+ 492 01ae F091 0000 		lds r31,(pxCurrentTCB)+1
+ 493 01b2 8485      		ldd r24,Z+12
+ 494               	.LVL33:
+ 495 01b4 9585      		ldd r25,Z+13
+ 496               	.LVL34:
+ 497               	.LM63:
+ 498 01b6 A091 0000 		lds r26,pxCurrentTCB
+ 499 01ba B091 0000 		lds r27,(pxCurrentTCB)+1
+ 500 01be E091 0000 		lds r30,pxCurrentTCB
+ 501 01c2 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 502 01c6 4689      		ldd r20,Z+22
+ 503 01c8 24E0      		ldi r18,lo8(4)
+ 504 01ca 30E0      		ldi r19,hi8(4)
+ 505 01cc 241B      		sub r18,r20
+ 506 01ce 3109      		sbc r19,__zero_reg__
+ 507 01d0 1D96      		adiw r26,12+1
+ 508 01d2 3C93      		st X,r19
+ 509 01d4 2E93      		st -X,r18
+ 510 01d6 1C97      		sbiw r26,12
+ 511               	.LVL35:
+ 512               	/* epilogue start */
+ 513               	.LM64:
+ 514 01d8 0895      		ret
+ 515               	.LFE43:
+ 517               	.global	pvTaskIncrementMutexHeldCount
+ 519               	pvTaskIncrementMutexHeldCount:
+ 520               	.LFB44:
+ 521               	.LM65:
+ 522               	/* prologue: function */
+ 523               	/* frame size = 0 */
+ 524               	.LM66:
+ 525 01da 8091 0000 		lds r24,pxCurrentTCB
+ 526 01de 9091 0000 		lds r25,(pxCurrentTCB)+1
+ 527 01e2 892B      		or r24,r25
+ 528 01e4 01F0      		breq .L46
+ 529               	.LM67:
+ 530 01e6 E091 0000 		lds r30,pxCurrentTCB
+ 531 01ea F091 0000 		lds r31,(pxCurrentTCB)+1
+ 532 01ee 82A1      		ldd r24,Z+34
+ 533 01f0 8F5F      		subi r24,lo8(-(1))
+ 534 01f2 82A3      		std Z+34,r24
+ 535               	.L46:
+ 536               	.LM68:
+ 537 01f4 2091 0000 		lds r18,pxCurrentTCB
+ 538 01f8 3091 0000 		lds r19,(pxCurrentTCB)+1
+ 539               	.LM69:
+ 540 01fc C901      		movw r24,r18
+ 541               	/* epilogue start */
+ 542 01fe 0895      		ret
+ 543               	.LFE44:
+ 545               	.global	xTaskGenericNotifyStateClear
+ 547               	xTaskGenericNotifyStateClear:
+ 548               	.LFB50:
+ 549               	.LM70:
+ 550               	.LVL36:
+ 551               	/* prologue: function */
+ 552               	/* frame size = 0 */
+ 553               	.LM71:
+ 554 0200 0097      		sbiw r24,0
+ 555 0202 01F4      		brne .L50
+ 556 0204 8091 0000 		lds r24,pxCurrentTCB
+ 557 0208 9091 0000 		lds r25,(pxCurrentTCB)+1
+ 558               	.LVL37:
+ 559               	.L50:
+ 560               	.LM72:
+ 561               	/* #APP */
+ 562               	 ;  5212 "FreeRTOS/Source/tasks.c" 1
+ 563 020c 0FB6      		in		__tmp_reg__, __SREG__
+ 564               	 ;  0 "" 2
+ 565               	 ;  5212 "FreeRTOS/Source/tasks.c" 1
+ 566 020e F894      		cli
+ 567               	 ;  0 "" 2
+ 568               	 ;  5212 "FreeRTOS/Source/tasks.c" 1
+ 569 0210 0F92      		push	__tmp_reg__
+ 570               	 ;  0 "" 2
+ 571               	.LM73:
+ 572               	/* #NOAPP */
+ 573 0212 FC01      		movw r30,r24
+ 574 0214 E60F      		add r30,r22
+ 575 0216 F11D      		adc r31,__zero_reg__
+ 576 0218 87A1      		ldd r24,Z+39
+ 577               	.LVL38:
+ 578 021a 8230      		cpi r24,lo8(2)
+ 579 021c 01F0      		breq .L51
+ 580 021e 80E0      		ldi r24,lo8(0)
+ 581               	.LVL39:
+ 582 0220 00C0      		rjmp .L52
+ 583               	.LVL40:
+ 584               	.L51:
+ 585               	.LM74:
+ 586 0222 17A2      		std Z+39,__zero_reg__
+ 587 0224 81E0      		ldi r24,lo8(1)
+ 588               	.LVL41:
+ 589               	.L52:
+ 590               	.LM75:
+ 591               	/* #APP */
+ 592               	 ;  5224 "FreeRTOS/Source/tasks.c" 1
+ 593 0226 0F90      		pop		__tmp_reg__
+ 594               	 ;  0 "" 2
+ 595               	 ;  5224 "FreeRTOS/Source/tasks.c" 1
+ 596 0228 0FBE      		out		__SREG__, __tmp_reg__
+ 597               	 ;  0 "" 2
+ 598               	.LVL42:
+ 599               	/* epilogue start */
+ 600               	.LM76:
+ 601               	/* #NOAPP */
+ 602 022a 0895      		ret
+ 603               	.LFE50:
+ 605               	.global	ulTaskGenericNotifyValueClear
+ 607               	ulTaskGenericNotifyValueClear:
+ 608               	.LFB51:
+ 609               	.LM77:
+ 610               	.LVL43:
+ 611 022c EF92      		push r14
+ 612 022e FF92      		push r15
+ 613 0230 0F93      		push r16
+ 614 0232 1F93      		push r17
+ 615               	/* prologue: function */
+ 616               	/* frame size = 0 */
+ 617 0234 7901      		movw r14,r18
+ 618 0236 8A01      		movw r16,r20
+ 619               	.LM78:
+ 620 0238 0097      		sbiw r24,0
+ 621 023a 01F4      		brne .L56
+ 622               	.LVL44:
+ 623 023c 8091 0000 		lds r24,pxCurrentTCB
+ 624 0240 9091 0000 		lds r25,(pxCurrentTCB)+1
+ 625               	.LVL45:
+ 626               	.L56:
+ 627               	.LM79:
+ 628               	/* #APP */
+ 629               	 ;  5245 "FreeRTOS/Source/tasks.c" 1
+ 630 0244 0FB6      		in		__tmp_reg__, __SREG__
+ 631               	 ;  0 "" 2
+ 632               	 ;  5245 "FreeRTOS/Source/tasks.c" 1
+ 633 0246 F894      		cli
+ 634               	 ;  0 "" 2
+ 635               	 ;  5245 "FreeRTOS/Source/tasks.c" 1
+ 636 0248 0F92      		push	__tmp_reg__
+ 637               	 ;  0 "" 2
+ 638               	.LM80:
+ 639               	/* #NOAPP */
+ 640 024a E62F      		mov r30,r22
+ 641 024c F0E0      		ldi r31,lo8(0)
+ 642 024e EE0F      		lsl r30
+ 643 0250 FF1F      		rol r31
+ 644 0252 EE0F      		lsl r30
+ 645 0254 FF1F      		rol r31
+ 646 0256 E80F      		add r30,r24
+ 647 0258 F91F      		adc r31,r25
+ 648 025a 23A1      		ldd r18,Z+35
+ 649 025c 34A1      		ldd r19,Z+36
+ 650 025e 45A1      		ldd r20,Z+37
+ 651 0260 56A1      		ldd r21,Z+38
+ 652               	.LVL46:
+ 653               	.LM81:
+ 654 0262 83A1      		ldd r24,Z+35
+ 655 0264 94A1      		ldd r25,Z+36
+ 656 0266 A5A1      		ldd r26,Z+37
+ 657 0268 B6A1      		ldd r27,Z+38
+ 658               	.LVL47:
+ 659 026a E094      		com r14
+ 660 026c F094      		com r15
+ 661 026e 0095      		com r16
+ 662 0270 1095      		com r17
+ 663 0272 8E21      		and r24,r14
+ 664 0274 9F21      		and r25,r15
+ 665 0276 A023      		and r26,r16
+ 666 0278 B123      		and r27,r17
+ 667 027a 83A3      		std Z+35,r24
+ 668 027c 94A3      		std Z+36,r25
+ 669 027e A5A3      		std Z+37,r26
+ 670 0280 B6A3      		std Z+38,r27
+ 671               	.LM82:
+ 672               	/* #APP */
+ 673               	 ;  5252 "FreeRTOS/Source/tasks.c" 1
+ 674 0282 0F90      		pop		__tmp_reg__
+ 675               	 ;  0 "" 2
+ 676               	 ;  5252 "FreeRTOS/Source/tasks.c" 1
+ 677 0284 0FBE      		out		__SREG__, __tmp_reg__
+ 678               	 ;  0 "" 2
+ 679               	.LM83:
+ 680               	/* #NOAPP */
+ 681 0286 B901      		movw r22,r18
+ 682               	.LVL48:
+ 683 0288 CA01      		movw r24,r20
+ 684               	/* epilogue start */
+ 685 028a 1F91      		pop r17
+ 686 028c 0F91      		pop r16
+ 687 028e FF90      		pop r15
+ 688 0290 EF90      		pop r14
+ 689               	.LVL49:
+ 690 0292 0895      		ret
+ 691               	.LFE51:
+ 693               	.global	vTaskGenericNotifyGiveFromISR
+ 695               	vTaskGenericNotifyGiveFromISR:
+ 696               	.LFB49:
+ 697               	.LM84:
+ 698               	.LVL50:
+ 699 0294 EF92      		push r14
+ 700 0296 FF92      		push r15
+ 701 0298 0F93      		push r16
+ 702 029a 1F93      		push r17
+ 703 029c CF93      		push r28
+ 704 029e DF93      		push r29
+ 705               	/* prologue: function */
+ 706               	/* frame size = 0 */
+ 707 02a0 EC01      		movw r28,r24
+ 708 02a2 E62F      		mov r30,r22
+ 709 02a4 7A01      		movw r14,r20
+ 710               	.LM85:
+ 711 02a6 F0E0      		ldi r31,lo8(0)
+ 712 02a8 DC01      		movw r26,r24
+ 713 02aa AE0F      		add r26,r30
+ 714 02ac BF1F      		adc r27,r31
+ 715 02ae 9796      		adiw r26,39
+ 716 02b0 2C91      		ld r18,X
+ 717 02b2 9797      		sbiw r26,39
+ 718               	.LVL51:
+ 719               	.LM86:
+ 720 02b4 82E0      		ldi r24,lo8(2)
+ 721               	.LVL52:
+ 722 02b6 9796      		adiw r26,39
+ 723 02b8 8C93      		st X,r24
+ 724               	.LM87:
+ 725 02ba EE0F      		lsl r30
+ 726 02bc FF1F      		rol r31
+ 727 02be EE0F      		lsl r30
+ 728 02c0 FF1F      		rol r31
+ 729 02c2 EC0F      		add r30,r28
+ 730 02c4 FD1F      		adc r31,r29
+ 731 02c6 83A1      		ldd r24,Z+35
+ 732 02c8 94A1      		ldd r25,Z+36
+ 733 02ca A5A1      		ldd r26,Z+37
+ 734 02cc B6A1      		ldd r27,Z+38
+ 735 02ce 0196      		adiw r24,1
+ 736 02d0 A11D      		adc r26,__zero_reg__
+ 737 02d2 B11D      		adc r27,__zero_reg__
+ 738 02d4 83A3      		std Z+35,r24
+ 739 02d6 94A3      		std Z+36,r25
+ 740 02d8 A5A3      		std Z+37,r26
+ 741 02da B6A3      		std Z+38,r27
+ 742               	.LM88:
+ 743 02dc 2130      		cpi r18,lo8(1)
+ 744 02de 01F4      		brne .L64
+ 745               	.LVL53:
+ 746               	.LM89:
+ 747 02e0 8091 0000 		lds r24,uxSchedulerSuspended
+ 748 02e4 8823      		tst r24
+ 749 02e6 01F4      		brne .L60
+ 750               	.LM90:
+ 751 02e8 8E01      		movw r16,r28
+ 752 02ea 0E5F      		subi r16,lo8(-(2))
+ 753 02ec 1F4F      		sbci r17,hi8(-(2))
+ 754 02ee C801      		movw r24,r16
+ 755 02f0 0E94 0000 		call uxListRemove
+ 756               	.LVL54:
+ 757               	.LM91:
+ 758 02f4 9E89      		ldd r25,Y+22
+ 759 02f6 8091 0000 		lds r24,uxTopReadyPriority
+ 760 02fa 8917      		cp r24,r25
+ 761 02fc 00F4      		brsh .L61
+ 762 02fe 9093 0000 		sts uxTopReadyPriority,r25
+ 763               	.L61:
+ 764 0302 89E0      		ldi r24,lo8(9)
+ 765 0304 989F      		mul r25,r24
+ 766 0306 C001      		movw r24,r0
+ 767 0308 1124      		clr r1
+ 768 030a 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 769 030c 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 770 030e B801      		movw r22,r16
+ 771 0310 00C0      		rjmp .L65
+ 772               	.LVL55:
+ 773               	.L60:
+ 774               	.LM92:
+ 775 0312 BE01      		movw r22,r28
+ 776               	.LVL56:
+ 777 0314 645F      		subi r22,lo8(-(12))
+ 778 0316 7F4F      		sbci r23,hi8(-(12))
+ 779 0318 80E0      		ldi r24,lo8(xPendingReadyList)
+ 780 031a 90E0      		ldi r25,hi8(xPendingReadyList)
+ 781               	.L65:
+ 782 031c 0E94 0000 		call vListInsertEnd
+ 783               	.LVL57:
+ 784               	.LM93:
+ 785 0320 E091 0000 		lds r30,pxCurrentTCB
+ 786 0324 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 787 0328 9E89      		ldd r25,Y+22
+ 788 032a 8689      		ldd r24,Z+22
+ 789 032c 8917      		cp r24,r25
+ 790 032e 00F4      		brsh .L64
+ 791               	.LM94:
+ 792 0330 E114      		cp r14,__zero_reg__
+ 793 0332 F104      		cpc r15,__zero_reg__
+ 794 0334 01F0      		breq .L63
+ 795               	.LM95:
+ 796 0336 81E0      		ldi r24,lo8(1)
+ 797 0338 F701      		movw r30,r14
+ 798 033a 8083      		st Z,r24
+ 799               	.L63:
+ 800               	.LM96:
+ 801 033c 81E0      		ldi r24,lo8(1)
+ 802 033e 8093 0000 		sts xYieldPending,r24
+ 803               	.LVL58:
+ 804               	.L64:
+ 805               	/* epilogue start */
+ 806               	.LM97:
+ 807 0342 DF91      		pop r29
+ 808 0344 CF91      		pop r28
+ 809               	.LVL59:
+ 810 0346 1F91      		pop r17
+ 811 0348 0F91      		pop r16
+ 812 034a FF90      		pop r15
+ 813 034c EF90      		pop r14
+ 814               	.LVL60:
+ 815 034e 0895      		ret
+ 816               	.LFE49:
+ 818               	.global	xTaskGenericNotifyFromISR
+ 820               	xTaskGenericNotifyFromISR:
+ 821               	.LFB48:
+ 822               	.LM98:
+ 823               	.LVL61:
+ 824 0350 CF92      		push r12
+ 825               	.LVL62:
+ 826 0352 DF92      		push r13
+ 827 0354 EF92      		push r14
+ 828               	.LVL63:
+ 829 0356 FF92      		push r15
+ 830 0358 0F93      		push r16
+ 831               	.LVL64:
+ 832 035a 1F93      		push r17
+ 833 035c CF93      		push r28
+ 834 035e DF93      		push r29
+ 835               	/* prologue: function */
+ 836               	/* frame size = 0 */
+ 837 0360 EC01      		movw r28,r24
+ 838               	.LM99:
+ 839 0362 E114      		cp r14,__zero_reg__
+ 840 0364 F104      		cpc r15,__zero_reg__
+ 841               	.LVL65:
+ 842 0366 01F0      		breq .L67
+ 843               	.LVL66:
+ 844               	.LM100:
+ 845 0368 E62F      		mov r30,r22
+ 846 036a F0E0      		ldi r31,lo8(0)
+ 847 036c EE0F      		lsl r30
+ 848 036e FF1F      		rol r31
+ 849 0370 EE0F      		lsl r30
+ 850 0372 FF1F      		rol r31
+ 851 0374 E80F      		add r30,r24
+ 852 0376 F91F      		adc r31,r25
+ 853 0378 83A1      		ldd r24,Z+35
+ 854 037a 94A1      		ldd r25,Z+36
+ 855 037c A5A1      		ldd r26,Z+37
+ 856 037e B6A1      		ldd r27,Z+38
+ 857 0380 F701      		movw r30,r14
+ 858 0382 8083      		st Z,r24
+ 859 0384 9183      		std Z+1,r25
+ 860 0386 A283      		std Z+2,r26
+ 861 0388 B383      		std Z+3,r27
+ 862               	.LVL67:
+ 863               	.L67:
+ 864               	.LM101:
+ 865 038a A62F      		mov r26,r22
+ 866 038c B0E0      		ldi r27,lo8(0)
+ 867 038e FE01      		movw r30,r28
+ 868 0390 EA0F      		add r30,r26
+ 869 0392 FB1F      		adc r31,r27
+ 870 0394 67A1      		ldd r22,Z+39
+ 871               	.LVL68:
+ 872               	.LM102:
+ 873 0396 82E0      		ldi r24,lo8(2)
+ 874 0398 87A3      		std Z+39,r24
+ 875               	.LM103:
+ 876 039a 0230      		cpi r16,lo8(2)
+ 877               	.LVL69:
+ 878 039c 01F0      		breq .L70
+ 879 039e 0330      		cpi r16,lo8(3)
+ 880 03a0 00F4      		brsh .L73
+ 881 03a2 0130      		cpi r16,lo8(1)
+ 882 03a4 01F4      		brne .L68
+ 883 03a6 00C0      		rjmp .L84
+ 884               	.L73:
+ 885 03a8 0330      		cpi r16,lo8(3)
+ 886 03aa 01F0      		breq .L74
+ 887 03ac 0430      		cpi r16,lo8(4)
+ 888 03ae 01F4      		brne .L68
+ 889 03b0 00C0      		rjmp .L85
+ 890               	.L84:
+ 891               	.LM104:
+ 892 03b2 FD01      		movw r30,r26
+ 893 03b4 EE0F      		lsl r30
+ 894 03b6 FF1F      		rol r31
+ 895 03b8 EE0F      		lsl r30
+ 896 03ba FF1F      		rol r31
+ 897 03bc EC0F      		add r30,r28
+ 898 03be FD1F      		adc r31,r29
+ 899 03c0 83A1      		ldd r24,Z+35
+ 900 03c2 94A1      		ldd r25,Z+36
+ 901 03c4 A5A1      		ldd r26,Z+37
+ 902 03c6 B6A1      		ldd r27,Z+38
+ 903 03c8 822B      		or r24,r18
+ 904 03ca 932B      		or r25,r19
+ 905 03cc A42B      		or r26,r20
+ 906 03ce B52B      		or r27,r21
+ 907 03d0 00C0      		rjmp .L82
+ 908               	.L70:
+ 909               	.LM105:
+ 910 03d2 FD01      		movw r30,r26
+ 911 03d4 EE0F      		lsl r30
+ 912 03d6 FF1F      		rol r31
+ 913 03d8 EE0F      		lsl r30
+ 914 03da FF1F      		rol r31
+ 915 03dc EC0F      		add r30,r28
+ 916 03de FD1F      		adc r31,r29
+ 917 03e0 83A1      		ldd r24,Z+35
+ 918 03e2 94A1      		ldd r25,Z+36
+ 919 03e4 A5A1      		ldd r26,Z+37
+ 920 03e6 B6A1      		ldd r27,Z+38
+ 921 03e8 0196      		adiw r24,1
+ 922 03ea A11D      		adc r26,__zero_reg__
+ 923 03ec B11D      		adc r27,__zero_reg__
+ 924               	.L82:
+ 925 03ee 83A3      		std Z+35,r24
+ 926 03f0 94A3      		std Z+36,r25
+ 927 03f2 A5A3      		std Z+37,r26
+ 928 03f4 B6A3      		std Z+38,r27
+ 929 03f6 00C0      		rjmp .L68
+ 930               	.L85:
+ 931               	.LM106:
+ 932 03f8 6230      		cpi r22,lo8(2)
+ 933 03fa 01F4      		brne .L74
+ 934 03fc 80E0      		ldi r24,lo8(0)
+ 935               	.LVL70:
+ 936 03fe 00C0      		rjmp .L75
+ 937               	.LVL71:
+ 938               	.L74:
+ 939               	.LM107:
+ 940 0400 AA0F      		lsl r26
+ 941 0402 BB1F      		rol r27
+ 942 0404 AA0F      		lsl r26
+ 943 0406 BB1F      		rol r27
+ 944 0408 AC0F      		add r26,r28
+ 945 040a BD1F      		adc r27,r29
+ 946 040c 9396      		adiw r26,35
+ 947 040e 2D93      		st X+,r18
+ 948 0410 3D93      		st X+,r19
+ 949 0412 4D93      		st X+,r20
+ 950 0414 5C93      		st X,r21
+ 951 0416 9697      		sbiw r26,35+3
+ 952               	.L68:
+ 953               	.LM108:
+ 954 0418 6130      		cpi r22,lo8(1)
+ 955 041a 01F4      		brne .L76
+ 956               	.LM109:
+ 957 041c 8091 0000 		lds r24,uxSchedulerSuspended
+ 958 0420 8823      		tst r24
+ 959 0422 01F4      		brne .L77
+ 960               	.LM110:
+ 961 0424 8E01      		movw r16,r28
+ 962               	.LVL72:
+ 963 0426 0E5F      		subi r16,lo8(-(2))
+ 964 0428 1F4F      		sbci r17,hi8(-(2))
+ 965 042a C801      		movw r24,r16
+ 966 042c 0E94 0000 		call uxListRemove
+ 967               	.LVL73:
+ 968               	.LM111:
+ 969 0430 9E89      		ldd r25,Y+22
+ 970 0432 8091 0000 		lds r24,uxTopReadyPriority
+ 971 0436 8917      		cp r24,r25
+ 972 0438 00F4      		brsh .L78
+ 973 043a 9093 0000 		sts uxTopReadyPriority,r25
+ 974               	.L78:
+ 975 043e 89E0      		ldi r24,lo8(9)
+ 976 0440 989F      		mul r25,r24
+ 977 0442 C001      		movw r24,r0
+ 978 0444 1124      		clr r1
+ 979 0446 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 980 0448 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 981 044a B801      		movw r22,r16
+ 982 044c 00C0      		rjmp .L83
+ 983               	.LVL74:
+ 984               	.L77:
+ 985               	.LM112:
+ 986 044e BE01      		movw r22,r28
+ 987               	.LVL75:
+ 988 0450 645F      		subi r22,lo8(-(12))
+ 989 0452 7F4F      		sbci r23,hi8(-(12))
+ 990 0454 80E0      		ldi r24,lo8(xPendingReadyList)
+ 991 0456 90E0      		ldi r25,hi8(xPendingReadyList)
+ 992               	.L83:
+ 993 0458 0E94 0000 		call vListInsertEnd
+ 994               	.LVL76:
+ 995               	.LM113:
+ 996 045c E091 0000 		lds r30,pxCurrentTCB
+ 997 0460 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 998 0464 9E89      		ldd r25,Y+22
+ 999 0466 8689      		ldd r24,Z+22
+ 1000 0468 8917      		cp r24,r25
+ 1001 046a 00F4      		brsh .L76
+ 1002               	.LM114:
+ 1003 046c C114      		cp r12,__zero_reg__
+ 1004 046e D104      		cpc r13,__zero_reg__
+ 1005               	.LVL77:
+ 1006 0470 01F0      		breq .L80
+ 1007               	.LM115:
+ 1008 0472 81E0      		ldi r24,lo8(1)
+ 1009 0474 F601      		movw r30,r12
+ 1010 0476 8083      		st Z,r24
+ 1011               	.L80:
+ 1012               	.LM116:
+ 1013 0478 81E0      		ldi r24,lo8(1)
+ 1014 047a 8093 0000 		sts xYieldPending,r24
+ 1015 047e 00C0      		rjmp .L75
+ 1016               	.LVL78:
+ 1017               	.L76:
+ 1018 0480 81E0      		ldi r24,lo8(1)
+ 1019               	.LVL79:
+ 1020               	.L75:
+ 1021               	.LVL80:
+ 1022               	/* epilogue start */
+ 1023               	.LM117:
+ 1024 0482 DF91      		pop r29
+ 1025 0484 CF91      		pop r28
+ 1026               	.LVL81:
+ 1027 0486 1F91      		pop r17
+ 1028 0488 0F91      		pop r16
+ 1029               	.LVL82:
+ 1030 048a FF90      		pop r15
+ 1031 048c EF90      		pop r14
+ 1032               	.LVL83:
+ 1033 048e DF90      		pop r13
+ 1034 0490 CF90      		pop r12
+ 1035               	.LVL84:
+ 1036 0492 0895      		ret
+ 1037               	.LFE48:
+ 1039               	.global	vTaskPriorityDisinheritAfterTimeout
+ 1041               	vTaskPriorityDisinheritAfterTimeout:
+ 1042               	.LFB42:
+ 1043               	.LM118:
+ 1044               	.LVL85:
+ 1045 0494 0F93      		push r16
+ 1046 0496 1F93      		push r17
+ 1047 0498 CF93      		push r28
+ 1048 049a DF93      		push r29
+ 1049               	/* prologue: function */
+ 1050               	/* frame size = 0 */
+ 1051 049c EC01      		movw r28,r24
+ 1052               	.LM119:
+ 1053 049e 0097      		sbiw r24,0
+ 1054 04a0 01F0      		breq .L91
+ 1055 04a2 89A1      		ldd r24,Y+33
+ 1056               	.LVL86:
+ 1057 04a4 6817      		cp r22,r24
+ 1058               	.LVL87:
+ 1059 04a6 00F4      		brsh .L88
+ 1060 04a8 682F      		mov r22,r24
+ 1061               	.LVL88:
+ 1062               	.L88:
+ 1063               	.LM120:
+ 1064 04aa 2E89      		ldd r18,Y+22
+ 1065 04ac 2617      		cp r18,r22
+ 1066 04ae 01F0      		breq .L91
+ 1067               	.LM121:
+ 1068 04b0 8AA1      		ldd r24,Y+34
+ 1069 04b2 8130      		cpi r24,lo8(1)
+ 1070 04b4 01F4      		brne .L91
+ 1071               	.LM122:
+ 1072 04b6 6E8B      		std Y+22,r22
+ 1073               	.LM123:
+ 1074 04b8 8C85      		ldd r24,Y+12
+ 1075 04ba 9D85      		ldd r25,Y+13
+ 1076 04bc 97FD      		sbrc r25,7
+ 1077 04be 00C0      		rjmp .L89
+ 1078               	.LM124:
+ 1079 04c0 84E0      		ldi r24,lo8(4)
+ 1080 04c2 90E0      		ldi r25,hi8(4)
+ 1081 04c4 861B      		sub r24,r22
+ 1082 04c6 9109      		sbc r25,__zero_reg__
+ 1083 04c8 9D87      		std Y+13,r25
+ 1084 04ca 8C87      		std Y+12,r24
+ 1085               	.L89:
+ 1086               	.LM125:
+ 1087 04cc 89E0      		ldi r24,lo8(9)
+ 1088 04ce 289F      		mul r18,r24
+ 1089 04d0 C001      		movw r24,r0
+ 1090 04d2 1124      		clr r1
+ 1091 04d4 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 1092 04d6 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 1093 04d8 2A85      		ldd r18,Y+10
+ 1094 04da 3B85      		ldd r19,Y+11
+ 1095 04dc 2817      		cp r18,r24
+ 1096 04de 3907      		cpc r19,r25
+ 1097 04e0 01F4      		brne .L91
+ 1098               	.LM126:
+ 1099 04e2 8E01      		movw r16,r28
+ 1100 04e4 0E5F      		subi r16,lo8(-(2))
+ 1101 04e6 1F4F      		sbci r17,hi8(-(2))
+ 1102 04e8 C801      		movw r24,r16
+ 1103 04ea 0E94 0000 		call uxListRemove
+ 1104               	.LVL89:
+ 1105               	.LM127:
+ 1106 04ee 9E89      		ldd r25,Y+22
+ 1107 04f0 8091 0000 		lds r24,uxTopReadyPriority
+ 1108 04f4 8917      		cp r24,r25
+ 1109 04f6 00F4      		brsh .L90
+ 1110 04f8 9093 0000 		sts uxTopReadyPriority,r25
+ 1111               	.L90:
+ 1112 04fc 89E0      		ldi r24,lo8(9)
+ 1113 04fe 989F      		mul r25,r24
+ 1114 0500 C001      		movw r24,r0
+ 1115 0502 1124      		clr r1
+ 1116 0504 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 1117 0506 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 1118 0508 B801      		movw r22,r16
+ 1119 050a 0E94 0000 		call vListInsertEnd
+ 1120               	.LVL90:
+ 1121               	.L91:
+ 1122               	/* epilogue start */
+ 1123               	.LM128:
+ 1124 050e DF91      		pop r29
+ 1125 0510 CF91      		pop r28
+ 1126               	.LVL91:
+ 1127 0512 1F91      		pop r17
+ 1128 0514 0F91      		pop r16
+ 1129 0516 0895      		ret
+ 1130               	.LFE42:
+ 1132               	.global	xTaskPriorityDisinherit
+ 1134               	xTaskPriorityDisinherit:
+ 1135               	.LFB41:
+ 1136               	.LM129:
+ 1137               	.LVL92:
+ 1138 0518 0F93      		push r16
+ 1139 051a 1F93      		push r17
+ 1140 051c CF93      		push r28
+ 1141 051e DF93      		push r29
+ 1142               	/* prologue: function */
+ 1143               	/* frame size = 0 */
+ 1144 0520 EC01      		movw r28,r24
+ 1145               	.LM130:
+ 1146 0522 0097      		sbiw r24,0
+ 1147 0524 01F0      		breq .L93
+ 1148               	.LM131:
+ 1149 0526 2AA1      		ldd r18,Y+34
+ 1150 0528 2150      		subi r18,lo8(-(-1))
+ 1151 052a 2AA3      		std Y+34,r18
+ 1152               	.LM132:
+ 1153 052c 9E89      		ldd r25,Y+22
+ 1154 052e 89A1      		ldd r24,Y+33
+ 1155               	.LVL93:
+ 1156 0530 9817      		cp r25,r24
+ 1157 0532 01F0      		breq .L93
+ 1158               	.LM133:
+ 1159 0534 2223      		tst r18
+ 1160 0536 01F4      		brne .L93
+ 1161               	.LM134:
+ 1162 0538 8E01      		movw r16,r28
+ 1163 053a 0E5F      		subi r16,lo8(-(2))
+ 1164 053c 1F4F      		sbci r17,hi8(-(2))
+ 1165 053e C801      		movw r24,r16
+ 1166 0540 0E94 0000 		call uxListRemove
+ 1167               	.LM135:
+ 1168 0544 29A1      		ldd r18,Y+33
+ 1169 0546 2E8B      		std Y+22,r18
+ 1170               	.LM136:
+ 1171 0548 84E0      		ldi r24,lo8(4)
+ 1172 054a 90E0      		ldi r25,hi8(4)
+ 1173 054c 821B      		sub r24,r18
+ 1174 054e 9109      		sbc r25,__zero_reg__
+ 1175 0550 9D87      		std Y+13,r25
+ 1176 0552 8C87      		std Y+12,r24
+ 1177               	.LM137:
+ 1178 0554 8091 0000 		lds r24,uxTopReadyPriority
+ 1179 0558 8217      		cp r24,r18
+ 1180 055a 00F4      		brsh .L94
+ 1181 055c 2093 0000 		sts uxTopReadyPriority,r18
+ 1182               	.L94:
+ 1183 0560 89E0      		ldi r24,lo8(9)
+ 1184 0562 289F      		mul r18,r24
+ 1185 0564 C001      		movw r24,r0
+ 1186 0566 1124      		clr r1
+ 1187 0568 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 1188 056a 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 1189 056c B801      		movw r22,r16
+ 1190 056e 0E94 0000 		call vListInsertEnd
+ 1191 0572 81E0      		ldi r24,lo8(1)
+ 1192               	.LVL94:
+ 1193 0574 00C0      		rjmp .L95
+ 1194               	.LVL95:
+ 1195               	.L93:
+ 1196 0576 80E0      		ldi r24,lo8(0)
+ 1197               	.LVL96:
+ 1198               	.L95:
+ 1199               	.LVL97:
+ 1200               	/* epilogue start */
+ 1201               	.LM138:
+ 1202 0578 DF91      		pop r29
+ 1203 057a CF91      		pop r28
+ 1204               	.LVL98:
+ 1205 057c 1F91      		pop r17
+ 1206 057e 0F91      		pop r16
+ 1207 0580 0895      		ret
+ 1208               	.LFE41:
+ 1210               	.global	xTaskPriorityInherit
+ 1212               	xTaskPriorityInherit:
+ 1213               	.LFB40:
+ 1214               	.LM139:
+ 1215               	.LVL99:
+ 1216 0582 0F93      		push r16
+ 1217 0584 1F93      		push r17
+ 1218 0586 CF93      		push r28
+ 1219 0588 DF93      		push r29
+ 1220               	/* prologue: function */
+ 1221               	/* frame size = 0 */
+ 1222 058a EC01      		movw r28,r24
+ 1223               	.LM140:
+ 1224 058c 0097      		sbiw r24,0
+ 1225 058e 01F4      		brne .L98
+ 1226 0590 20E0      		ldi r18,lo8(0)
+ 1227               	.LVL100:
+ 1228 0592 00C0      		rjmp .L99
+ 1229               	.LVL101:
+ 1230               	.L98:
+ 1231               	.LM141:
+ 1232 0594 E091 0000 		lds r30,pxCurrentTCB
+ 1233 0598 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 1234 059c 9E89      		ldd r25,Y+22
+ 1235 059e 8689      		ldd r24,Z+22
+ 1236               	.LVL102:
+ 1237 05a0 9817      		cp r25,r24
+ 1238 05a2 00F4      		brsh .L100
+ 1239               	.LM142:
+ 1240 05a4 8C85      		ldd r24,Y+12
+ 1241 05a6 9D85      		ldd r25,Y+13
+ 1242 05a8 97FD      		sbrc r25,7
+ 1243 05aa 00C0      		rjmp .L101
+ 1244               	.LM143:
+ 1245 05ac E091 0000 		lds r30,pxCurrentTCB
+ 1246 05b0 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 1247 05b4 2689      		ldd r18,Z+22
+ 1248 05b6 84E0      		ldi r24,lo8(4)
+ 1249 05b8 90E0      		ldi r25,hi8(4)
+ 1250 05ba 821B      		sub r24,r18
+ 1251 05bc 9109      		sbc r25,__zero_reg__
+ 1252 05be 9D87      		std Y+13,r25
+ 1253 05c0 8C87      		std Y+12,r24
+ 1254               	.L101:
+ 1255               	.LM144:
+ 1256 05c2 8E89      		ldd r24,Y+22
+ 1257 05c4 29E0      		ldi r18,lo8(9)
+ 1258 05c6 829F      		mul r24,r18
+ 1259 05c8 C001      		movw r24,r0
+ 1260 05ca 1124      		clr r1
+ 1261 05cc 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 1262 05ce 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 1263 05d0 2A85      		ldd r18,Y+10
+ 1264 05d2 3B85      		ldd r19,Y+11
+ 1265 05d4 2817      		cp r18,r24
+ 1266 05d6 3907      		cpc r19,r25
+ 1267 05d8 01F4      		brne .L102
+ 1268               	.LM145:
+ 1269 05da 8E01      		movw r16,r28
+ 1270 05dc 0E5F      		subi r16,lo8(-(2))
+ 1271 05de 1F4F      		sbci r17,hi8(-(2))
+ 1272 05e0 C801      		movw r24,r16
+ 1273 05e2 0E94 0000 		call uxListRemove
+ 1274               	.LM146:
+ 1275 05e6 E091 0000 		lds r30,pxCurrentTCB
+ 1276 05ea F091 0000 		lds r31,(pxCurrentTCB)+1
+ 1277 05ee 9689      		ldd r25,Z+22
+ 1278 05f0 9E8B      		std Y+22,r25
+ 1279               	.LM147:
+ 1280 05f2 8091 0000 		lds r24,uxTopReadyPriority
+ 1281 05f6 8917      		cp r24,r25
+ 1282 05f8 00F4      		brsh .L103
+ 1283 05fa 9093 0000 		sts uxTopReadyPriority,r25
+ 1284               	.L103:
+ 1285 05fe 89E0      		ldi r24,lo8(9)
+ 1286 0600 989F      		mul r25,r24
+ 1287 0602 C001      		movw r24,r0
+ 1288 0604 1124      		clr r1
+ 1289 0606 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 1290 0608 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 1291 060a B801      		movw r22,r16
+ 1292 060c 0E94 0000 		call vListInsertEnd
+ 1293 0610 00C0      		rjmp .L106
+ 1294               	.L102:
+ 1295               	.LM148:
+ 1296 0612 E091 0000 		lds r30,pxCurrentTCB
+ 1297 0616 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 1298 061a 8689      		ldd r24,Z+22
+ 1299 061c 8E8B      		std Y+22,r24
+ 1300 061e 00C0      		rjmp .L106
+ 1301               	.L100:
+ 1302               	.LM149:
+ 1303 0620 E091 0000 		lds r30,pxCurrentTCB
+ 1304 0624 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 1305 0628 20E0      		ldi r18,lo8(0)
+ 1306               	.LVL103:
+ 1307 062a 99A1      		ldd r25,Y+33
+ 1308 062c 8689      		ldd r24,Z+22
+ 1309 062e 9817      		cp r25,r24
+ 1310 0630 00F4      		brsh .L99
+ 1311               	.L106:
+ 1312 0632 21E0      		ldi r18,lo8(1)
+ 1313               	.LVL104:
+ 1314               	.L99:
+ 1315               	.LM150:
+ 1316 0634 822F      		mov r24,r18
+ 1317               	/* epilogue start */
+ 1318 0636 DF91      		pop r29
+ 1319 0638 CF91      		pop r28
+ 1320               	.LVL105:
+ 1321 063a 1F91      		pop r17
+ 1322 063c 0F91      		pop r16
+ 1323 063e 0895      		ret
+ 1324               	.LFE40:
+ 1326               	.global	vTaskRemoveFromUnorderedEventList
+ 1328               	vTaskRemoveFromUnorderedEventList:
+ 1329               	.LFB29:
+ 1330               	.LM151:
+ 1331               	.LVL106:
+ 1332 0640 0F93      		push r16
+ 1333 0642 1F93      		push r17
+ 1334 0644 CF93      		push r28
+ 1335 0646 DF93      		push r29
+ 1336               	/* prologue: function */
+ 1337               	/* frame size = 0 */
+ 1338 0648 FC01      		movw r30,r24
+ 1339               	.LM152:
+ 1340 064a 7068      		ori r23,hi8(-32768)
+ 1341               	.LVL107:
+ 1342 064c 7183      		std Z+1,r23
+ 1343 064e 6083      		st Z,r22
+ 1344               	.LM153:
+ 1345 0650 C681      		ldd r28,Z+6
+ 1346 0652 D781      		ldd r29,Z+7
+ 1347               	.LVL108:
+ 1348               	.LM154:
+ 1349 0654 0E94 0000 		call uxListRemove
+ 1350               	.LVL109:
+ 1351               	.LM155:
+ 1352 0658 8E01      		movw r16,r28
+ 1353 065a 0E5F      		subi r16,lo8(-(2))
+ 1354 065c 1F4F      		sbci r17,hi8(-(2))
+ 1355 065e C801      		movw r24,r16
+ 1356 0660 0E94 0000 		call uxListRemove
+ 1357               	.LM156:
+ 1358 0664 9E89      		ldd r25,Y+22
+ 1359 0666 8091 0000 		lds r24,uxTopReadyPriority
+ 1360 066a 8917      		cp r24,r25
+ 1361 066c 00F4      		brsh .L108
+ 1362 066e 9093 0000 		sts uxTopReadyPriority,r25
+ 1363               	.L108:
+ 1364 0672 89E0      		ldi r24,lo8(9)
+ 1365 0674 989F      		mul r25,r24
+ 1366 0676 C001      		movw r24,r0
+ 1367 0678 1124      		clr r1
+ 1368 067a 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 1369 067c 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 1370 067e B801      		movw r22,r16
+ 1371 0680 0E94 0000 		call vListInsertEnd
+ 1372               	.LM157:
+ 1373 0684 E091 0000 		lds r30,pxCurrentTCB
+ 1374 0688 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 1375 068c 9E89      		ldd r25,Y+22
+ 1376 068e 8689      		ldd r24,Z+22
+ 1377 0690 8917      		cp r24,r25
+ 1378 0692 00F4      		brsh .L110
+ 1379               	.LM158:
+ 1380 0694 81E0      		ldi r24,lo8(1)
+ 1381 0696 8093 0000 		sts xYieldPending,r24
+ 1382               	.L110:
+ 1383               	/* epilogue start */
+ 1384               	.LM159:
+ 1385 069a DF91      		pop r29
+ 1386 069c CF91      		pop r28
+ 1387               	.LVL110:
+ 1388 069e 1F91      		pop r17
+ 1389 06a0 0F91      		pop r16
+ 1390 06a2 0895      		ret
+ 1391               	.LFE29:
+ 1393               	.global	xTaskRemoveFromEventList
+ 1395               	xTaskRemoveFromEventList:
+ 1396               	.LFB28:
+ 1397               	.LM160:
+ 1398               	.LVL111:
+ 1399 06a4 0F93      		push r16
+ 1400 06a6 1F93      		push r17
+ 1401 06a8 CF93      		push r28
+ 1402 06aa DF93      		push r29
+ 1403               	/* prologue: function */
+ 1404               	/* frame size = 0 */
+ 1405               	.LM161:
+ 1406 06ac DC01      		movw r26,r24
+ 1407 06ae 1596      		adiw r26,5
+ 1408 06b0 ED91      		ld r30,X+
+ 1409 06b2 FC91      		ld r31,X
+ 1410 06b4 1697      		sbiw r26,5+1
+ 1411 06b6 C681      		ldd r28,Z+6
+ 1412 06b8 D781      		ldd r29,Z+7
+ 1413               	.LVL112:
+ 1414               	.LM162:
+ 1415 06ba 8E01      		movw r16,r28
+ 1416 06bc 045F      		subi r16,lo8(-(12))
+ 1417 06be 1F4F      		sbci r17,hi8(-(12))
+ 1418 06c0 C801      		movw r24,r16
+ 1419               	.LVL113:
+ 1420 06c2 0E94 0000 		call uxListRemove
+ 1421               	.LM163:
+ 1422 06c6 8091 0000 		lds r24,uxSchedulerSuspended
+ 1423 06ca 8823      		tst r24
+ 1424 06cc 01F4      		brne .L112
+ 1425               	.LM164:
+ 1426 06ce 8E01      		movw r16,r28
+ 1427 06d0 0E5F      		subi r16,lo8(-(2))
+ 1428 06d2 1F4F      		sbci r17,hi8(-(2))
+ 1429 06d4 C801      		movw r24,r16
+ 1430 06d6 0E94 0000 		call uxListRemove
+ 1431               	.LM165:
+ 1432 06da 9E89      		ldd r25,Y+22
+ 1433 06dc 8091 0000 		lds r24,uxTopReadyPriority
+ 1434 06e0 8917      		cp r24,r25
+ 1435 06e2 00F4      		brsh .L113
+ 1436 06e4 9093 0000 		sts uxTopReadyPriority,r25
+ 1437               	.L113:
+ 1438 06e8 89E0      		ldi r24,lo8(9)
+ 1439 06ea 989F      		mul r25,r24
+ 1440 06ec C001      		movw r24,r0
+ 1441 06ee 1124      		clr r1
+ 1442 06f0 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 1443 06f2 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 1444 06f4 00C0      		rjmp .L118
+ 1445               	.L112:
+ 1446               	.LM166:
+ 1447 06f6 80E0      		ldi r24,lo8(xPendingReadyList)
+ 1448 06f8 90E0      		ldi r25,hi8(xPendingReadyList)
+ 1449               	.L118:
+ 1450 06fa B801      		movw r22,r16
+ 1451 06fc 0E94 0000 		call vListInsertEnd
+ 1452               	.LM167:
+ 1453 0700 E091 0000 		lds r30,pxCurrentTCB
+ 1454 0704 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 1455 0708 9E89      		ldd r25,Y+22
+ 1456 070a 8689      		ldd r24,Z+22
+ 1457 070c 8917      		cp r24,r25
+ 1458 070e 00F0      		brlo .L115
+ 1459 0710 80E0      		ldi r24,lo8(0)
+ 1460               	.LVL114:
+ 1461 0712 00C0      		rjmp .L116
+ 1462               	.LVL115:
+ 1463               	.L115:
+ 1464               	.LM168:
+ 1465 0714 81E0      		ldi r24,lo8(1)
+ 1466 0716 8093 0000 		sts xYieldPending,r24
+ 1467               	.LVL116:
+ 1468               	.L116:
+ 1469               	.LVL117:
+ 1470               	/* epilogue start */
+ 1471               	.LM169:
+ 1472 071a DF91      		pop r29
+ 1473 071c CF91      		pop r28
+ 1474               	.LVL118:
+ 1475 071e 1F91      		pop r17
+ 1476 0720 0F91      		pop r16
+ 1477 0722 0895      		ret
+ 1478               	.LFE28:
+ 1480               	.global	xTaskIncrementTick
+ 1482               	xTaskIncrementTick:
+ 1483               	.LFB24:
+ 1484               	.LM170:
+ 1485 0724 CF92      		push r12
+ 1486 0726 DF92      		push r13
+ 1487 0728 EF92      		push r14
+ 1488 072a FF92      		push r15
+ 1489 072c 0F93      		push r16
+ 1490 072e 1F93      		push r17
+ 1491 0730 CF93      		push r28
+ 1492 0732 DF93      		push r29
+ 1493               	/* prologue: function */
+ 1494               	/* frame size = 0 */
+ 1495               	.LM171:
+ 1496 0734 8091 0000 		lds r24,uxSchedulerSuspended
+ 1497 0738 8823      		tst r24
+ 1498 073a 01F0      		breq .+2
+ 1499 073c 00C0      		rjmp .L120
+ 1500               	.LBB52:
+ 1501               	.LM172:
+ 1502 073e 0091 0000 		lds r16,xTickCount
+ 1503 0742 1091 0000 		lds r17,(xTickCount)+1
+ 1504               	.LVL119:
+ 1505 0746 0F5F      		subi r16,lo8(-(1))
+ 1506 0748 1F4F      		sbci r17,hi8(-(1))
+ 1507               	.LM173:
+ 1508 074a 1093 0000 		sts (xTickCount)+1,r17
+ 1509 074e 0093 0000 		sts xTickCount,r16
+ 1510               	.LM174:
+ 1511 0752 0115      		cp r16,__zero_reg__
+ 1512 0754 1105      		cpc r17,__zero_reg__
+ 1513 0756 01F4      		brne .L121
+ 1514               	.LBB53:
+ 1515               	.LM175:
+ 1516 0758 2091 0000 		lds r18,pxDelayedTaskList
+ 1517 075c 3091 0000 		lds r19,(pxDelayedTaskList)+1
+ 1518               	.LVL120:
+ 1519 0760 8091 0000 		lds r24,pxOverflowDelayedTaskList
+ 1520 0764 9091 0000 		lds r25,(pxOverflowDelayedTaskList)+1
+ 1521 0768 9093 0000 		sts (pxDelayedTaskList)+1,r25
+ 1522 076c 8093 0000 		sts pxDelayedTaskList,r24
+ 1523 0770 3093 0000 		sts (pxOverflowDelayedTaskList)+1,r19
+ 1524 0774 2093 0000 		sts pxOverflowDelayedTaskList,r18
+ 1525 0778 8091 0000 		lds r24,xNumOfOverflows
+ 1526 077c 8F5F      		subi r24,lo8(-(1))
+ 1527 077e 8093 0000 		sts xNumOfOverflows,r24
+ 1528               	.LBB54:
+ 1529               	.LBB55:
+ 1530               	.LM176:
+ 1531 0782 E091 0000 		lds r30,pxDelayedTaskList
+ 1532 0786 F091 0000 		lds r31,(pxDelayedTaskList)+1
+ 1533 078a 8081      		ld r24,Z
+ 1534 078c 8823      		tst r24
+ 1535 078e 01F4      		brne .L122
+ 1536               	.LM177:
+ 1537 0790 8FEF      		ldi r24,lo8(-1)
+ 1538 0792 9FEF      		ldi r25,hi8(-1)
+ 1539 0794 00C0      		rjmp .L136
+ 1540               	.L122:
+ 1541               	.LM178:
+ 1542 0796 E091 0000 		lds r30,pxDelayedTaskList
+ 1543 079a F091 0000 		lds r31,(pxDelayedTaskList)+1
+ 1544 079e 0580      		ldd __tmp_reg__,Z+5
+ 1545 07a0 F681      		ldd r31,Z+6
+ 1546 07a2 E02D      		mov r30,__tmp_reg__
+ 1547 07a4 8081      		ld r24,Z
+ 1548 07a6 9181      		ldd r25,Z+1
+ 1549               	.L136:
+ 1550 07a8 9093 0000 		sts (xNextTaskUnblockTime)+1,r25
+ 1551 07ac 8093 0000 		sts xNextTaskUnblockTime,r24
+ 1552               	.L121:
+ 1553               	.LBE55:
+ 1554               	.LBE54:
+ 1555               	.LBE53:
+ 1556               	.LM179:
+ 1557 07b0 8091 0000 		lds r24,xNextTaskUnblockTime
+ 1558 07b4 9091 0000 		lds r25,(xNextTaskUnblockTime)+1
+ 1559 07b8 0817      		cp r16,r24
+ 1560 07ba 1907      		cpc r17,r25
+ 1561 07bc 00F4      		brsh .+2
+ 1562 07be 00C0      		rjmp .L123
+ 1563 07c0 DD24      		clr r13
+ 1564               	.LVL121:
+ 1565               	.LM180:
+ 1566 07c2 99E0      		ldi r25,lo8(9)
+ 1567 07c4 C92E      		mov r12,r25
+ 1568               	.LVL122:
+ 1569               	.L135:
+ 1570               	.LM181:
+ 1571 07c6 E091 0000 		lds r30,pxDelayedTaskList
+ 1572 07ca F091 0000 		lds r31,(pxDelayedTaskList)+1
+ 1573 07ce 8081      		ld r24,Z
+ 1574 07d0 8823      		tst r24
+ 1575 07d2 01F4      		brne .L124
+ 1576               	.LM182:
+ 1577 07d4 8FEF      		ldi r24,lo8(-1)
+ 1578 07d6 9FEF      		ldi r25,hi8(-1)
+ 1579 07d8 00C0      		rjmp .L137
+ 1580               	.L124:
+ 1581               	.LM183:
+ 1582 07da E091 0000 		lds r30,pxDelayedTaskList
+ 1583 07de F091 0000 		lds r31,(pxDelayedTaskList)+1
+ 1584 07e2 0580      		ldd __tmp_reg__,Z+5
+ 1585 07e4 F681      		ldd r31,Z+6
+ 1586 07e6 E02D      		mov r30,__tmp_reg__
+ 1587 07e8 C681      		ldd r28,Z+6
+ 1588 07ea D781      		ldd r29,Z+7
+ 1589               	.LM184:
+ 1590 07ec 8A81      		ldd r24,Y+2
+ 1591 07ee 9B81      		ldd r25,Y+3
+ 1592               	.LVL123:
+ 1593               	.LM185:
+ 1594 07f0 0817      		cp r16,r24
+ 1595 07f2 1907      		cpc r17,r25
+ 1596 07f4 00F4      		brsh .L126
+ 1597               	.L137:
+ 1598               	.LM186:
+ 1599 07f6 9093 0000 		sts (xNextTaskUnblockTime)+1,r25
+ 1600 07fa 8093 0000 		sts xNextTaskUnblockTime,r24
+ 1601 07fe 00C0      		rjmp .L125
+ 1602               	.L126:
+ 1603               	.LM187:
+ 1604 0800 82E0      		ldi r24,lo8(2)
+ 1605 0802 E82E      		mov r14,r24
+ 1606 0804 F12C      		mov r15,__zero_reg__
+ 1607               	.LVL124:
+ 1608 0806 EC0E      		add r14,r28
+ 1609 0808 FD1E      		adc r15,r29
+ 1610 080a C701      		movw r24,r14
+ 1611 080c 0E94 0000 		call uxListRemove
+ 1612               	.LVL125:
+ 1613               	.LM188:
+ 1614 0810 8C89      		ldd r24,Y+20
+ 1615 0812 9D89      		ldd r25,Y+21
+ 1616 0814 892B      		or r24,r25
+ 1617 0816 01F0      		breq .L127
+ 1618               	.LM189:
+ 1619 0818 CE01      		movw r24,r28
+ 1620 081a 0C96      		adiw r24,12
+ 1621 081c 0E94 0000 		call uxListRemove
+ 1622               	.L127:
+ 1623               	.LM190:
+ 1624 0820 9E89      		ldd r25,Y+22
+ 1625 0822 8091 0000 		lds r24,uxTopReadyPriority
+ 1626 0826 8917      		cp r24,r25
+ 1627 0828 00F4      		brsh .L128
+ 1628 082a 9093 0000 		sts uxTopReadyPriority,r25
+ 1629               	.L128:
+ 1630 082e 9C9D      		mul r25,r12
+ 1631 0830 C001      		movw r24,r0
+ 1632 0832 1124      		clr r1
+ 1633 0834 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 1634 0836 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 1635 0838 B701      		movw r22,r14
+ 1636 083a 0E94 0000 		call vListInsertEnd
+ 1637               	.LM191:
+ 1638 083e E091 0000 		lds r30,pxCurrentTCB
+ 1639 0842 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 1640 0846 9E89      		ldd r25,Y+22
+ 1641 0848 8689      		ldd r24,Z+22
+ 1642 084a 9817      		cp r25,r24
+ 1643 084c 00F4      		brsh .+2
+ 1644 084e 00C0      		rjmp .L135
+ 1645 0850 DD24      		clr r13
+ 1646 0852 D394      		inc r13
+ 1647 0854 00C0      		rjmp .L135
+ 1648               	.LVL126:
+ 1649               	.L123:
+ 1650 0856 DD24      		clr r13
+ 1651               	.LVL127:
+ 1652               	.L125:
+ 1653               	.LM192:
+ 1654 0858 E091 0000 		lds r30,pxCurrentTCB
+ 1655 085c F091 0000 		lds r31,(pxCurrentTCB)+1
+ 1656 0860 E689      		ldd r30,Z+22
+ 1657 0862 89E0      		ldi r24,lo8(9)
+ 1658               	.LVL128:
+ 1659 0864 E89F      		mul r30,r24
+ 1660 0866 F001      		movw r30,r0
+ 1661 0868 1124      		clr r1
+ 1662 086a E050      		subi r30,lo8(-(pxReadyTasksLists))
+ 1663 086c F040      		sbci r31,hi8(-(pxReadyTasksLists))
+ 1664 086e 8081      		ld r24,Z
+ 1665 0870 8230      		cpi r24,lo8(2)
+ 1666 0872 00F0      		brlo .L130
+ 1667 0874 DD24      		clr r13
+ 1668 0876 D394      		inc r13
+ 1669               	.L130:
+ 1670               	.LM193:
+ 1671 0878 8091 0000 		lds r24,xYieldPending
+ 1672 087c 8823      		tst r24
+ 1673 087e 01F0      		breq .L131
+ 1674 0880 DD24      		clr r13
+ 1675 0882 D394      		inc r13
+ 1676 0884 00C0      		rjmp .L131
+ 1677               	.LVL129:
+ 1678               	.L120:
+ 1679               	.LBE52:
+ 1680               	.LM194:
+ 1681 0886 8091 0000 		lds r24,xPendedTicks
+ 1682 088a 9091 0000 		lds r25,(xPendedTicks)+1
+ 1683 088e 0196      		adiw r24,1
+ 1684 0890 9093 0000 		sts (xPendedTicks)+1,r25
+ 1685 0894 8093 0000 		sts xPendedTicks,r24
+ 1686 0898 DD24      		clr r13
+ 1687               	.LVL130:
+ 1688               	.L131:
+ 1689               	.LM195:
+ 1690 089a 8D2D      		mov r24,r13
+ 1691               	/* epilogue start */
+ 1692 089c DF91      		pop r29
+ 1693 089e CF91      		pop r28
+ 1694               	.LVL131:
+ 1695 08a0 1F91      		pop r17
+ 1696 08a2 0F91      		pop r16
+ 1697               	.LVL132:
+ 1698 08a4 FF90      		pop r15
+ 1699 08a6 EF90      		pop r14
+ 1700 08a8 DF90      		pop r13
+ 1701               	.LVL133:
+ 1702 08aa CF90      		pop r12
+ 1703 08ac 0895      		ret
+ 1704               	.LFE24:
+ 1706               	.global	xTaskResumeFromISR
+ 1708               	xTaskResumeFromISR:
+ 1709               	.LFB14:
+ 1710               	.LM196:
+ 1711               	.LVL134:
+ 1712 08ae FF92      		push r15
+ 1713 08b0 0F93      		push r16
+ 1714 08b2 1F93      		push r17
+ 1715 08b4 CF93      		push r28
+ 1716 08b6 DF93      		push r29
+ 1717               	/* prologue: function */
+ 1718               	/* frame size = 0 */
+ 1719 08b8 EC01      		movw r28,r24
+ 1720               	.LBB56:
+ 1721               	.LBB57:
+ 1722               	.LM197:
+ 1723 08ba 8A85      		ldd r24,Y+10
+ 1724 08bc 9B85      		ldd r25,Y+11
+ 1725               	.LVL135:
+ 1726 08be 8050      		subi r24,lo8(xSuspendedTaskList)
+ 1727 08c0 9040      		sbci r25,hi8(xSuspendedTaskList)
+ 1728 08c2 01F4      		brne .L139
+ 1729               	.LM198:
+ 1730 08c4 8C89      		ldd r24,Y+20
+ 1731 08c6 9D89      		ldd r25,Y+21
+ 1732 08c8 20E0      		ldi r18,hi8(xPendingReadyList)
+ 1733 08ca 8030      		cpi r24,lo8(xPendingReadyList)
+ 1734 08cc 9207      		cpc r25,r18
+ 1735 08ce 01F0      		breq .L139
+ 1736               	.LM199:
+ 1737 08d0 892B      		or r24,r25
+ 1738 08d2 01F4      		brne .L139
+ 1739 08d4 00C0      		rjmp .L149
+ 1740               	.L145:
+ 1741               	.LBE57:
+ 1742               	.LBE56:
+ 1743               	.LM200:
+ 1744 08d6 E091 0000 		lds r30,pxCurrentTCB
+ 1745 08da F091 0000 		lds r31,(pxCurrentTCB)+1
+ 1746 08de 9E89      		ldd r25,Y+22
+ 1747 08e0 8689      		ldd r24,Z+22
+ 1748 08e2 9817      		cp r25,r24
+ 1749 08e4 00F4      		brsh .L141
+ 1750 08e6 FF24      		clr r15
+ 1751               	.LVL136:
+ 1752 08e8 00C0      		rjmp .L142
+ 1753               	.LVL137:
+ 1754               	.L141:
+ 1755               	.LM201:
+ 1756 08ea 81E0      		ldi r24,lo8(1)
+ 1757 08ec 8093 0000 		sts xYieldPending,r24
+ 1758 08f0 FF24      		clr r15
+ 1759 08f2 F394      		inc r15
+ 1760               	.LVL138:
+ 1761               	.L142:
+ 1762               	.LM202:
+ 1763 08f4 8E01      		movw r16,r28
+ 1764 08f6 0E5F      		subi r16,lo8(-(2))
+ 1765 08f8 1F4F      		sbci r17,hi8(-(2))
+ 1766 08fa C801      		movw r24,r16
+ 1767 08fc 0E94 0000 		call uxListRemove
+ 1768               	.LM203:
+ 1769 0900 6E89      		ldd r22,Y+22
+ 1770 0902 8091 0000 		lds r24,uxTopReadyPriority
+ 1771 0906 8617      		cp r24,r22
+ 1772 0908 00F4      		brsh .L143
+ 1773 090a 6093 0000 		sts uxTopReadyPriority,r22
+ 1774               	.L143:
+ 1775 090e 89E0      		ldi r24,lo8(9)
+ 1776 0910 689F      		mul r22,r24
+ 1777 0912 C001      		movw r24,r0
+ 1778 0914 1124      		clr r1
+ 1779 0916 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 1780 0918 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 1781 091a B801      		movw r22,r16
+ 1782 091c 0E94 0000 		call vListInsertEnd
+ 1783 0920 00C0      		rjmp .L144
+ 1784               	.LVL139:
+ 1785               	.L150:
+ 1786               	.LM204:
+ 1787 0922 2C96      		adiw r28,12
+ 1788 0924 80E0      		ldi r24,lo8(xPendingReadyList)
+ 1789 0926 90E0      		ldi r25,hi8(xPendingReadyList)
+ 1790 0928 BE01      		movw r22,r28
+ 1791 092a 0E94 0000 		call vListInsertEnd
+ 1792               	.L139:
+ 1793 092e FF24      		clr r15
+ 1794               	.LVL140:
+ 1795               	.L144:
+ 1796               	.LM205:
+ 1797 0930 8F2D      		mov r24,r15
+ 1798               	/* epilogue start */
+ 1799 0932 DF91      		pop r29
+ 1800 0934 CF91      		pop r28
+ 1801               	.LVL141:
+ 1802 0936 1F91      		pop r17
+ 1803 0938 0F91      		pop r16
+ 1804 093a FF90      		pop r15
+ 1805               	.LVL142:
+ 1806 093c 0895      		ret
+ 1807               	.LVL143:
+ 1808               	.L149:
+ 1809               	.LM206:
+ 1810 093e 8091 0000 		lds r24,uxSchedulerSuspended
+ 1811 0942 8823      		tst r24
+ 1812 0944 01F0      		breq .L145
+ 1813 0946 00C0      		rjmp .L150
+ 1814               	.LFE14:
+ 1816               	.global	xTaskGenericNotify
+ 1818               	xTaskGenericNotify:
+ 1819               	.LFB47:
+ 1820               	.LM207:
+ 1821               	.LVL144:
+ 1822 0948 EF92      		push r14
+ 1823               	.LVL145:
+ 1824 094a FF92      		push r15
+ 1825 094c 0F93      		push r16
+ 1826               	.LVL146:
+ 1827 094e 1F93      		push r17
+ 1828 0950 CF93      		push r28
+ 1829 0952 DF93      		push r29
+ 1830               	/* prologue: function */
+ 1831               	/* frame size = 0 */
+ 1832 0954 EC01      		movw r28,r24
+ 1833               	.LM208:
+ 1834               	/* #APP */
+ 1835               	 ;  4863 "FreeRTOS/Source/tasks.c" 1
+ 1836 0956 0FB6      		in		__tmp_reg__, __SREG__
+ 1837               	 ;  0 "" 2
+ 1838               	 ;  4863 "FreeRTOS/Source/tasks.c" 1
+ 1839 0958 F894      		cli
+ 1840               	 ;  0 "" 2
+ 1841               	 ;  4863 "FreeRTOS/Source/tasks.c" 1
+ 1842 095a 0F92      		push	__tmp_reg__
+ 1843               	 ;  0 "" 2
+ 1844               	.LM209:
+ 1845               	/* #NOAPP */
+ 1846 095c E114      		cp r14,__zero_reg__
+ 1847 095e F104      		cpc r15,__zero_reg__
+ 1848               	.LVL147:
+ 1849 0960 01F0      		breq .L152
+ 1850               	.LVL148:
+ 1851               	.LM210:
+ 1852 0962 E62F      		mov r30,r22
+ 1853 0964 F0E0      		ldi r31,lo8(0)
+ 1854 0966 EE0F      		lsl r30
+ 1855 0968 FF1F      		rol r31
+ 1856 096a EE0F      		lsl r30
+ 1857 096c FF1F      		rol r31
+ 1858 096e E80F      		add r30,r24
+ 1859 0970 F91F      		adc r31,r25
+ 1860 0972 83A1      		ldd r24,Z+35
+ 1861 0974 94A1      		ldd r25,Z+36
+ 1862 0976 A5A1      		ldd r26,Z+37
+ 1863 0978 B6A1      		ldd r27,Z+38
+ 1864 097a F701      		movw r30,r14
+ 1865 097c 8083      		st Z,r24
+ 1866 097e 9183      		std Z+1,r25
+ 1867 0980 A283      		std Z+2,r26
+ 1868 0982 B383      		std Z+3,r27
+ 1869               	.LVL149:
+ 1870               	.L152:
+ 1871               	.LM211:
+ 1872 0984 A62F      		mov r26,r22
+ 1873 0986 B0E0      		ldi r27,lo8(0)
+ 1874 0988 FE01      		movw r30,r28
+ 1875 098a EA0F      		add r30,r26
+ 1876 098c FB1F      		adc r31,r27
+ 1877 098e 67A1      		ldd r22,Z+39
+ 1878               	.LVL150:
+ 1879               	.LM212:
+ 1880 0990 82E0      		ldi r24,lo8(2)
+ 1881 0992 87A3      		std Z+39,r24
+ 1882               	.LM213:
+ 1883 0994 0230      		cpi r16,lo8(2)
+ 1884               	.LVL151:
+ 1885 0996 01F0      		breq .L155
+ 1886 0998 0330      		cpi r16,lo8(3)
+ 1887 099a 00F4      		brsh .L158
+ 1888 099c 0130      		cpi r16,lo8(1)
+ 1889 099e 01F4      		brne .L153
+ 1890 09a0 00C0      		rjmp .L165
+ 1891               	.L158:
+ 1892 09a2 0330      		cpi r16,lo8(3)
+ 1893 09a4 01F0      		breq .L159
+ 1894 09a6 0430      		cpi r16,lo8(4)
+ 1895 09a8 01F4      		brne .L153
+ 1896 09aa 00C0      		rjmp .L166
+ 1897               	.L165:
+ 1898               	.LM214:
+ 1899 09ac FD01      		movw r30,r26
+ 1900 09ae EE0F      		lsl r30
+ 1901 09b0 FF1F      		rol r31
+ 1902 09b2 EE0F      		lsl r30
+ 1903 09b4 FF1F      		rol r31
+ 1904 09b6 EC0F      		add r30,r28
+ 1905 09b8 FD1F      		adc r31,r29
+ 1906 09ba 83A1      		ldd r24,Z+35
+ 1907 09bc 94A1      		ldd r25,Z+36
+ 1908 09be A5A1      		ldd r26,Z+37
+ 1909 09c0 B6A1      		ldd r27,Z+38
+ 1910 09c2 822B      		or r24,r18
+ 1911 09c4 932B      		or r25,r19
+ 1912 09c6 A42B      		or r26,r20
+ 1913 09c8 B52B      		or r27,r21
+ 1914 09ca 00C0      		rjmp .L164
+ 1915               	.L155:
+ 1916               	.LM215:
+ 1917 09cc FD01      		movw r30,r26
+ 1918 09ce EE0F      		lsl r30
+ 1919 09d0 FF1F      		rol r31
+ 1920 09d2 EE0F      		lsl r30
+ 1921 09d4 FF1F      		rol r31
+ 1922 09d6 EC0F      		add r30,r28
+ 1923 09d8 FD1F      		adc r31,r29
+ 1924 09da 83A1      		ldd r24,Z+35
+ 1925 09dc 94A1      		ldd r25,Z+36
+ 1926 09de A5A1      		ldd r26,Z+37
+ 1927 09e0 B6A1      		ldd r27,Z+38
+ 1928 09e2 0196      		adiw r24,1
+ 1929 09e4 A11D      		adc r26,__zero_reg__
+ 1930 09e6 B11D      		adc r27,__zero_reg__
+ 1931               	.L164:
+ 1932 09e8 83A3      		std Z+35,r24
+ 1933 09ea 94A3      		std Z+36,r25
+ 1934 09ec A5A3      		std Z+37,r26
+ 1935 09ee B6A3      		std Z+38,r27
+ 1936 09f0 00C0      		rjmp .L153
+ 1937               	.L166:
+ 1938               	.LM216:
+ 1939 09f2 6230      		cpi r22,lo8(2)
+ 1940 09f4 01F4      		brne .L159
+ 1941 09f6 80E0      		ldi r24,lo8(0)
+ 1942               	.LVL152:
+ 1943 09f8 00C0      		rjmp .L160
+ 1944               	.LVL153:
+ 1945               	.L159:
+ 1946               	.LM217:
+ 1947 09fa AA0F      		lsl r26
+ 1948 09fc BB1F      		rol r27
+ 1949 09fe AA0F      		lsl r26
+ 1950 0a00 BB1F      		rol r27
+ 1951 0a02 AC0F      		add r26,r28
+ 1952 0a04 BD1F      		adc r27,r29
+ 1953 0a06 9396      		adiw r26,35
+ 1954 0a08 2D93      		st X+,r18
+ 1955 0a0a 3D93      		st X+,r19
+ 1956 0a0c 4D93      		st X+,r20
+ 1957 0a0e 5C93      		st X,r21
+ 1958 0a10 9697      		sbiw r26,35+3
+ 1959               	.L153:
+ 1960               	.LM218:
+ 1961 0a12 6130      		cpi r22,lo8(1)
+ 1962 0a14 01F4      		brne .L161
+ 1963               	.LM219:
+ 1964 0a16 8E01      		movw r16,r28
+ 1965               	.LVL154:
+ 1966 0a18 0E5F      		subi r16,lo8(-(2))
+ 1967 0a1a 1F4F      		sbci r17,hi8(-(2))
+ 1968 0a1c C801      		movw r24,r16
+ 1969 0a1e 0E94 0000 		call uxListRemove
+ 1970               	.LVL155:
+ 1971               	.LM220:
+ 1972 0a22 9E89      		ldd r25,Y+22
+ 1973 0a24 8091 0000 		lds r24,uxTopReadyPriority
+ 1974 0a28 8917      		cp r24,r25
+ 1975 0a2a 00F4      		brsh .L162
+ 1976 0a2c 9093 0000 		sts uxTopReadyPriority,r25
+ 1977               	.L162:
+ 1978 0a30 89E0      		ldi r24,lo8(9)
+ 1979 0a32 989F      		mul r25,r24
+ 1980 0a34 C001      		movw r24,r0
+ 1981 0a36 1124      		clr r1
+ 1982 0a38 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 1983 0a3a 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 1984 0a3c B801      		movw r22,r16
+ 1985 0a3e 0E94 0000 		call vListInsertEnd
+ 1986               	.LM221:
+ 1987 0a42 E091 0000 		lds r30,pxCurrentTCB
+ 1988 0a46 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 1989 0a4a 9E89      		ldd r25,Y+22
+ 1990 0a4c 8689      		ldd r24,Z+22
+ 1991 0a4e 8917      		cp r24,r25
+ 1992 0a50 00F4      		brsh .L161
+ 1993               	.LM222:
+ 1994 0a52 0E94 0000 		call vPortYield
+ 1995               	.LVL156:
+ 1996               	.L161:
+ 1997 0a56 81E0      		ldi r24,lo8(1)
+ 1998               	.LVL157:
+ 1999               	.L160:
+ 2000               	.LM223:
+ 2001               	/* #APP */
+ 2002               	 ;  4962 "FreeRTOS/Source/tasks.c" 1
+ 2003 0a58 0F90      		pop		__tmp_reg__
+ 2004               	 ;  0 "" 2
+ 2005               	 ;  4962 "FreeRTOS/Source/tasks.c" 1
+ 2006 0a5a 0FBE      		out		__SREG__, __tmp_reg__
+ 2007               	 ;  0 "" 2
+ 2008               	.LVL158:
+ 2009               	/* epilogue start */
+ 2010               	.LM224:
+ 2011               	/* #NOAPP */
+ 2012 0a5c DF91      		pop r29
+ 2013 0a5e CF91      		pop r28
+ 2014               	.LVL159:
+ 2015 0a60 1F91      		pop r17
+ 2016 0a62 0F91      		pop r16
+ 2017               	.LVL160:
+ 2018 0a64 FF90      		pop r15
+ 2019 0a66 EF90      		pop r14
+ 2020               	.LVL161:
+ 2021 0a68 0895      		ret
+ 2022               	.LFE47:
+ 2024               	.global	xTaskResumeAll
+ 2026               	xTaskResumeAll:
+ 2027               	.LFB18:
+ 2028               	.LM225:
+ 2029 0a6a EF92      		push r14
+ 2030 0a6c FF92      		push r15
+ 2031 0a6e 0F93      		push r16
+ 2032 0a70 1F93      		push r17
+ 2033 0a72 CF93      		push r28
+ 2034 0a74 DF93      		push r29
+ 2035               	/* prologue: function */
+ 2036               	/* frame size = 0 */
+ 2037               	.LM226:
+ 2038               	/* #APP */
+ 2039               	 ;  2231 "FreeRTOS/Source/tasks.c" 1
+ 2040 0a76 0FB6      		in		__tmp_reg__, __SREG__
+ 2041               	 ;  0 "" 2
+ 2042               	 ;  2231 "FreeRTOS/Source/tasks.c" 1
+ 2043 0a78 F894      		cli
+ 2044               	 ;  0 "" 2
+ 2045               	 ;  2231 "FreeRTOS/Source/tasks.c" 1
+ 2046 0a7a 0F92      		push	__tmp_reg__
+ 2047               	 ;  0 "" 2
+ 2048               	.LM227:
+ 2049               	/* #NOAPP */
+ 2050 0a7c 8091 0000 		lds r24,uxSchedulerSuspended
+ 2051 0a80 8150      		subi r24,lo8(-(-1))
+ 2052 0a82 8093 0000 		sts uxSchedulerSuspended,r24
+ 2053               	.LM228:
+ 2054 0a86 8091 0000 		lds r24,uxSchedulerSuspended
+ 2055 0a8a 8823      		tst r24
+ 2056 0a8c 01F0      		breq .+2
+ 2057 0a8e 00C0      		rjmp .L168
+ 2058               	.LM229:
+ 2059 0a90 8091 0000 		lds r24,uxCurrentNumberOfTasks
+ 2060 0a94 8823      		tst r24
+ 2061 0a96 01F4      		brne .+2
+ 2062 0a98 00C0      		rjmp .L168
+ 2063 0a9a C0E0      		ldi r28,lo8(0)
+ 2064 0a9c D0E0      		ldi r29,hi8(0)
+ 2065               	.LVL162:
+ 2066               	.LM230:
+ 2067 0a9e 09E0      		ldi r16,lo8(9)
+ 2068 0aa0 E02E      		mov r14,r16
+ 2069               	.LM231:
+ 2070 0aa2 FF24      		clr r15
+ 2071 0aa4 F394      		inc r15
+ 2072 0aa6 00C0      		rjmp .L183
+ 2073               	.L171:
+ 2074               	.LM232:
+ 2075 0aa8 E091 0000 		lds r30,xPendingReadyList+5
+ 2076 0aac F091 0000 		lds r31,(xPendingReadyList+5)+1
+ 2077 0ab0 C681      		ldd r28,Z+6
+ 2078 0ab2 D781      		ldd r29,Z+7
+ 2079               	.LM233:
+ 2080 0ab4 CE01      		movw r24,r28
+ 2081 0ab6 0C96      		adiw r24,12
+ 2082 0ab8 0E94 0000 		call uxListRemove
+ 2083               	.LM234:
+ 2084 0abc 8E01      		movw r16,r28
+ 2085 0abe 0E5F      		subi r16,lo8(-(2))
+ 2086 0ac0 1F4F      		sbci r17,hi8(-(2))
+ 2087 0ac2 C801      		movw r24,r16
+ 2088 0ac4 0E94 0000 		call uxListRemove
+ 2089               	.LM235:
+ 2090 0ac8 9E89      		ldd r25,Y+22
+ 2091 0aca 8091 0000 		lds r24,uxTopReadyPriority
+ 2092 0ace 8917      		cp r24,r25
+ 2093 0ad0 00F4      		brsh .L170
+ 2094 0ad2 9093 0000 		sts uxTopReadyPriority,r25
+ 2095               	.L170:
+ 2096 0ad6 9E9D      		mul r25,r14
+ 2097 0ad8 C001      		movw r24,r0
+ 2098 0ada 1124      		clr r1
+ 2099 0adc 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 2100 0ade 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 2101 0ae0 B801      		movw r22,r16
+ 2102 0ae2 0E94 0000 		call vListInsertEnd
+ 2103               	.LM236:
+ 2104 0ae6 E091 0000 		lds r30,pxCurrentTCB
+ 2105 0aea F091 0000 		lds r31,(pxCurrentTCB)+1
+ 2106 0aee 9E89      		ldd r25,Y+22
+ 2107 0af0 8689      		ldd r24,Z+22
+ 2108 0af2 9817      		cp r25,r24
+ 2109 0af4 00F0      		brlo .L183
+ 2110               	.LM237:
+ 2111 0af6 F092 0000 		sts xYieldPending,r15
+ 2112               	.L183:
+ 2113               	.LM238:
+ 2114 0afa 8091 0000 		lds r24,xPendingReadyList
+ 2115 0afe 8823      		tst r24
+ 2116 0b00 01F4      		brne .L171
+ 2117               	.LM239:
+ 2118 0b02 CD2B      		or r28,r29
+ 2119 0b04 01F0      		breq .L172
+ 2120               	.LBB58:
+ 2121               	.LBB59:
+ 2122               	.LM240:
+ 2123 0b06 E091 0000 		lds r30,pxDelayedTaskList
+ 2124 0b0a F091 0000 		lds r31,(pxDelayedTaskList)+1
+ 2125 0b0e 8081      		ld r24,Z
+ 2126 0b10 8823      		tst r24
+ 2127 0b12 01F4      		brne .L173
+ 2128               	.LM241:
+ 2129 0b14 8FEF      		ldi r24,lo8(-1)
+ 2130 0b16 9FEF      		ldi r25,hi8(-1)
+ 2131 0b18 00C0      		rjmp .L184
+ 2132               	.L173:
+ 2133               	.LM242:
+ 2134 0b1a E091 0000 		lds r30,pxDelayedTaskList
+ 2135 0b1e F091 0000 		lds r31,(pxDelayedTaskList)+1
+ 2136 0b22 0580      		ldd __tmp_reg__,Z+5
+ 2137 0b24 F681      		ldd r31,Z+6
+ 2138 0b26 E02D      		mov r30,__tmp_reg__
+ 2139 0b28 8081      		ld r24,Z
+ 2140 0b2a 9181      		ldd r25,Z+1
+ 2141               	.L184:
+ 2142 0b2c 9093 0000 		sts (xNextTaskUnblockTime)+1,r25
+ 2143 0b30 8093 0000 		sts xNextTaskUnblockTime,r24
+ 2144               	.L172:
+ 2145               	.LBE59:
+ 2146               	.LBE58:
+ 2147               	.LBB60:
+ 2148               	.LM243:
+ 2149 0b34 C091 0000 		lds r28,xPendedTicks
+ 2150 0b38 D091 0000 		lds r29,(xPendedTicks)+1
+ 2151               	.LVL163:
+ 2152               	.LM244:
+ 2153 0b3c 2097      		sbiw r28,0
+ 2154 0b3e 01F0      		breq .L174
+ 2155               	.LM245:
+ 2156 0b40 11E0      		ldi r17,lo8(1)
+ 2157               	.L180:
+ 2158               	.LM246:
+ 2159 0b42 0E94 0000 		call xTaskIncrementTick
+ 2160 0b46 8823      		tst r24
+ 2161 0b48 01F0      		breq .L175
+ 2162               	.LM247:
+ 2163 0b4a 1093 0000 		sts xYieldPending,r17
+ 2164               	.L175:
+ 2165               	.LM248:
+ 2166 0b4e 2197      		sbiw r28,1
+ 2167               	.LM249:
+ 2168 0b50 01F4      		brne .L180
+ 2169               	.LM250:
+ 2170 0b52 1092 0000 		sts (xPendedTicks)+1,__zero_reg__
+ 2171 0b56 1092 0000 		sts xPendedTicks,__zero_reg__
+ 2172               	.L174:
+ 2173               	.LBE60:
+ 2174               	.LM251:
+ 2175 0b5a 8091 0000 		lds r24,xYieldPending
+ 2176 0b5e 8823      		tst r24
+ 2177 0b60 01F0      		breq .L168
+ 2178               	.LM252:
+ 2179 0b62 0E94 0000 		call vPortYield
+ 2180 0b66 81E0      		ldi r24,lo8(1)
+ 2181               	.LVL164:
+ 2182 0b68 00C0      		rjmp .L177
+ 2183               	.LVL165:
+ 2184               	.L168:
+ 2185 0b6a 80E0      		ldi r24,lo8(0)
+ 2186               	.LVL166:
+ 2187               	.L177:
+ 2188               	.LM253:
+ 2189               	/* #APP */
+ 2190               	 ;  2322 "FreeRTOS/Source/tasks.c" 1
+ 2191 0b6c 0F90      		pop		__tmp_reg__
+ 2192               	 ;  0 "" 2
+ 2193               	 ;  2322 "FreeRTOS/Source/tasks.c" 1
+ 2194 0b6e 0FBE      		out		__SREG__, __tmp_reg__
+ 2195               	 ;  0 "" 2
+ 2196               	.LVL167:
+ 2197               	/* epilogue start */
+ 2198               	.LM254:
+ 2199               	/* #NOAPP */
+ 2200 0b70 DF91      		pop r29
+ 2201 0b72 CF91      		pop r28
+ 2202               	.LVL168:
+ 2203 0b74 1F91      		pop r17
+ 2204 0b76 0F91      		pop r16
+ 2205 0b78 FF90      		pop r15
+ 2206 0b7a EF90      		pop r14
+ 2207 0b7c 0895      		ret
+ 2208               	.LFE18:
+ 2210               	.global	xTaskCatchUpTicks
+ 2212               	xTaskCatchUpTicks:
+ 2213               	.LFB23:
+ 2214               	.LM255:
+ 2215               	.LVL169:
+ 2216               	/* prologue: function */
+ 2217               	/* frame size = 0 */
+ 2218               	.LBB61:
+ 2219               	.LBB62:
+ 2220               	.LM256:
+ 2221 0b7e 2091 0000 		lds r18,uxSchedulerSuspended
+ 2222 0b82 2F5F      		subi r18,lo8(-(1))
+ 2223 0b84 2093 0000 		sts uxSchedulerSuspended,r18
+ 2224               	.LBE62:
+ 2225               	.LBE61:
+ 2226               	.LM257:
+ 2227 0b88 2091 0000 		lds r18,xPendedTicks
+ 2228 0b8c 3091 0000 		lds r19,(xPendedTicks)+1
+ 2229 0b90 280F      		add r18,r24
+ 2230 0b92 391F      		adc r19,r25
+ 2231 0b94 3093 0000 		sts (xPendedTicks)+1,r19
+ 2232 0b98 2093 0000 		sts xPendedTicks,r18
+ 2233               	.LM258:
+ 2234 0b9c 0E94 0000 		call xTaskResumeAll
+ 2235               	.LVL170:
+ 2236               	/* epilogue start */
+ 2237               	.LM259:
+ 2238 0ba0 0895      		ret
+ 2239               	.LFE23:
+ 2241               	.global	vTaskResume
+ 2243               	vTaskResume:
+ 2244               	.LFB13:
+ 2245               	.LM260:
+ 2246               	.LVL171:
+ 2247 0ba2 0F93      		push r16
+ 2248 0ba4 1F93      		push r17
+ 2249 0ba6 CF93      		push r28
+ 2250 0ba8 DF93      		push r29
+ 2251               	/* prologue: function */
+ 2252               	/* frame size = 0 */
+ 2253 0baa EC01      		movw r28,r24
+ 2254               	.LM261:
+ 2255 0bac 8091 0000 		lds r24,pxCurrentTCB
+ 2256 0bb0 9091 0000 		lds r25,(pxCurrentTCB)+1
+ 2257               	.LVL172:
+ 2258 0bb4 C817      		cp r28,r24
+ 2259 0bb6 D907      		cpc r29,r25
+ 2260 0bb8 01F0      		breq .L193
+ 2261 0bba 2097      		sbiw r28,0
+ 2262 0bbc 01F0      		breq .L193
+ 2263               	.LM262:
+ 2264               	/* #APP */
+ 2265               	 ;  1876 "FreeRTOS/Source/tasks.c" 1
+ 2266 0bbe 0FB6      		in		__tmp_reg__, __SREG__
+ 2267               	 ;  0 "" 2
+ 2268               	 ;  1876 "FreeRTOS/Source/tasks.c" 1
+ 2269 0bc0 F894      		cli
+ 2270               	 ;  0 "" 2
+ 2271               	 ;  1876 "FreeRTOS/Source/tasks.c" 1
+ 2272 0bc2 0F92      		push	__tmp_reg__
+ 2273               	 ;  0 "" 2
+ 2274               	/* #NOAPP */
+ 2275               	.LBB63:
+ 2276               	.LBB64:
+ 2277               	.LM263:
+ 2278 0bc4 8A85      		ldd r24,Y+10
+ 2279 0bc6 9B85      		ldd r25,Y+11
+ 2280 0bc8 8050      		subi r24,lo8(xSuspendedTaskList)
+ 2281 0bca 9040      		sbci r25,hi8(xSuspendedTaskList)
+ 2282 0bcc 01F4      		brne .L189
+ 2283               	.LM264:
+ 2284 0bce 8C89      		ldd r24,Y+20
+ 2285 0bd0 9D89      		ldd r25,Y+21
+ 2286 0bd2 20E0      		ldi r18,hi8(xPendingReadyList)
+ 2287 0bd4 8030      		cpi r24,lo8(xPendingReadyList)
+ 2288 0bd6 9207      		cpc r25,r18
+ 2289 0bd8 01F0      		breq .L189
+ 2290               	.LM265:
+ 2291 0bda 892B      		or r24,r25
+ 2292 0bdc 01F4      		brne .L189
+ 2293 0bde 00C0      		rjmp .L194
+ 2294               	.L191:
+ 2295               	.LBE64:
+ 2296               	.LBE63:
+ 2297               	.LM266:
+ 2298 0be0 9093 0000 		sts uxTopReadyPriority,r25
+ 2299               	.L192:
+ 2300 0be4 89E0      		ldi r24,lo8(9)
+ 2301 0be6 989F      		mul r25,r24
+ 2302 0be8 C001      		movw r24,r0
+ 2303 0bea 1124      		clr r1
+ 2304 0bec 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 2305 0bee 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 2306 0bf0 B801      		movw r22,r16
+ 2307 0bf2 0E94 0000 		call vListInsertEnd
+ 2308               	.LM267:
+ 2309 0bf6 E091 0000 		lds r30,pxCurrentTCB
+ 2310 0bfa F091 0000 		lds r31,(pxCurrentTCB)+1
+ 2311 0bfe 9E89      		ldd r25,Y+22
+ 2312 0c00 8689      		ldd r24,Z+22
+ 2313 0c02 9817      		cp r25,r24
+ 2314 0c04 00F0      		brlo .L189
+ 2315               	.LM268:
+ 2316 0c06 0E94 0000 		call vPortYield
+ 2317               	.L189:
+ 2318               	.LM269:
+ 2319               	/* #APP */
+ 2320               	 ;  1905 "FreeRTOS/Source/tasks.c" 1
+ 2321 0c0a 0F90      		pop		__tmp_reg__
+ 2322               	 ;  0 "" 2
+ 2323               	 ;  1905 "FreeRTOS/Source/tasks.c" 1
+ 2324 0c0c 0FBE      		out		__SREG__, __tmp_reg__
+ 2325               	 ;  0 "" 2
+ 2326               	/* #NOAPP */
+ 2327 0c0e 00C0      		rjmp .L193
+ 2328               	.L194:
+ 2329               	.LM270:
+ 2330 0c10 8E01      		movw r16,r28
+ 2331 0c12 0E5F      		subi r16,lo8(-(2))
+ 2332 0c14 1F4F      		sbci r17,hi8(-(2))
+ 2333 0c16 C801      		movw r24,r16
+ 2334 0c18 0E94 0000 		call uxListRemove
+ 2335               	.LM271:
+ 2336 0c1c 9E89      		ldd r25,Y+22
+ 2337 0c1e 8091 0000 		lds r24,uxTopReadyPriority
+ 2338 0c22 8917      		cp r24,r25
+ 2339 0c24 00F0      		brlo .L191
+ 2340 0c26 00C0      		rjmp .L192
+ 2341               	.L193:
+ 2342               	/* epilogue start */
+ 2343               	.LM272:
+ 2344 0c28 DF91      		pop r29
+ 2345 0c2a CF91      		pop r28
+ 2346               	.LVL173:
+ 2347 0c2c 1F91      		pop r17
+ 2348 0c2e 0F91      		pop r16
+ 2349 0c30 0895      		ret
+ 2350               	.LFE13:
+ 2352               	.global	vTaskSuspend
+ 2354               	vTaskSuspend:
+ 2355               	.LFB11:
+ 2356               	.LM273:
+ 2357               	.LVL174:
+ 2358 0c32 0F93      		push r16
+ 2359 0c34 1F93      		push r17
+ 2360 0c36 CF93      		push r28
+ 2361 0c38 DF93      		push r29
+ 2362               	/* prologue: function */
+ 2363               	/* frame size = 0 */
+ 2364               	.LM274:
+ 2365               	/* #APP */
+ 2366               	 ;  1717 "FreeRTOS/Source/tasks.c" 1
+ 2367 0c3a 0FB6      		in		__tmp_reg__, __SREG__
+ 2368               	 ;  0 "" 2
+ 2369               	 ;  1717 "FreeRTOS/Source/tasks.c" 1
+ 2370 0c3c F894      		cli
+ 2371               	 ;  0 "" 2
+ 2372               	 ;  1717 "FreeRTOS/Source/tasks.c" 1
+ 2373 0c3e 0F92      		push	__tmp_reg__
+ 2374               	 ;  0 "" 2
+ 2375               	.LM275:
+ 2376               	/* #NOAPP */
+ 2377 0c40 0097      		sbiw r24,0
+ 2378 0c42 01F0      		breq .L196
+ 2379 0c44 EC01      		movw r28,r24
+ 2380               	.LVL175:
+ 2381 0c46 00C0      		rjmp .L197
+ 2382               	.LVL176:
+ 2383               	.L196:
+ 2384 0c48 C091 0000 		lds r28,pxCurrentTCB
+ 2385 0c4c D091 0000 		lds r29,(pxCurrentTCB)+1
+ 2386               	.LVL177:
+ 2387               	.L197:
+ 2388               	.LM276:
+ 2389 0c50 8E01      		movw r16,r28
+ 2390 0c52 0E5F      		subi r16,lo8(-(2))
+ 2391 0c54 1F4F      		sbci r17,hi8(-(2))
+ 2392 0c56 C801      		movw r24,r16
+ 2393               	.LVL178:
+ 2394 0c58 0E94 0000 		call uxListRemove
+ 2395               	.LM277:
+ 2396 0c5c 8C89      		ldd r24,Y+20
+ 2397 0c5e 9D89      		ldd r25,Y+21
+ 2398 0c60 892B      		or r24,r25
+ 2399 0c62 01F0      		breq .L198
+ 2400               	.LM278:
+ 2401 0c64 CE01      		movw r24,r28
+ 2402 0c66 0C96      		adiw r24,12
+ 2403 0c68 0E94 0000 		call uxListRemove
+ 2404               	.L198:
+ 2405               	.LM279:
+ 2406 0c6c 80E0      		ldi r24,lo8(xSuspendedTaskList)
+ 2407 0c6e 90E0      		ldi r25,hi8(xSuspendedTaskList)
+ 2408 0c70 B801      		movw r22,r16
+ 2409 0c72 0E94 0000 		call vListInsertEnd
+ 2410               	.LBB65:
+ 2411               	.LM280:
+ 2412 0c76 8FA1      		ldd r24,Y+39
+ 2413 0c78 8130      		cpi r24,lo8(1)
+ 2414 0c7a 01F4      		brne .L199
+ 2415               	.LM281:
+ 2416 0c7c 1FA2      		std Y+39,__zero_reg__
+ 2417               	.L199:
+ 2418               	.LBE65:
+ 2419               	.LM282:
+ 2420               	/* #APP */
+ 2421               	 ;  1764 "FreeRTOS/Source/tasks.c" 1
+ 2422 0c7e 0F90      		pop		__tmp_reg__
+ 2423               	 ;  0 "" 2
+ 2424               	 ;  1764 "FreeRTOS/Source/tasks.c" 1
+ 2425 0c80 0FBE      		out		__SREG__, __tmp_reg__
+ 2426               	 ;  0 "" 2
+ 2427               	.LM283:
+ 2428               	/* #NOAPP */
+ 2429 0c82 8091 0000 		lds r24,xSchedulerRunning
+ 2430 0c86 8823      		tst r24
+ 2431 0c88 01F0      		breq .L200
+ 2432               	.LM284:
+ 2433               	/* #APP */
+ 2434               	 ;  1770 "FreeRTOS/Source/tasks.c" 1
+ 2435 0c8a 0FB6      		in		__tmp_reg__, __SREG__
+ 2436               	 ;  0 "" 2
+ 2437               	 ;  1770 "FreeRTOS/Source/tasks.c" 1
+ 2438 0c8c F894      		cli
+ 2439               	 ;  0 "" 2
+ 2440               	 ;  1770 "FreeRTOS/Source/tasks.c" 1
+ 2441 0c8e 0F92      		push	__tmp_reg__
+ 2442               	 ;  0 "" 2
+ 2443               	/* #NOAPP */
+ 2444               	.LBB66:
+ 2445               	.LBB67:
+ 2446               	.LM285:
+ 2447 0c90 E091 0000 		lds r30,pxDelayedTaskList
+ 2448 0c94 F091 0000 		lds r31,(pxDelayedTaskList)+1
+ 2449 0c98 8081      		ld r24,Z
+ 2450 0c9a 8823      		tst r24
+ 2451 0c9c 01F4      		brne .L201
+ 2452               	.LM286:
+ 2453 0c9e 8FEF      		ldi r24,lo8(-1)
+ 2454 0ca0 9FEF      		ldi r25,hi8(-1)
+ 2455 0ca2 00C0      		rjmp .L207
+ 2456               	.L201:
+ 2457               	.LM287:
+ 2458 0ca4 E091 0000 		lds r30,pxDelayedTaskList
+ 2459 0ca8 F091 0000 		lds r31,(pxDelayedTaskList)+1
+ 2460 0cac 0580      		ldd __tmp_reg__,Z+5
+ 2461 0cae F681      		ldd r31,Z+6
+ 2462 0cb0 E02D      		mov r30,__tmp_reg__
+ 2463 0cb2 8081      		ld r24,Z
+ 2464 0cb4 9181      		ldd r25,Z+1
+ 2465               	.L207:
+ 2466 0cb6 9093 0000 		sts (xNextTaskUnblockTime)+1,r25
+ 2467 0cba 8093 0000 		sts xNextTaskUnblockTime,r24
+ 2468               	.LBE67:
+ 2469               	.LBE66:
+ 2470               	.LM288:
+ 2471               	/* #APP */
+ 2472               	 ;  1774 "FreeRTOS/Source/tasks.c" 1
+ 2473 0cbe 0F90      		pop		__tmp_reg__
+ 2474               	 ;  0 "" 2
+ 2475               	 ;  1774 "FreeRTOS/Source/tasks.c" 1
+ 2476 0cc0 0FBE      		out		__SREG__, __tmp_reg__
+ 2477               	 ;  0 "" 2
+ 2478               	/* #NOAPP */
+ 2479               	.L200:
+ 2480               	.LM289:
+ 2481 0cc2 8091 0000 		lds r24,pxCurrentTCB
+ 2482 0cc6 9091 0000 		lds r25,(pxCurrentTCB)+1
+ 2483 0cca C817      		cp r28,r24
+ 2484 0ccc D907      		cpc r29,r25
+ 2485 0cce 01F4      		brne .L206
+ 2486               	.LM290:
+ 2487 0cd0 8091 0000 		lds r24,xSchedulerRunning
+ 2488 0cd4 8823      		tst r24
+ 2489 0cd6 01F0      		breq .L204
+ 2490               	.LM291:
+ 2491 0cd8 0E94 0000 		call vPortYield
+ 2492 0cdc 00C0      		rjmp .L206
+ 2493               	.L204:
+ 2494               	.LM292:
+ 2495 0cde 9091 0000 		lds r25,xSuspendedTaskList
+ 2496 0ce2 8091 0000 		lds r24,uxCurrentNumberOfTasks
+ 2497 0ce6 9817      		cp r25,r24
+ 2498 0ce8 01F4      		brne .L205
+ 2499               	.LM293:
+ 2500 0cea 1092 0000 		sts (pxCurrentTCB)+1,__zero_reg__
+ 2501 0cee 1092 0000 		sts pxCurrentTCB,__zero_reg__
+ 2502 0cf2 00C0      		rjmp .L206
+ 2503               	.L205:
+ 2504               	.LM294:
+ 2505 0cf4 0E94 0000 		call vTaskSwitchContext
+ 2506               	.L206:
+ 2507               	/* epilogue start */
+ 2508               	.LM295:
+ 2509 0cf8 DF91      		pop r29
+ 2510 0cfa CF91      		pop r28
+ 2511               	.LVL179:
+ 2512 0cfc 1F91      		pop r17
+ 2513 0cfe 0F91      		pop r16
+ 2514 0d00 0895      		ret
+ 2515               	.LFE11:
+ 2517               	.global	vTaskPrioritySet
+ 2519               	vTaskPrioritySet:
+ 2520               	.LFB10:
+ 2521               	.LM296:
+ 2522               	.LVL180:
+ 2523 0d02 FF92      		push r15
+ 2524 0d04 0F93      		push r16
+ 2525 0d06 1F93      		push r17
+ 2526 0d08 CF93      		push r28
+ 2527 0d0a DF93      		push r29
+ 2528               	/* prologue: function */
+ 2529               	/* frame size = 0 */
+ 2530               	.LM297:
+ 2531 0d0c 6430      		cpi r22,lo8(4)
+ 2532 0d0e 00F0      		brlo .L209
+ 2533 0d10 63E0      		ldi r22,lo8(3)
+ 2534               	.LVL181:
+ 2535               	.L209:
+ 2536               	.LM298:
+ 2537               	/* #APP */
+ 2538               	 ;  1566 "FreeRTOS/Source/tasks.c" 1
+ 2539 0d12 0FB6      		in		__tmp_reg__, __SREG__
+ 2540               	 ;  0 "" 2
+ 2541               	 ;  1566 "FreeRTOS/Source/tasks.c" 1
+ 2542 0d14 F894      		cli
+ 2543               	 ;  0 "" 2
+ 2544               	 ;  1566 "FreeRTOS/Source/tasks.c" 1
+ 2545 0d16 0F92      		push	__tmp_reg__
+ 2546               	 ;  0 "" 2
+ 2547               	.LM299:
+ 2548               	/* #NOAPP */
+ 2549 0d18 0097      		sbiw r24,0
+ 2550 0d1a 01F0      		breq .L210
+ 2551 0d1c EC01      		movw r28,r24
+ 2552               	.LVL182:
+ 2553 0d1e 00C0      		rjmp .L211
+ 2554               	.LVL183:
+ 2555               	.L210:
+ 2556 0d20 C091 0000 		lds r28,pxCurrentTCB
+ 2557 0d24 D091 0000 		lds r29,(pxCurrentTCB)+1
+ 2558               	.LVL184:
+ 2559               	.L211:
+ 2560               	.LM300:
+ 2561 0d28 29A1      		ldd r18,Y+33
+ 2562               	.LVL185:
+ 2563               	.LM301:
+ 2564 0d2a 2617      		cp r18,r22
+ 2565 0d2c 01F4      		brne .+2
+ 2566 0d2e 00C0      		rjmp .L212
+ 2567               	.LM302:
+ 2568 0d30 2617      		cp r18,r22
+ 2569 0d32 00F4      		brsh .L213
+ 2570               	.LM303:
+ 2571 0d34 8091 0000 		lds r24,pxCurrentTCB
+ 2572 0d38 9091 0000 		lds r25,(pxCurrentTCB)+1
+ 2573               	.LVL186:
+ 2574 0d3c C817      		cp r28,r24
+ 2575 0d3e D907      		cpc r29,r25
+ 2576 0d40 01F4      		brne .L214
+ 2577 0d42 FF24      		clr r15
+ 2578               	.LVL187:
+ 2579 0d44 00C0      		rjmp .L215
+ 2580               	.LVL188:
+ 2581               	.L214:
+ 2582               	.LM304:
+ 2583 0d46 E091 0000 		lds r30,pxCurrentTCB
+ 2584 0d4a F091 0000 		lds r31,(pxCurrentTCB)+1
+ 2585 0d4e FF24      		clr r15
+ 2586               	.LVL189:
+ 2587 0d50 8689      		ldd r24,Z+22
+ 2588 0d52 6817      		cp r22,r24
+ 2589 0d54 00F0      		brlo .L215
+ 2590 0d56 00C0      		rjmp .L223
+ 2591               	.LVL190:
+ 2592               	.L213:
+ 2593               	.LM305:
+ 2594 0d58 8091 0000 		lds r24,pxCurrentTCB
+ 2595 0d5c 9091 0000 		lds r25,(pxCurrentTCB)+1
+ 2596               	.LVL191:
+ 2597 0d60 FF24      		clr r15
+ 2598               	.LVL192:
+ 2599 0d62 C817      		cp r28,r24
+ 2600 0d64 D907      		cpc r29,r25
+ 2601 0d66 01F4      		brne .L215
+ 2602               	.L223:
+ 2603 0d68 FF24      		clr r15
+ 2604 0d6a F394      		inc r15
+ 2605               	.L215:
+ 2606               	.LM306:
+ 2607 0d6c 3E89      		ldd r19,Y+22
+ 2608               	.LVL193:
+ 2609               	.LM307:
+ 2610 0d6e 2317      		cp r18,r19
+ 2611 0d70 01F4      		brne .L218
+ 2612               	.LM308:
+ 2613 0d72 6E8B      		std Y+22,r22
+ 2614               	.L218:
+ 2615               	.LM309:
+ 2616 0d74 69A3      		std Y+33,r22
+ 2617               	.LM310:
+ 2618 0d76 8C85      		ldd r24,Y+12
+ 2619 0d78 9D85      		ldd r25,Y+13
+ 2620 0d7a 97FD      		sbrc r25,7
+ 2621 0d7c 00C0      		rjmp .L219
+ 2622               	.LM311:
+ 2623 0d7e 84E0      		ldi r24,lo8(4)
+ 2624 0d80 90E0      		ldi r25,hi8(4)
+ 2625 0d82 861B      		sub r24,r22
+ 2626 0d84 9109      		sbc r25,__zero_reg__
+ 2627 0d86 9D87      		std Y+13,r25
+ 2628 0d88 8C87      		std Y+12,r24
+ 2629               	.L219:
+ 2630               	.LM312:
+ 2631 0d8a 89E0      		ldi r24,lo8(9)
+ 2632 0d8c 389F      		mul r19,r24
+ 2633 0d8e C001      		movw r24,r0
+ 2634 0d90 1124      		clr r1
+ 2635 0d92 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 2636 0d94 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 2637 0d96 2A85      		ldd r18,Y+10
+ 2638 0d98 3B85      		ldd r19,Y+11
+ 2639               	.LVL194:
+ 2640 0d9a 2817      		cp r18,r24
+ 2641 0d9c 3907      		cpc r19,r25
+ 2642 0d9e 01F4      		brne .L220
+ 2643               	.LM313:
+ 2644 0da0 8E01      		movw r16,r28
+ 2645 0da2 0E5F      		subi r16,lo8(-(2))
+ 2646 0da4 1F4F      		sbci r17,hi8(-(2))
+ 2647 0da6 C801      		movw r24,r16
+ 2648 0da8 0E94 0000 		call uxListRemove
+ 2649               	.LVL195:
+ 2650               	.LM314:
+ 2651 0dac 9E89      		ldd r25,Y+22
+ 2652 0dae 8091 0000 		lds r24,uxTopReadyPriority
+ 2653 0db2 8917      		cp r24,r25
+ 2654 0db4 00F4      		brsh .L221
+ 2655 0db6 9093 0000 		sts uxTopReadyPriority,r25
+ 2656               	.L221:
+ 2657 0dba 89E0      		ldi r24,lo8(9)
+ 2658 0dbc 989F      		mul r25,r24
+ 2659 0dbe C001      		movw r24,r0
+ 2660 0dc0 1124      		clr r1
+ 2661 0dc2 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 2662 0dc4 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 2663 0dc6 B801      		movw r22,r16
+ 2664 0dc8 0E94 0000 		call vListInsertEnd
+ 2665               	.LVL196:
+ 2666               	.L220:
+ 2667               	.LM315:
+ 2668 0dcc FF20      		tst r15
+ 2669 0dce 01F0      		breq .L212
+ 2670               	.LM316:
+ 2671 0dd0 0E94 0000 		call vPortYield
+ 2672               	.LVL197:
+ 2673               	.L212:
+ 2674               	.LM317:
+ 2675               	/* #APP */
+ 2676               	 ;  1705 "FreeRTOS/Source/tasks.c" 1
+ 2677 0dd4 0F90      		pop		__tmp_reg__
+ 2678               	 ;  0 "" 2
+ 2679               	 ;  1705 "FreeRTOS/Source/tasks.c" 1
+ 2680 0dd6 0FBE      		out		__SREG__, __tmp_reg__
+ 2681               	 ;  0 "" 2
+ 2682               	/* epilogue start */
+ 2683               	.LM318:
+ 2684               	/* #NOAPP */
+ 2685 0dd8 DF91      		pop r29
+ 2686 0dda CF91      		pop r28
+ 2687               	.LVL198:
+ 2688 0ddc 1F91      		pop r17
+ 2689 0dde 0F91      		pop r16
+ 2690 0de0 FF90      		pop r15
+ 2691               	.LVL199:
+ 2692 0de2 0895      		ret
+ 2693               	.LFE10:
+ 2696               	prvAddCurrentTaskToDelayedList:
+ 2697               	.LFB52:
+ 2698               	.LM319:
+ 2699               	.LVL200:
+ 2700 0de4 FF92      		push r15
+ 2701 0de6 0F93      		push r16
+ 2702 0de8 1F93      		push r17
+ 2703 0dea CF93      		push r28
+ 2704 0dec DF93      		push r29
+ 2705               	/* prologue: function */
+ 2706               	/* frame size = 0 */
+ 2707 0dee EC01      		movw r28,r24
+ 2708 0df0 F62E      		mov r15,r22
+ 2709               	.LM320:
+ 2710 0df2 0091 0000 		lds r16,xTickCount
+ 2711 0df6 1091 0000 		lds r17,(xTickCount)+1
+ 2712               	.LVL201:
+ 2713               	.LM321:
+ 2714 0dfa 8091 0000 		lds r24,pxCurrentTCB
+ 2715 0dfe 9091 0000 		lds r25,(pxCurrentTCB)+1
+ 2716               	.LVL202:
+ 2717 0e02 0296      		adiw r24,2
+ 2718 0e04 0E94 0000 		call uxListRemove
+ 2719               	.LVL203:
+ 2720               	.LM322:
+ 2721 0e08 8FEF      		ldi r24,hi8(-1)
+ 2722 0e0a CF3F      		cpi r28,lo8(-1)
+ 2723 0e0c D807      		cpc r29,r24
+ 2724 0e0e 01F4      		brne .L225
+ 2725 0e10 FF20      		tst r15
+ 2726 0e12 01F0      		breq .L225
+ 2727               	.LM323:
+ 2728 0e14 6091 0000 		lds r22,pxCurrentTCB
+ 2729 0e18 7091 0000 		lds r23,(pxCurrentTCB)+1
+ 2730 0e1c 6E5F      		subi r22,lo8(-(2))
+ 2731 0e1e 7F4F      		sbci r23,hi8(-(2))
+ 2732 0e20 80E0      		ldi r24,lo8(xSuspendedTaskList)
+ 2733 0e22 90E0      		ldi r25,hi8(xSuspendedTaskList)
+ 2734 0e24 0E94 0000 		call vListInsertEnd
+ 2735 0e28 00C0      		rjmp .L228
+ 2736               	.L225:
+ 2737               	.LM324:
+ 2738 0e2a C00F      		add r28,r16
+ 2739 0e2c D11F      		adc r29,r17
+ 2740               	.LVL204:
+ 2741               	.LM325:
+ 2742 0e2e E091 0000 		lds r30,pxCurrentTCB
+ 2743 0e32 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 2744 0e36 D383      		std Z+3,r29
+ 2745 0e38 C283      		std Z+2,r28
+ 2746               	.LM326:
+ 2747 0e3a C017      		cp r28,r16
+ 2748 0e3c D107      		cpc r29,r17
+ 2749 0e3e 00F4      		brsh .L227
+ 2750               	.LM327:
+ 2751 0e40 8091 0000 		lds r24,pxOverflowDelayedTaskList
+ 2752 0e44 9091 0000 		lds r25,(pxOverflowDelayedTaskList)+1
+ 2753 0e48 6091 0000 		lds r22,pxCurrentTCB
+ 2754 0e4c 7091 0000 		lds r23,(pxCurrentTCB)+1
+ 2755 0e50 6E5F      		subi r22,lo8(-(2))
+ 2756 0e52 7F4F      		sbci r23,hi8(-(2))
+ 2757 0e54 0E94 0000 		call vListInsert
+ 2758 0e58 00C0      		rjmp .L228
+ 2759               	.L227:
+ 2760               	.LM328:
+ 2761 0e5a 8091 0000 		lds r24,pxDelayedTaskList
+ 2762 0e5e 9091 0000 		lds r25,(pxDelayedTaskList)+1
+ 2763 0e62 6091 0000 		lds r22,pxCurrentTCB
+ 2764 0e66 7091 0000 		lds r23,(pxCurrentTCB)+1
+ 2765 0e6a 6E5F      		subi r22,lo8(-(2))
+ 2766 0e6c 7F4F      		sbci r23,hi8(-(2))
+ 2767 0e6e 0E94 0000 		call vListInsert
+ 2768               	.LM329:
+ 2769 0e72 8091 0000 		lds r24,xNextTaskUnblockTime
+ 2770 0e76 9091 0000 		lds r25,(xNextTaskUnblockTime)+1
+ 2771 0e7a C817      		cp r28,r24
+ 2772 0e7c D907      		cpc r29,r25
+ 2773 0e7e 00F4      		brsh .L228
+ 2774               	.LM330:
+ 2775 0e80 D093 0000 		sts (xNextTaskUnblockTime)+1,r29
+ 2776 0e84 C093 0000 		sts xNextTaskUnblockTime,r28
+ 2777               	.LVL205:
+ 2778               	.L228:
+ 2779               	/* epilogue start */
+ 2780               	.LM331:
+ 2781 0e88 DF91      		pop r29
+ 2782 0e8a CF91      		pop r28
+ 2783               	.LVL206:
+ 2784 0e8c 1F91      		pop r17
+ 2785 0e8e 0F91      		pop r16
+ 2786               	.LVL207:
+ 2787 0e90 FF90      		pop r15
+ 2788               	.LVL208:
+ 2789 0e92 0895      		ret
+ 2790               	.LFE52:
+ 2792               	.global	xTaskGenericNotifyWait
+ 2794               	xTaskGenericNotifyWait:
+ 2795               	.LFB46:
+ 2796               	.LM332:
+ 2797               	.LVL209:
+ 2798 0e94 8F92      		push r8
+ 2799 0e96 9F92      		push r9
+ 2800 0e98 AF92      		push r10
+ 2801 0e9a BF92      		push r11
+ 2802 0e9c CF92      		push r12
+ 2803               	.LVL210:
+ 2804 0e9e DF92      		push r13
+ 2805 0ea0 EF92      		push r14
+ 2806               	.LVL211:
+ 2807 0ea2 FF92      		push r15
+ 2808 0ea4 0F93      		push r16
+ 2809               	.LVL212:
+ 2810 0ea6 1F93      		push r17
+ 2811 0ea8 CF93      		push r28
+ 2812 0eaa DF93      		push r29
+ 2813               	/* prologue: function */
+ 2814               	/* frame size = 0 */
+ 2815 0eac 4801      		movw r8,r16
+ 2816 0eae 5901      		movw r10,r18
+ 2817               	.LVL213:
+ 2818 0eb0 E701      		movw r28,r14
+ 2819               	.LVL214:
+ 2820               	.LM333:
+ 2821               	/* #APP */
+ 2822               	 ;  4773 "FreeRTOS/Source/tasks.c" 1
+ 2823 0eb2 0FB6      		in		__tmp_reg__, __SREG__
+ 2824               	 ;  0 "" 2
+ 2825               	 ;  4773 "FreeRTOS/Source/tasks.c" 1
+ 2826 0eb4 F894      		cli
+ 2827               	 ;  0 "" 2
+ 2828               	 ;  4773 "FreeRTOS/Source/tasks.c" 1
+ 2829 0eb6 0F92      		push	__tmp_reg__
+ 2830               	 ;  0 "" 2
+ 2831               	.LM334:
+ 2832               	/* #NOAPP */
+ 2833 0eb8 E091 0000 		lds r30,pxCurrentTCB
+ 2834 0ebc F091 0000 		lds r31,(pxCurrentTCB)+1
+ 2835 0ec0 E82E      		mov r14,r24
+ 2836               	.LVL215:
+ 2837 0ec2 FF24      		clr r15
+ 2838 0ec4 EE0D      		add r30,r14
+ 2839 0ec6 FF1D      		adc r31,r15
+ 2840 0ec8 87A1      		ldd r24,Z+39
+ 2841               	.LVL216:
+ 2842 0eca 8230      		cpi r24,lo8(2)
+ 2843 0ecc 01F0      		breq .L230
+ 2844               	.LVL217:
+ 2845               	.LM335:
+ 2846 0ece E091 0000 		lds r30,pxCurrentTCB
+ 2847 0ed2 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 2848 0ed6 C701      		movw r24,r14
+ 2849 0ed8 880F      		lsl r24
+ 2850 0eda 991F      		rol r25
+ 2851 0edc 880F      		lsl r24
+ 2852 0ede 991F      		rol r25
+ 2853 0ee0 E80F      		add r30,r24
+ 2854 0ee2 F91F      		adc r31,r25
+ 2855 0ee4 83A1      		ldd r24,Z+35
+ 2856 0ee6 94A1      		ldd r25,Z+36
+ 2857 0ee8 A5A1      		ldd r26,Z+37
+ 2858 0eea B6A1      		ldd r27,Z+38
+ 2859 0eec 4095      		com r20
+ 2860 0eee 5095      		com r21
+ 2861 0ef0 6095      		com r22
+ 2862 0ef2 7095      		com r23
+ 2863               	.LVL218:
+ 2864 0ef4 8423      		and r24,r20
+ 2865 0ef6 9523      		and r25,r21
+ 2866 0ef8 A623      		and r26,r22
+ 2867 0efa B723      		and r27,r23
+ 2868 0efc 83A3      		std Z+35,r24
+ 2869 0efe 94A3      		std Z+36,r25
+ 2870 0f00 A5A3      		std Z+37,r26
+ 2871 0f02 B6A3      		std Z+38,r27
+ 2872               	.LM336:
+ 2873 0f04 E091 0000 		lds r30,pxCurrentTCB
+ 2874 0f08 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 2875 0f0c EE0D      		add r30,r14
+ 2876 0f0e FF1D      		adc r31,r15
+ 2877 0f10 81E0      		ldi r24,lo8(1)
+ 2878 0f12 87A3      		std Z+39,r24
+ 2879               	.LM337:
+ 2880 0f14 C114      		cp r12,__zero_reg__
+ 2881 0f16 D104      		cpc r13,__zero_reg__
+ 2882               	.LVL219:
+ 2883 0f18 01F0      		breq .L230
+ 2884               	.LM338:
+ 2885 0f1a C601      		movw r24,r12
+ 2886 0f1c 61E0      		ldi r22,lo8(1)
+ 2887 0f1e 0E94 0000 		call prvAddCurrentTaskToDelayedList
+ 2888               	.LVL220:
+ 2889               	.LM339:
+ 2890 0f22 0E94 0000 		call vPortYield
+ 2891               	.LVL221:
+ 2892               	.L230:
+ 2893               	.LM340:
+ 2894               	/* #APP */
+ 2895               	 ;  4807 "FreeRTOS/Source/tasks.c" 1
+ 2896 0f26 0F90      		pop		__tmp_reg__
+ 2897               	 ;  0 "" 2
+ 2898               	 ;  4807 "FreeRTOS/Source/tasks.c" 1
+ 2899 0f28 0FBE      		out		__SREG__, __tmp_reg__
+ 2900               	 ;  0 "" 2
+ 2901               	.LM341:
+ 2902               	 ;  4809 "FreeRTOS/Source/tasks.c" 1
+ 2903 0f2a 0FB6      		in		__tmp_reg__, __SREG__
+ 2904               	 ;  0 "" 2
+ 2905               	 ;  4809 "FreeRTOS/Source/tasks.c" 1
+ 2906 0f2c F894      		cli
+ 2907               	 ;  0 "" 2
+ 2908               	 ;  4809 "FreeRTOS/Source/tasks.c" 1
+ 2909 0f2e 0F92      		push	__tmp_reg__
+ 2910               	 ;  0 "" 2
+ 2911               	.LM342:
+ 2912               	/* #NOAPP */
+ 2913 0f30 2097      		sbiw r28,0
+ 2914 0f32 01F0      		breq .L231
+ 2915               	.LM343:
+ 2916 0f34 E091 0000 		lds r30,pxCurrentTCB
+ 2917 0f38 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 2918 0f3c C701      		movw r24,r14
+ 2919 0f3e 880F      		lsl r24
+ 2920 0f40 991F      		rol r25
+ 2921 0f42 880F      		lsl r24
+ 2922 0f44 991F      		rol r25
+ 2923 0f46 E80F      		add r30,r24
+ 2924 0f48 F91F      		adc r31,r25
+ 2925 0f4a 83A1      		ldd r24,Z+35
+ 2926 0f4c 94A1      		ldd r25,Z+36
+ 2927 0f4e A5A1      		ldd r26,Z+37
+ 2928 0f50 B6A1      		ldd r27,Z+38
+ 2929 0f52 8883      		st Y,r24
+ 2930 0f54 9983      		std Y+1,r25
+ 2931 0f56 AA83      		std Y+2,r26
+ 2932 0f58 BB83      		std Y+3,r27
+ 2933               	.L231:
+ 2934               	.LM344:
+ 2935 0f5a E091 0000 		lds r30,pxCurrentTCB
+ 2936 0f5e F091 0000 		lds r31,(pxCurrentTCB)+1
+ 2937 0f62 EE0D      		add r30,r14
+ 2938 0f64 FF1D      		adc r31,r15
+ 2939 0f66 87A1      		ldd r24,Z+39
+ 2940 0f68 8230      		cpi r24,lo8(2)
+ 2941 0f6a 01F0      		breq .L232
+ 2942 0f6c 80E0      		ldi r24,lo8(0)
+ 2943               	.LVL222:
+ 2944 0f6e 00C0      		rjmp .L233
+ 2945               	.LVL223:
+ 2946               	.L232:
+ 2947               	.LM345:
+ 2948 0f70 E091 0000 		lds r30,pxCurrentTCB
+ 2949 0f74 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 2950 0f78 C701      		movw r24,r14
+ 2951 0f7a 880F      		lsl r24
+ 2952 0f7c 991F      		rol r25
+ 2953 0f7e 880F      		lsl r24
+ 2954 0f80 991F      		rol r25
+ 2955 0f82 E80F      		add r30,r24
+ 2956 0f84 F91F      		adc r31,r25
+ 2957 0f86 83A1      		ldd r24,Z+35
+ 2958 0f88 94A1      		ldd r25,Z+36
+ 2959 0f8a A5A1      		ldd r26,Z+37
+ 2960 0f8c B6A1      		ldd r27,Z+38
+ 2961 0f8e 8094      		com r8
+ 2962 0f90 9094      		com r9
+ 2963 0f92 A094      		com r10
+ 2964 0f94 B094      		com r11
+ 2965 0f96 8821      		and r24,r8
+ 2966 0f98 9921      		and r25,r9
+ 2967 0f9a AA21      		and r26,r10
+ 2968 0f9c BB21      		and r27,r11
+ 2969 0f9e 83A3      		std Z+35,r24
+ 2970 0fa0 94A3      		std Z+36,r25
+ 2971 0fa2 A5A3      		std Z+37,r26
+ 2972 0fa4 B6A3      		std Z+38,r27
+ 2973 0fa6 81E0      		ldi r24,lo8(1)
+ 2974               	.LVL224:
+ 2975               	.L233:
+ 2976               	.LM346:
+ 2977 0fa8 E091 0000 		lds r30,pxCurrentTCB
+ 2978 0fac F091 0000 		lds r31,(pxCurrentTCB)+1
+ 2979 0fb0 EE0D      		add r30,r14
+ 2980 0fb2 FF1D      		adc r31,r15
+ 2981 0fb4 17A2      		std Z+39,__zero_reg__
+ 2982               	.LM347:
+ 2983               	/* #APP */
+ 2984               	 ;  4839 "FreeRTOS/Source/tasks.c" 1
+ 2985 0fb6 0F90      		pop		__tmp_reg__
+ 2986               	 ;  0 "" 2
+ 2987               	 ;  4839 "FreeRTOS/Source/tasks.c" 1
+ 2988 0fb8 0FBE      		out		__SREG__, __tmp_reg__
+ 2989               	 ;  0 "" 2
+ 2990               	.LVL225:
+ 2991               	/* epilogue start */
+ 2992               	.LM348:
+ 2993               	/* #NOAPP */
+ 2994 0fba DF91      		pop r29
+ 2995 0fbc CF91      		pop r28
+ 2996               	.LVL226:
+ 2997 0fbe 1F91      		pop r17
+ 2998 0fc0 0F91      		pop r16
+ 2999 0fc2 FF90      		pop r15
+ 3000 0fc4 EF90      		pop r14
+ 3001 0fc6 DF90      		pop r13
+ 3002 0fc8 CF90      		pop r12
+ 3003               	.LVL227:
+ 3004 0fca BF90      		pop r11
+ 3005 0fcc AF90      		pop r10
+ 3006 0fce 9F90      		pop r9
+ 3007 0fd0 8F90      		pop r8
+ 3008               	.LVL228:
+ 3009 0fd2 0895      		ret
+ 3010               	.LFE46:
+ 3012               	.global	ulTaskGenericNotifyTake
+ 3014               	ulTaskGenericNotifyTake:
+ 3015               	.LFB45:
+ 3016               	.LM349:
+ 3017               	.LVL229:
+ 3018 0fd4 1F93      		push r17
+ 3019 0fd6 CF93      		push r28
+ 3020 0fd8 DF93      		push r29
+ 3021               	/* prologue: function */
+ 3022               	/* frame size = 0 */
+ 3023 0fda 162F      		mov r17,r22
+ 3024               	.LM350:
+ 3025               	/* #APP */
+ 3026               	 ;  4699 "FreeRTOS/Source/tasks.c" 1
+ 3027 0fdc 0FB6      		in		__tmp_reg__, __SREG__
+ 3028               	 ;  0 "" 2
+ 3029               	 ;  4699 "FreeRTOS/Source/tasks.c" 1
+ 3030 0fde F894      		cli
+ 3031               	 ;  0 "" 2
+ 3032               	 ;  4699 "FreeRTOS/Source/tasks.c" 1
+ 3033 0fe0 0F92      		push	__tmp_reg__
+ 3034               	 ;  0 "" 2
+ 3035               	.LM351:
+ 3036               	/* #NOAPP */
+ 3037 0fe2 E091 0000 		lds r30,pxCurrentTCB
+ 3038 0fe6 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 3039 0fea C82F      		mov r28,r24
+ 3040 0fec D0E0      		ldi r29,lo8(0)
+ 3041 0fee CE01      		movw r24,r28
+ 3042               	.LVL230:
+ 3043 0ff0 880F      		lsl r24
+ 3044 0ff2 991F      		rol r25
+ 3045 0ff4 880F      		lsl r24
+ 3046 0ff6 991F      		rol r25
+ 3047 0ff8 E80F      		add r30,r24
+ 3048 0ffa F91F      		adc r31,r25
+ 3049 0ffc 83A1      		ldd r24,Z+35
+ 3050 0ffe 94A1      		ldd r25,Z+36
+ 3051 1000 A5A1      		ldd r26,Z+37
+ 3052 1002 B6A1      		ldd r27,Z+38
+ 3053 1004 0097      		sbiw r24,0
+ 3054 1006 A105      		cpc r26,__zero_reg__
+ 3055 1008 B105      		cpc r27,__zero_reg__
+ 3056 100a 01F4      		brne .L236
+ 3057               	.LVL231:
+ 3058               	.LM352:
+ 3059 100c E091 0000 		lds r30,pxCurrentTCB
+ 3060 1010 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 3061 1014 EC0F      		add r30,r28
+ 3062 1016 FD1F      		adc r31,r29
+ 3063 1018 81E0      		ldi r24,lo8(1)
+ 3064 101a 87A3      		std Z+39,r24
+ 3065               	.LM353:
+ 3066 101c 4115      		cp r20,__zero_reg__
+ 3067 101e 5105      		cpc r21,__zero_reg__
+ 3068 1020 01F0      		breq .L236
+ 3069               	.LM354:
+ 3070 1022 CA01      		movw r24,r20
+ 3071 1024 61E0      		ldi r22,lo8(1)
+ 3072 1026 0E94 0000 		call prvAddCurrentTaskToDelayedList
+ 3073               	.LVL232:
+ 3074               	.LM355:
+ 3075 102a 0E94 0000 		call vPortYield
+ 3076               	.LVL233:
+ 3077               	.L236:
+ 3078               	.LM356:
+ 3079               	/* #APP */
+ 3080               	 ;  4728 "FreeRTOS/Source/tasks.c" 1
+ 3081 102e 0F90      		pop		__tmp_reg__
+ 3082               	 ;  0 "" 2
+ 3083               	 ;  4728 "FreeRTOS/Source/tasks.c" 1
+ 3084 1030 0FBE      		out		__SREG__, __tmp_reg__
+ 3085               	 ;  0 "" 2
+ 3086               	.LM357:
+ 3087               	 ;  4730 "FreeRTOS/Source/tasks.c" 1
+ 3088 1032 0FB6      		in		__tmp_reg__, __SREG__
+ 3089               	 ;  0 "" 2
+ 3090               	 ;  4730 "FreeRTOS/Source/tasks.c" 1
+ 3091 1034 F894      		cli
+ 3092               	 ;  0 "" 2
+ 3093               	 ;  4730 "FreeRTOS/Source/tasks.c" 1
+ 3094 1036 0F92      		push	__tmp_reg__
+ 3095               	 ;  0 "" 2
+ 3096               	.LM358:
+ 3097               	/* #NOAPP */
+ 3098 1038 E091 0000 		lds r30,pxCurrentTCB
+ 3099 103c F091 0000 		lds r31,(pxCurrentTCB)+1
+ 3100 1040 CE01      		movw r24,r28
+ 3101 1042 880F      		lsl r24
+ 3102 1044 991F      		rol r25
+ 3103 1046 880F      		lsl r24
+ 3104 1048 991F      		rol r25
+ 3105 104a E80F      		add r30,r24
+ 3106 104c F91F      		adc r31,r25
+ 3107 104e 23A1      		ldd r18,Z+35
+ 3108 1050 34A1      		ldd r19,Z+36
+ 3109 1052 45A1      		ldd r20,Z+37
+ 3110 1054 56A1      		ldd r21,Z+38
+ 3111               	.LVL234:
+ 3112               	.LM359:
+ 3113 1056 2115      		cp r18,__zero_reg__
+ 3114 1058 3105      		cpc r19,__zero_reg__
+ 3115 105a 4105      		cpc r20,__zero_reg__
+ 3116 105c 5105      		cpc r21,__zero_reg__
+ 3117 105e 01F0      		breq .L237
+ 3118               	.LM360:
+ 3119 1060 1123      		tst r17
+ 3120 1062 01F0      		breq .L238
+ 3121               	.LM361:
+ 3122 1064 E091 0000 		lds r30,pxCurrentTCB
+ 3123 1068 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 3124 106c E80F      		add r30,r24
+ 3125 106e F91F      		adc r31,r25
+ 3126 1070 13A2      		std Z+35,__zero_reg__
+ 3127 1072 14A2      		std Z+36,__zero_reg__
+ 3128 1074 15A2      		std Z+37,__zero_reg__
+ 3129 1076 16A2      		std Z+38,__zero_reg__
+ 3130 1078 00C0      		rjmp .L237
+ 3131               	.L238:
+ 3132               	.LM362:
+ 3133 107a E091 0000 		lds r30,pxCurrentTCB
+ 3134 107e F091 0000 		lds r31,(pxCurrentTCB)+1
+ 3135 1082 2150      		subi r18,lo8(-(-1))
+ 3136 1084 3040      		sbci r19,hi8(-(-1))
+ 3137 1086 4040      		sbci r20,hlo8(-(-1))
+ 3138 1088 5040      		sbci r21,hhi8(-(-1))
+ 3139 108a E80F      		add r30,r24
+ 3140 108c F91F      		adc r31,r25
+ 3141 108e 23A3      		std Z+35,r18
+ 3142 1090 34A3      		std Z+36,r19
+ 3143 1092 45A3      		std Z+37,r20
+ 3144 1094 56A3      		std Z+38,r21
+ 3145 1096 2F5F      		subi r18,lo8(-(1))
+ 3146 1098 3F4F      		sbci r19,hi8(-(1))
+ 3147 109a 4F4F      		sbci r20,hlo8(-(1))
+ 3148 109c 5F4F      		sbci r21,hhi8(-(1))
+ 3149               	.L237:
+ 3150               	.LM363:
+ 3151 109e E091 0000 		lds r30,pxCurrentTCB
+ 3152 10a2 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 3153 10a6 EC0F      		add r30,r28
+ 3154 10a8 FD1F      		adc r31,r29
+ 3155 10aa 17A2      		std Z+39,__zero_reg__
+ 3156               	.LM364:
+ 3157               	/* #APP */
+ 3158               	 ;  4753 "FreeRTOS/Source/tasks.c" 1
+ 3159 10ac 0F90      		pop		__tmp_reg__
+ 3160               	 ;  0 "" 2
+ 3161               	 ;  4753 "FreeRTOS/Source/tasks.c" 1
+ 3162 10ae 0FBE      		out		__SREG__, __tmp_reg__
+ 3163               	 ;  0 "" 2
+ 3164               	.LM365:
+ 3165               	/* #NOAPP */
+ 3166 10b0 B901      		movw r22,r18
+ 3167               	.LVL235:
+ 3168 10b2 CA01      		movw r24,r20
+ 3169               	.LVL236:
+ 3170               	/* epilogue start */
+ 3171 10b4 DF91      		pop r29
+ 3172 10b6 CF91      		pop r28
+ 3173 10b8 1F91      		pop r17
+ 3174               	.LVL237:
+ 3175 10ba 0895      		ret
+ 3176               	.LFE45:
+ 3178               	.global	vTaskPlaceOnUnorderedEventList
+ 3180               	vTaskPlaceOnUnorderedEventList:
+ 3181               	.LFB27:
+ 3182               	.LM366:
+ 3183               	.LVL238:
+ 3184 10bc 0F93      		push r16
+ 3185 10be 1F93      		push r17
+ 3186               	/* prologue: function */
+ 3187               	/* frame size = 0 */
+ 3188 10c0 8A01      		movw r16,r20
+ 3189               	.LM367:
+ 3190 10c2 E091 0000 		lds r30,pxCurrentTCB
+ 3191 10c6 F091 0000 		lds r31,(pxCurrentTCB)+1
+ 3192 10ca 7068      		ori r23,hi8(-32768)
+ 3193               	.LVL239:
+ 3194 10cc 7587      		std Z+13,r23
+ 3195 10ce 6487      		std Z+12,r22
+ 3196               	.LM368:
+ 3197 10d0 6091 0000 		lds r22,pxCurrentTCB
+ 3198 10d4 7091 0000 		lds r23,(pxCurrentTCB)+1
+ 3199               	.LVL240:
+ 3200 10d8 645F      		subi r22,lo8(-(12))
+ 3201 10da 7F4F      		sbci r23,hi8(-(12))
+ 3202 10dc 0E94 0000 		call vListInsertEnd
+ 3203               	.LVL241:
+ 3204               	.LM369:
+ 3205 10e0 C801      		movw r24,r16
+ 3206 10e2 61E0      		ldi r22,lo8(1)
+ 3207 10e4 0E94 0000 		call prvAddCurrentTaskToDelayedList
+ 3208               	/* epilogue start */
+ 3209               	.LM370:
+ 3210 10e8 1F91      		pop r17
+ 3211 10ea 0F91      		pop r16
+ 3212               	.LVL242:
+ 3213 10ec 0895      		ret
+ 3214               	.LFE27:
+ 3216               	.global	vTaskDelay
+ 3218               	vTaskDelay:
+ 3219               	.LFB7:
+ 3220               	.LM371:
+ 3221               	.LVL243:
+ 3222               	/* prologue: function */
+ 3223               	/* frame size = 0 */
+ 3224 10ee 9C01      		movw r18,r24
+ 3225               	.LM372:
+ 3226 10f0 0097      		sbiw r24,0
+ 3227 10f2 01F0      		breq .L243
+ 3228               	.LBB68:
+ 3229               	.LBB69:
+ 3230               	.LM373:
+ 3231 10f4 8091 0000 		lds r24,uxSchedulerSuspended
+ 3232               	.LVL244:
+ 3233 10f8 8F5F      		subi r24,lo8(-(1))
+ 3234 10fa 8093 0000 		sts uxSchedulerSuspended,r24
+ 3235               	.LBE69:
+ 3236               	.LBE68:
+ 3237               	.LM374:
+ 3238 10fe C901      		movw r24,r18
+ 3239 1100 60E0      		ldi r22,lo8(0)
+ 3240 1102 0E94 0000 		call prvAddCurrentTaskToDelayedList
+ 3241               	.LVL245:
+ 3242               	.LM375:
+ 3243 1106 0E94 0000 		call xTaskResumeAll
+ 3244               	.LM376:
+ 3245 110a 8823      		tst r24
+ 3246 110c 01F4      		brne .L245
+ 3247               	.LVL246:
+ 3248               	.L243:
+ 3249               	.LM377:
+ 3250 110e 0E94 0000 		call vPortYield
+ 3251               	.LVL247:
+ 3252               	.L245:
+ 3253 1112 0895      		ret
+ 3254               	.LFE7:
+ 3256               	.global	xTaskDelayUntil
+ 3258               	xTaskDelayUntil:
+ 3259               	.LFB6:
+ 3260               	.LM378:
+ 3261               	.LVL248:
+ 3262 1114 1F93      		push r17
+ 3263               	/* prologue: function */
+ 3264               	/* frame size = 0 */
+ 3265 1116 FC01      		movw r30,r24
+ 3266               	.LBB70:
+ 3267               	.LBB71:
+ 3268               	.LM379:
+ 3269 1118 8091 0000 		lds r24,uxSchedulerSuspended
+ 3270               	.LVL249:
+ 3271 111c 8F5F      		subi r24,lo8(-(1))
+ 3272 111e 8093 0000 		sts uxSchedulerSuspended,r24
+ 3273               	.LBE71:
+ 3274               	.LBE70:
+ 3275               	.LBB72:
+ 3276               	.LM380:
+ 3277 1122 8091 0000 		lds r24,xTickCount
+ 3278 1126 9091 0000 		lds r25,(xTickCount)+1
+ 3279               	.LVL250:
+ 3280               	.LM381:
+ 3281 112a 2081      		ld r18,Z
+ 3282 112c 3181      		ldd r19,Z+1
+ 3283 112e 620F      		add r22,r18
+ 3284 1130 731F      		adc r23,r19
+ 3285               	.LVL251:
+ 3286               	.LM382:
+ 3287 1132 8217      		cp r24,r18
+ 3288 1134 9307      		cpc r25,r19
+ 3289 1136 00F4      		brsh .L247
+ 3290               	.LM383:
+ 3291 1138 6217      		cp r22,r18
+ 3292 113a 7307      		cpc r23,r19
+ 3293 113c 00F0      		brlo .L251
+ 3294 113e 10E0      		ldi r17,lo8(0)
+ 3295               	.LVL252:
+ 3296 1140 00C0      		rjmp .L249
+ 3297               	.LVL253:
+ 3298               	.L247:
+ 3299               	.LM384:
+ 3300 1142 6217      		cp r22,r18
+ 3301 1144 7307      		cpc r23,r19
+ 3302 1146 00F0      		brlo .L256
+ 3303               	.L251:
+ 3304 1148 10E0      		ldi r17,lo8(0)
+ 3305               	.LVL254:
+ 3306 114a 8617      		cp r24,r22
+ 3307 114c 9707      		cpc r25,r23
+ 3308 114e 00F4      		brsh .L249
+ 3309               	.L256:
+ 3310 1150 11E0      		ldi r17,lo8(1)
+ 3311               	.L249:
+ 3312               	.LM385:
+ 3313 1152 7183      		std Z+1,r23
+ 3314 1154 6083      		st Z,r22
+ 3315               	.LM386:
+ 3316 1156 1123      		tst r17
+ 3317 1158 01F0      		breq .L253
+ 3318               	.LM387:
+ 3319 115a 9B01      		movw r18,r22
+ 3320 115c 281B      		sub r18,r24
+ 3321 115e 390B      		sbc r19,r25
+ 3322 1160 C901      		movw r24,r18
+ 3323               	.LVL255:
+ 3324 1162 60E0      		ldi r22,lo8(0)
+ 3325               	.LVL256:
+ 3326 1164 0E94 0000 		call prvAddCurrentTaskToDelayedList
+ 3327               	.LVL257:
+ 3328               	.L253:
+ 3329               	.LBE72:
+ 3330               	.LM388:
+ 3331 1168 0E94 0000 		call xTaskResumeAll
+ 3332               	.LVL258:
+ 3333               	.LM389:
+ 3334 116c 8823      		tst r24
+ 3335 116e 01F4      		brne .L254
+ 3336               	.LM390:
+ 3337 1170 0E94 0000 		call vPortYield
+ 3338               	.L254:
+ 3339               	.LM391:
+ 3340 1174 812F      		mov r24,r17
+ 3341               	/* epilogue start */
+ 3342 1176 1F91      		pop r17
+ 3343               	.LVL259:
+ 3344 1178 0895      		ret
+ 3345               	.LFE6:
+ 3347               	.global	vTaskPlaceOnEventList
+ 3349               	vTaskPlaceOnEventList:
+ 3350               	.LFB26:
+ 3351               	.LM392:
+ 3352               	.LVL260:
+ 3353 117a 0F93      		push r16
+ 3354 117c 1F93      		push r17
+ 3355               	/* prologue: function */
+ 3356               	/* frame size = 0 */
+ 3357 117e 8B01      		movw r16,r22
+ 3358               	.LM393:
+ 3359 1180 6091 0000 		lds r22,pxCurrentTCB
+ 3360 1184 7091 0000 		lds r23,(pxCurrentTCB)+1
+ 3361               	.LVL261:
+ 3362 1188 645F      		subi r22,lo8(-(12))
+ 3363 118a 7F4F      		sbci r23,hi8(-(12))
+ 3364 118c 0E94 0000 		call vListInsert
+ 3365               	.LVL262:
+ 3366               	.LM394:
+ 3367 1190 C801      		movw r24,r16
+ 3368 1192 61E0      		ldi r22,lo8(1)
+ 3369 1194 0E94 0000 		call prvAddCurrentTaskToDelayedList
+ 3370               	/* epilogue start */
+ 3371               	.LM395:
+ 3372 1198 1F91      		pop r17
+ 3373 119a 0F91      		pop r16
+ 3374               	.LVL263:
+ 3375 119c 0895      		ret
+ 3376               	.LFE26:
+ 3378               	.global	vTaskEndScheduler
+ 3380               	vTaskEndScheduler:
+ 3381               	.LFB16:
+ 3382               	.LM396:
+ 3383               	/* prologue: function */
+ 3384               	/* frame size = 0 */
+ 3385               	.LM397:
+ 3386               	/* #APP */
+ 3387               	 ;  2127 "FreeRTOS/Source/tasks.c" 1
+ 3388 119e F894      		cli
+ 3389               	 ;  0 "" 2
+ 3390               	.LM398:
+ 3391               	/* #NOAPP */
+ 3392 11a0 1092 0000 		sts xSchedulerRunning,__zero_reg__
+ 3393               	.LM399:
+ 3394 11a4 0E94 0000 		call vPortEndScheduler
+ 3395               	/* epilogue start */
+ 3396               	.LM400:
+ 3397 11a8 0895      		ret
+ 3398               	.LFE16:
+ 3401               	prvIdleTask:
+ 3402               	.LFB34:
+ 3403               	.LM401:
+ 3404               	.LVL264:
+ 3405 11aa 0F93      		push r16
+ 3406 11ac 1F93      		push r17
+ 3407               	/* prologue: function */
+ 3408               	/* frame size = 0 */
+ 3409 11ae 00C0      		rjmp .L267
+ 3410               	.LVL265:
+ 3411               	.L263:
+ 3412               	.LBB73:
+ 3413               	.LBB74:
+ 3414               	.LBB75:
+ 3415               	.LM402:
+ 3416               	/* #APP */
+ 3417               	 ;  3699 "FreeRTOS/Source/tasks.c" 1
+ 3418 11b0 0FB6      		in		__tmp_reg__, __SREG__
+ 3419               	 ;  0 "" 2
+ 3420               	 ;  3699 "FreeRTOS/Source/tasks.c" 1
+ 3421 11b2 F894      		cli
+ 3422               	 ;  0 "" 2
+ 3423               	 ;  3699 "FreeRTOS/Source/tasks.c" 1
+ 3424 11b4 0F92      		push	__tmp_reg__
+ 3425               	 ;  0 "" 2
+ 3426               	.LM403:
+ 3427               	/* #NOAPP */
+ 3428 11b6 E091 0000 		lds r30,xTasksWaitingTermination+5
+ 3429 11ba F091 0000 		lds r31,(xTasksWaitingTermination+5)+1
+ 3430 11be 0681      		ldd r16,Z+6
+ 3431 11c0 1781      		ldd r17,Z+7
+ 3432               	.LM404:
+ 3433 11c2 C801      		movw r24,r16
+ 3434 11c4 0296      		adiw r24,2
+ 3435 11c6 0E94 0000 		call uxListRemove
+ 3436               	.LM405:
+ 3437 11ca 8091 0000 		lds r24,uxCurrentNumberOfTasks
+ 3438 11ce 8150      		subi r24,lo8(-(-1))
+ 3439 11d0 8093 0000 		sts uxCurrentNumberOfTasks,r24
+ 3440               	.LM406:
+ 3441 11d4 8091 0000 		lds r24,uxDeletedTasksWaitingCleanUp
+ 3442 11d8 8150      		subi r24,lo8(-(-1))
+ 3443 11da 8093 0000 		sts uxDeletedTasksWaitingCleanUp,r24
+ 3444               	.LM407:
+ 3445               	/* #APP */
+ 3446               	 ;  3706 "FreeRTOS/Source/tasks.c" 1
+ 3447 11de 0F90      		pop		__tmp_reg__
+ 3448               	 ;  0 "" 2
+ 3449               	 ;  3706 "FreeRTOS/Source/tasks.c" 1
+ 3450 11e0 0FBE      		out		__SREG__, __tmp_reg__
+ 3451               	 ;  0 "" 2
+ 3452               	/* #NOAPP */
+ 3453               	.LBB76:
+ 3454               	.LBB77:
+ 3455               	.LM408:
+ 3456 11e2 F801      		movw r30,r16
+ 3457 11e4 8789      		ldd r24,Z+23
+ 3458 11e6 908D      		ldd r25,Z+24
+ 3459 11e8 0E94 0000 		call vPortFree
+ 3460               	.LM409:
+ 3461 11ec C801      		movw r24,r16
+ 3462 11ee 0E94 0000 		call vPortFree
+ 3463               	.LVL266:
+ 3464               	.L267:
+ 3465               	.LBE77:
+ 3466               	.LBE76:
+ 3467               	.LM410:
+ 3468 11f2 8091 0000 		lds r24,uxDeletedTasksWaitingCleanUp
+ 3469               	.LVL267:
+ 3470 11f6 8823      		tst r24
+ 3471 11f8 01F4      		brne .L263
+ 3472               	.LBE75:
+ 3473               	.LBE74:
+ 3474               	.LBE73:
+ 3475               	.LM411:
+ 3476 11fa 8091 0000 		lds r24,pxReadyTasksLists
+ 3477 11fe 8230      		cpi r24,lo8(2)
+ 3478 1200 00F0      		brlo .L267
+ 3479               	.LM412:
+ 3480 1202 0E94 0000 		call vPortYield
+ 3481 1206 00C0      		rjmp .L267
+ 3482               	.LFE34:
+ 3484               	.global	vTaskDelete
+ 3486               	vTaskDelete:
+ 3487               	.LFB5:
+ 3488               	.LM413:
+ 3489               	.LVL268:
+ 3490 1208 0F93      		push r16
+ 3491 120a 1F93      		push r17
+ 3492 120c CF93      		push r28
+ 3493 120e DF93      		push r29
+ 3494               	/* prologue: function */
+ 3495               	/* frame size = 0 */
+ 3496               	.LM414:
+ 3497               	/* #APP */
+ 3498               	 ;  1158 "FreeRTOS/Source/tasks.c" 1
+ 3499 1210 0FB6      		in		__tmp_reg__, __SREG__
+ 3500               	 ;  0 "" 2
+ 3501               	 ;  1158 "FreeRTOS/Source/tasks.c" 1
+ 3502 1212 F894      		cli
+ 3503               	 ;  0 "" 2
+ 3504               	 ;  1158 "FreeRTOS/Source/tasks.c" 1
+ 3505 1214 0F92      		push	__tmp_reg__
+ 3506               	 ;  0 "" 2
+ 3507               	.LM415:
+ 3508               	/* #NOAPP */
+ 3509 1216 0097      		sbiw r24,0
+ 3510 1218 01F0      		breq .L269
+ 3511 121a EC01      		movw r28,r24
+ 3512               	.LVL269:
+ 3513 121c 00C0      		rjmp .L270
+ 3514               	.LVL270:
+ 3515               	.L269:
+ 3516 121e C091 0000 		lds r28,pxCurrentTCB
+ 3517 1222 D091 0000 		lds r29,(pxCurrentTCB)+1
+ 3518               	.LVL271:
+ 3519               	.L270:
+ 3520               	.LM416:
+ 3521 1226 8E01      		movw r16,r28
+ 3522 1228 0E5F      		subi r16,lo8(-(2))
+ 3523 122a 1F4F      		sbci r17,hi8(-(2))
+ 3524 122c C801      		movw r24,r16
+ 3525               	.LVL272:
+ 3526 122e 0E94 0000 		call uxListRemove
+ 3527               	.LM417:
+ 3528 1232 8C89      		ldd r24,Y+20
+ 3529 1234 9D89      		ldd r25,Y+21
+ 3530 1236 892B      		or r24,r25
+ 3531 1238 01F0      		breq .L271
+ 3532               	.LM418:
+ 3533 123a CE01      		movw r24,r28
+ 3534 123c 0C96      		adiw r24,12
+ 3535 123e 0E94 0000 		call uxListRemove
+ 3536               	.L271:
+ 3537               	.LM419:
+ 3538 1242 8091 0000 		lds r24,uxTaskNumber
+ 3539 1246 8F5F      		subi r24,lo8(-(1))
+ 3540 1248 8093 0000 		sts uxTaskNumber,r24
+ 3541               	.LM420:
+ 3542 124c 8091 0000 		lds r24,pxCurrentTCB
+ 3543 1250 9091 0000 		lds r25,(pxCurrentTCB)+1
+ 3544 1254 C817      		cp r28,r24
+ 3545 1256 D907      		cpc r29,r25
+ 3546 1258 01F4      		brne .L272
+ 3547               	.LM421:
+ 3548 125a 80E0      		ldi r24,lo8(xTasksWaitingTermination)
+ 3549 125c 90E0      		ldi r25,hi8(xTasksWaitingTermination)
+ 3550 125e B801      		movw r22,r16
+ 3551 1260 0E94 0000 		call vListInsertEnd
+ 3552               	.LM422:
+ 3553 1264 8091 0000 		lds r24,uxDeletedTasksWaitingCleanUp
+ 3554 1268 8F5F      		subi r24,lo8(-(1))
+ 3555 126a 8093 0000 		sts uxDeletedTasksWaitingCleanUp,r24
+ 3556 126e 00C0      		rjmp .L273
+ 3557               	.L272:
+ 3558               	.LM423:
+ 3559 1270 8091 0000 		lds r24,uxCurrentNumberOfTasks
+ 3560 1274 8150      		subi r24,lo8(-(-1))
+ 3561 1276 8093 0000 		sts uxCurrentNumberOfTasks,r24
+ 3562               	.LBB78:
+ 3563               	.LBB79:
+ 3564               	.LM424:
+ 3565 127a E091 0000 		lds r30,pxDelayedTaskList
+ 3566 127e F091 0000 		lds r31,(pxDelayedTaskList)+1
+ 3567 1282 8081      		ld r24,Z
+ 3568 1284 8823      		tst r24
+ 3569 1286 01F4      		brne .L274
+ 3570               	.LM425:
+ 3571 1288 8FEF      		ldi r24,lo8(-1)
+ 3572 128a 9FEF      		ldi r25,hi8(-1)
+ 3573 128c 00C0      		rjmp .L278
+ 3574               	.L274:
+ 3575               	.LM426:
+ 3576 128e E091 0000 		lds r30,pxDelayedTaskList
+ 3577 1292 F091 0000 		lds r31,(pxDelayedTaskList)+1
+ 3578 1296 0580      		ldd __tmp_reg__,Z+5
+ 3579 1298 F681      		ldd r31,Z+6
+ 3580 129a E02D      		mov r30,__tmp_reg__
+ 3581 129c 8081      		ld r24,Z
+ 3582 129e 9181      		ldd r25,Z+1
+ 3583               	.L278:
+ 3584 12a0 9093 0000 		sts (xNextTaskUnblockTime)+1,r25
+ 3585 12a4 8093 0000 		sts xNextTaskUnblockTime,r24
+ 3586               	.L273:
+ 3587               	.LBE79:
+ 3588               	.LBE78:
+ 3589               	.LM427:
+ 3590               	/* #APP */
+ 3591               	 ;  1225 "FreeRTOS/Source/tasks.c" 1
+ 3592 12a8 0F90      		pop		__tmp_reg__
+ 3593               	 ;  0 "" 2
+ 3594               	 ;  1225 "FreeRTOS/Source/tasks.c" 1
+ 3595 12aa 0FBE      		out		__SREG__, __tmp_reg__
+ 3596               	 ;  0 "" 2
+ 3597               	.LM428:
+ 3598               	/* #NOAPP */
+ 3599 12ac 8091 0000 		lds r24,pxCurrentTCB
+ 3600 12b0 9091 0000 		lds r25,(pxCurrentTCB)+1
+ 3601 12b4 C817      		cp r28,r24
+ 3602 12b6 D907      		cpc r29,r25
+ 3603 12b8 01F0      		breq .L275
+ 3604               	.LBB80:
+ 3605               	.LBB81:
+ 3606               	.LM429:
+ 3607 12ba 8F89      		ldd r24,Y+23
+ 3608 12bc 988D      		ldd r25,Y+24
+ 3609 12be 0E94 0000 		call vPortFree
+ 3610               	.LM430:
+ 3611 12c2 CE01      		movw r24,r28
+ 3612 12c4 0E94 0000 		call vPortFree
+ 3613               	.L275:
+ 3614               	.LBE81:
+ 3615               	.LBE80:
+ 3616               	.LM431:
+ 3617 12c8 8091 0000 		lds r24,xSchedulerRunning
+ 3618 12cc 8823      		tst r24
+ 3619 12ce 01F0      		breq .L277
+ 3620               	.LM432:
+ 3621 12d0 8091 0000 		lds r24,pxCurrentTCB
+ 3622 12d4 9091 0000 		lds r25,(pxCurrentTCB)+1
+ 3623 12d8 C817      		cp r28,r24
+ 3624 12da D907      		cpc r29,r25
+ 3625 12dc 01F4      		brne .L277
+ 3626               	.LM433:
+ 3627 12de 0E94 0000 		call vPortYield
+ 3628               	.L277:
+ 3629               	/* epilogue start */
+ 3630               	.LM434:
+ 3631 12e2 DF91      		pop r29
+ 3632 12e4 CF91      		pop r28
+ 3633               	.LVL273:
+ 3634 12e6 1F91      		pop r17
+ 3635 12e8 0F91      		pop r16
+ 3636 12ea 0895      		ret
+ 3637               	.LFE5:
+ 3639               	.global	xTaskCreate
+ 3641               	xTaskCreate:
+ 3642               	.LFB2:
+ 3643               	.LM435:
+ 3644               	.LVL274:
+ 3645 12ec 4F92      		push r4
+ 3646 12ee 5F92      		push r5
+ 3647 12f0 6F92      		push r6
+ 3648 12f2 7F92      		push r7
+ 3649 12f4 8F92      		push r8
+ 3650 12f6 9F92      		push r9
+ 3651 12f8 AF92      		push r10
+ 3652 12fa BF92      		push r11
+ 3653 12fc CF92      		push r12
+ 3654 12fe DF92      		push r13
+ 3655 1300 EF92      		push r14
+ 3656               	.LVL275:
+ 3657 1302 FF92      		push r15
+ 3658 1304 0F93      		push r16
+ 3659               	.LVL276:
+ 3660 1306 1F93      		push r17
+ 3661 1308 CF93      		push r28
+ 3662 130a DF93      		push r29
+ 3663               	/* prologue: function */
+ 3664               	/* frame size = 0 */
+ 3665 130c 2C01      		movw r4,r24
+ 3666 130e 5B01      		movw r10,r22
+ 3667 1310 6A01      		movw r12,r20
+ 3668 1312 3901      		movw r6,r18
+ 3669 1314 4701      		movw r8,r14
+ 3670               	.LVL277:
+ 3671               	.LBB82:
+ 3672               	.LM436:
+ 3673 1316 CA01      		movw r24,r20
+ 3674               	.LVL278:
+ 3675 1318 0E94 0000 		call pvPortMalloc
+ 3676               	.LVL279:
+ 3677 131c 7C01      		movw r14,r24
+ 3678               	.LVL280:
+ 3679               	.LM437:
+ 3680 131e 0097      		sbiw r24,0
+ 3681               	.LVL281:
+ 3682 1320 01F0      		breq .L297
+ 3683               	.L280:
+ 3684               	.LM438:
+ 3685 1322 88E2      		ldi r24,lo8(40)
+ 3686 1324 90E0      		ldi r25,hi8(40)
+ 3687               	.LVL282:
+ 3688 1326 0E94 0000 		call pvPortMalloc
+ 3689 132a EC01      		movw r28,r24
+ 3690               	.LM439:
+ 3691 132c 0097      		sbiw r24,0
+ 3692               	.LVL283:
+ 3693 132e 01F0      		breq .L282
+ 3694               	.LM440:
+ 3695 1330 F88E      		std Y+24,r15
+ 3696 1332 EF8A      		std Y+23,r14
+ 3697               	.LVL284:
+ 3698               	.LBE82:
+ 3699               	.LBB83:
+ 3700               	.LBB84:
+ 3701               	.LM441:
+ 3702 1334 A114      		cp r10,__zero_reg__
+ 3703 1336 B104      		cpc r11,__zero_reg__
+ 3704 1338 01F4      		brne .L283
+ 3705               	.LVL285:
+ 3706 133a 00C0      		rjmp .L298
+ 3707               	.LVL286:
+ 3708               	.L282:
+ 3709               	.LBE84:
+ 3710               	.LBE83:
+ 3711               	.LBB87:
+ 3712               	.LM442:
+ 3713 133c C701      		movw r24,r14
+ 3714               	.LVL287:
+ 3715 133e 0E94 0000 		call vPortFree
+ 3716               	.LVL288:
+ 3717               	.L297:
+ 3718 1342 8FEF      		ldi r24,lo8(-1)
+ 3719               	.LVL289:
+ 3720 1344 00C0      		rjmp .L281
+ 3721               	.LVL290:
+ 3722               	.L283:
+ 3723 1346 F501      		movw r30,r10
+ 3724 1348 DC01      		movw r26,r24
+ 3725 134a 90E0      		ldi r25,lo8(0)
+ 3726               	.LVL291:
+ 3727               	.L286:
+ 3728               	.LBE87:
+ 3729               	.LBB88:
+ 3730               	.LBB85:
+ 3731               	.LM443:
+ 3732 134c 8081      		ld r24,Z
+ 3733 134e 5996      		adiw r26,25
+ 3734 1350 8C93      		st X,r24
+ 3735 1352 5997      		sbiw r26,25
+ 3736               	.LM444:
+ 3737 1354 8081      		ld r24,Z
+ 3738 1356 8823      		tst r24
+ 3739 1358 01F0      		breq .L285
+ 3740               	.LM445:
+ 3741 135a 9F5F      		subi r25,lo8(-(1))
+ 3742 135c 3196      		adiw r30,1
+ 3743 135e 1196      		adiw r26,1
+ 3744 1360 9830      		cpi r25,lo8(8)
+ 3745 1362 01F4      		brne .L286
+ 3746               	.L285:
+ 3747               	.LM446:
+ 3748 1364 18A2      		std Y+32,__zero_reg__
+ 3749 1366 00C0      		rjmp .L287
+ 3750               	.LVL292:
+ 3751               	.L298:
+ 3752               	.LM447:
+ 3753 1368 198E      		std Y+25,__zero_reg__
+ 3754               	.LVL293:
+ 3755               	.L287:
+ 3756 136a 0430      		cpi r16,lo8(4)
+ 3757               	.LVL294:
+ 3758 136c 00F0      		brlo .L288
+ 3759 136e 03E0      		ldi r16,lo8(3)
+ 3760               	.L288:
+ 3761               	.LM448:
+ 3762 1370 0E8B      		std Y+22,r16
+ 3763               	.LM449:
+ 3764 1372 09A3      		std Y+33,r16
+ 3765               	.LM450:
+ 3766 1374 1AA2      		std Y+34,__zero_reg__
+ 3767               	.LM451:
+ 3768 1376 42E0      		ldi r20,lo8(2)
+ 3769 1378 A42E      		mov r10,r20
+ 3770 137a B12C      		mov r11,__zero_reg__
+ 3771               	.LVL295:
+ 3772 137c AC0E      		add r10,r28
+ 3773 137e BD1E      		adc r11,r29
+ 3774 1380 C501      		movw r24,r10
+ 3775 1382 0E94 0000 		call vListInitialiseItem
+ 3776               	.LVL296:
+ 3777               	.LM452:
+ 3778 1386 CE01      		movw r24,r28
+ 3779 1388 0C96      		adiw r24,12
+ 3780 138a 0E94 0000 		call vListInitialiseItem
+ 3781               	.LM453:
+ 3782 138e D987      		std Y+9,r29
+ 3783 1390 C887      		std Y+8,r28
+ 3784               	.LM454:
+ 3785 1392 84E0      		ldi r24,lo8(4)
+ 3786 1394 90E0      		ldi r25,hi8(4)
+ 3787 1396 801B      		sub r24,r16
+ 3788 1398 9109      		sbc r25,__zero_reg__
+ 3789 139a 9D87      		std Y+13,r25
+ 3790 139c 8C87      		std Y+12,r24
+ 3791               	.LM455:
+ 3792 139e DB8B      		std Y+19,r29
+ 3793 13a0 CA8B      		std Y+18,r28
+ 3794               	.LM456:
+ 3795 13a2 1BA2      		std Y+35,__zero_reg__
+ 3796 13a4 1CA2      		std Y+36,__zero_reg__
+ 3797 13a6 1DA2      		std Y+37,__zero_reg__
+ 3798 13a8 1EA2      		std Y+38,__zero_reg__
+ 3799               	.LM457:
+ 3800 13aa 1FA2      		std Y+39,__zero_reg__
+ 3801               	.LBE85:
+ 3802               	.LM458:
+ 3803 13ac 0894      		sec
+ 3804 13ae C108      		sbc r12,__zero_reg__
+ 3805 13b0 D108      		sbc r13,__zero_reg__
+ 3806 13b2 C701      		movw r24,r14
+ 3807 13b4 8C0D      		add r24,r12
+ 3808 13b6 9D1D      		adc r25,r13
+ 3809 13b8 B201      		movw r22,r4
+ 3810 13ba A301      		movw r20,r6
+ 3811 13bc 0E94 0000 		call pxPortInitialiseStack
+ 3812               	.LBB86:
+ 3813 13c0 9983      		std Y+1,r25
+ 3814 13c2 8883      		st Y,r24
+ 3815               	.LM459:
+ 3816 13c4 8114      		cp r8,__zero_reg__
+ 3817 13c6 9104      		cpc r9,__zero_reg__
+ 3818 13c8 01F0      		breq .L289
+ 3819               	.LM460:
+ 3820 13ca F401      		movw r30,r8
+ 3821 13cc D183      		std Z+1,r29
+ 3822 13ce C083      		st Z,r28
+ 3823               	.L289:
+ 3824               	.LBE86:
+ 3825               	.LBE88:
+ 3826               	.LBB89:
+ 3827               	.LBB90:
+ 3828               	.LM461:
+ 3829               	/* #APP */
+ 3830               	 ;  1072 "FreeRTOS/Source/tasks.c" 1
+ 3831 13d0 0FB6      		in		__tmp_reg__, __SREG__
+ 3832               	 ;  0 "" 2
+ 3833               	 ;  1072 "FreeRTOS/Source/tasks.c" 1
+ 3834 13d2 F894      		cli
+ 3835               	 ;  0 "" 2
+ 3836               	 ;  1072 "FreeRTOS/Source/tasks.c" 1
+ 3837 13d4 0F92      		push	__tmp_reg__
+ 3838               	 ;  0 "" 2
+ 3839               	.LM462:
+ 3840               	/* #NOAPP */
+ 3841 13d6 8091 0000 		lds r24,uxCurrentNumberOfTasks
+ 3842 13da 8F5F      		subi r24,lo8(-(1))
+ 3843 13dc 8093 0000 		sts uxCurrentNumberOfTasks,r24
+ 3844               	.LM463:
+ 3845 13e0 8091 0000 		lds r24,pxCurrentTCB
+ 3846 13e4 9091 0000 		lds r25,(pxCurrentTCB)+1
+ 3847 13e8 892B      		or r24,r25
+ 3848 13ea 01F4      		brne .L290
+ 3849               	.LM464:
+ 3850 13ec D093 0000 		sts (pxCurrentTCB)+1,r29
+ 3851 13f0 C093 0000 		sts pxCurrentTCB,r28
+ 3852               	.LM465:
+ 3853 13f4 8091 0000 		lds r24,uxCurrentNumberOfTasks
+ 3854 13f8 8130      		cpi r24,lo8(1)
+ 3855 13fa 01F0      		breq .+2
+ 3856 13fc 00C0      		rjmp .L291
+ 3857               	.LBB91:
+ 3858               	.LBB92:
+ 3859               	.LM466:
+ 3860 13fe 80E0      		ldi r24,lo8(pxReadyTasksLists)
+ 3861 1400 90E0      		ldi r25,hi8(pxReadyTasksLists)
+ 3862 1402 0E94 0000 		call vListInitialise
+ 3863 1406 80E0      		ldi r24,lo8(pxReadyTasksLists+9)
+ 3864 1408 90E0      		ldi r25,hi8(pxReadyTasksLists+9)
+ 3865 140a 0E94 0000 		call vListInitialise
+ 3866 140e 80E0      		ldi r24,lo8(pxReadyTasksLists+18)
+ 3867 1410 90E0      		ldi r25,hi8(pxReadyTasksLists+18)
+ 3868 1412 0E94 0000 		call vListInitialise
+ 3869 1416 80E0      		ldi r24,lo8(pxReadyTasksLists+27)
+ 3870 1418 90E0      		ldi r25,hi8(pxReadyTasksLists+27)
+ 3871 141a 0E94 0000 		call vListInitialise
+ 3872               	.LM467:
+ 3873 141e 30E0      		ldi r19,lo8(xDelayedTaskList1)
+ 3874 1420 E32E      		mov r14,r19
+ 3875 1422 30E0      		ldi r19,hi8(xDelayedTaskList1)
+ 3876 1424 F32E      		mov r15,r19
+ 3877               	.LVL297:
+ 3878 1426 C701      		movw r24,r14
+ 3879 1428 0E94 0000 		call vListInitialise
+ 3880               	.LM468:
+ 3881 142c 00E0      		ldi r16,lo8(xDelayedTaskList2)
+ 3882 142e 10E0      		ldi r17,hi8(xDelayedTaskList2)
+ 3883               	.LVL298:
+ 3884 1430 C801      		movw r24,r16
+ 3885 1432 0E94 0000 		call vListInitialise
+ 3886               	.LM469:
+ 3887 1436 80E0      		ldi r24,lo8(xPendingReadyList)
+ 3888 1438 90E0      		ldi r25,hi8(xPendingReadyList)
+ 3889 143a 0E94 0000 		call vListInitialise
+ 3890               	.LM470:
+ 3891 143e 80E0      		ldi r24,lo8(xTasksWaitingTermination)
+ 3892 1440 90E0      		ldi r25,hi8(xTasksWaitingTermination)
+ 3893 1442 0E94 0000 		call vListInitialise
+ 3894               	.LM471:
+ 3895 1446 80E0      		ldi r24,lo8(xSuspendedTaskList)
+ 3896 1448 90E0      		ldi r25,hi8(xSuspendedTaskList)
+ 3897 144a 0E94 0000 		call vListInitialise
+ 3898               	.LM472:
+ 3899 144e F092 0000 		sts (pxDelayedTaskList)+1,r15
+ 3900 1452 E092 0000 		sts pxDelayedTaskList,r14
+ 3901               	.LM473:
+ 3902 1456 1093 0000 		sts (pxOverflowDelayedTaskList)+1,r17
+ 3903 145a 0093 0000 		sts pxOverflowDelayedTaskList,r16
+ 3904 145e 00C0      		rjmp .L291
+ 3905               	.LVL299:
+ 3906               	.L290:
+ 3907               	.LBE92:
+ 3908               	.LBE91:
+ 3909               	.LM474:
+ 3910 1460 8091 0000 		lds r24,xSchedulerRunning
+ 3911 1464 8823      		tst r24
+ 3912 1466 01F4      		brne .L291
+ 3913               	.LM475:
+ 3914 1468 E091 0000 		lds r30,pxCurrentTCB
+ 3915 146c F091 0000 		lds r31,(pxCurrentTCB)+1
+ 3916 1470 9689      		ldd r25,Z+22
+ 3917 1472 8E89      		ldd r24,Y+22
+ 3918 1474 8917      		cp r24,r25
+ 3919 1476 00F0      		brlo .L291
+ 3920               	.LM476:
+ 3921 1478 D093 0000 		sts (pxCurrentTCB)+1,r29
+ 3922 147c C093 0000 		sts pxCurrentTCB,r28
+ 3923               	.L291:
+ 3924               	.LM477:
+ 3925 1480 8091 0000 		lds r24,uxTaskNumber
+ 3926 1484 8F5F      		subi r24,lo8(-(1))
+ 3927 1486 8093 0000 		sts uxTaskNumber,r24
+ 3928               	.LM478:
+ 3929 148a 9E89      		ldd r25,Y+22
+ 3930 148c 8091 0000 		lds r24,uxTopReadyPriority
+ 3931 1490 8917      		cp r24,r25
+ 3932 1492 00F4      		brsh .L292
+ 3933 1494 9093 0000 		sts uxTopReadyPriority,r25
+ 3934               	.L292:
+ 3935 1498 8E89      		ldd r24,Y+22
+ 3936 149a 29E0      		ldi r18,lo8(9)
+ 3937 149c 829F      		mul r24,r18
+ 3938 149e C001      		movw r24,r0
+ 3939 14a0 1124      		clr r1
+ 3940 14a2 8050      		subi r24,lo8(-(pxReadyTasksLists))
+ 3941 14a4 9040      		sbci r25,hi8(-(pxReadyTasksLists))
+ 3942 14a6 B501      		movw r22,r10
+ 3943 14a8 0E94 0000 		call vListInsertEnd
+ 3944               	.LM479:
+ 3945               	/* #APP */
+ 3946               	 ;  1130 "FreeRTOS/Source/tasks.c" 1
+ 3947 14ac 0F90      		pop		__tmp_reg__
+ 3948               	 ;  0 "" 2
+ 3949               	 ;  1130 "FreeRTOS/Source/tasks.c" 1
+ 3950 14ae 0FBE      		out		__SREG__, __tmp_reg__
+ 3951               	 ;  0 "" 2
+ 3952               	.LM480:
+ 3953               	/* #NOAPP */
+ 3954 14b0 8091 0000 		lds r24,xSchedulerRunning
+ 3955 14b4 8823      		tst r24
+ 3956 14b6 01F0      		breq .L293
+ 3957               	.LM481:
+ 3958 14b8 E091 0000 		lds r30,pxCurrentTCB
+ 3959 14bc F091 0000 		lds r31,(pxCurrentTCB)+1
+ 3960 14c0 9689      		ldd r25,Z+22
+ 3961 14c2 8E89      		ldd r24,Y+22
+ 3962 14c4 9817      		cp r25,r24
+ 3963 14c6 00F4      		brsh .L293
+ 3964               	.LM482:
+ 3965 14c8 0E94 0000 		call vPortYield
+ 3966               	.L293:
+ 3967 14cc 81E0      		ldi r24,lo8(1)
+ 3968               	.LVL300:
+ 3969               	.L281:
+ 3970               	.LVL301:
+ 3971               	/* epilogue start */
+ 3972               	.LBE90:
+ 3973               	.LBE89:
+ 3974               	.LM483:
+ 3975 14ce DF91      		pop r29
+ 3976 14d0 CF91      		pop r28
+ 3977               	.LVL302:
+ 3978 14d2 1F91      		pop r17
+ 3979 14d4 0F91      		pop r16
+ 3980               	.LVL303:
+ 3981 14d6 FF90      		pop r15
+ 3982 14d8 EF90      		pop r14
+ 3983               	.LVL304:
+ 3984 14da DF90      		pop r13
+ 3985 14dc CF90      		pop r12
+ 3986               	.LVL305:
+ 3987 14de BF90      		pop r11
+ 3988 14e0 AF90      		pop r10
+ 3989               	.LVL306:
+ 3990 14e2 9F90      		pop r9
+ 3991 14e4 8F90      		pop r8
+ 3992               	.LVL307:
+ 3993 14e6 7F90      		pop r7
+ 3994 14e8 6F90      		pop r6
+ 3995               	.LVL308:
+ 3996 14ea 5F90      		pop r5
+ 3997 14ec 4F90      		pop r4
+ 3998               	.LVL309:
+ 3999 14ee 0895      		ret
+ 4000               	.LFE2:
+ 4002               		.data
+ 4003               	.LC0:
+ 4004 0000 4944 4C45 		.string	"IDLE"
+ 4004      00
+ 4005               		.text
+ 4006               	.global	vTaskStartScheduler
+ 4008               	vTaskStartScheduler:
+ 4009               	.LFB15:
+ 4010               	.LM484:
+ 4011 14f0 EF92      		push r14
+ 4012 14f2 FF92      		push r15
+ 4013 14f4 0F93      		push r16
+ 4014               	/* prologue: function */
+ 4015               	/* frame size = 0 */
+ 4016               	.LM485:
+ 4017 14f6 80E0      		ldi r24,lo8(gs(prvIdleTask))
+ 4018 14f8 90E0      		ldi r25,hi8(gs(prvIdleTask))
+ 4019 14fa 60E0      		ldi r22,lo8(.LC0)
+ 4020 14fc 70E0      		ldi r23,hi8(.LC0)
+ 4021 14fe 45E5      		ldi r20,lo8(85)
+ 4022 1500 50E0      		ldi r21,hi8(85)
+ 4023 1502 20E0      		ldi r18,lo8(0)
+ 4024 1504 30E0      		ldi r19,hi8(0)
+ 4025 1506 00E0      		ldi r16,lo8(0)
+ 4026 1508 E0E0      		ldi r30,lo8(xIdleTaskHandle)
+ 4027 150a EE2E      		mov r14,r30
+ 4028 150c E0E0      		ldi r30,hi8(xIdleTaskHandle)
+ 4029 150e FE2E      		mov r15,r30
+ 4030 1510 0E94 0000 		call xTaskCreate
+ 4031               	.LM486:
+ 4032 1514 8130      		cpi r24,lo8(1)
+ 4033 1516 01F4      		brne .L300
+ 4034               	.LM487:
+ 4035               	/* #APP */
+ 4036               	 ;  2066 "FreeRTOS/Source/tasks.c" 1
+ 4037 1518 F894      		cli
+ 4038               	 ;  0 "" 2
+ 4039               	.LM488:
+ 4040               	/* #NOAPP */
+ 4041 151a 8FEF      		ldi r24,lo8(-1)
+ 4042 151c 9FEF      		ldi r25,hi8(-1)
+ 4043 151e 9093 0000 		sts (xNextTaskUnblockTime)+1,r25
+ 4044 1522 8093 0000 		sts xNextTaskUnblockTime,r24
+ 4045               	.LM489:
+ 4046 1526 81E0      		ldi r24,lo8(1)
+ 4047 1528 8093 0000 		sts xSchedulerRunning,r24
+ 4048               	.LM490:
+ 4049 152c 1092 0000 		sts (xTickCount)+1,__zero_reg__
+ 4050 1530 1092 0000 		sts xTickCount,__zero_reg__
+ 4051               	.LM491:
+ 4052 1534 0E94 0000 		call xPortStartScheduler
+ 4053               	.L300:
+ 4054               	.LM492:
+ 4055 1538 8091 0000 		lds r24,uxTopUsedPriority
+ 4056               	/* epilogue start */
+ 4057               	.LM493:
+ 4058 153c 0F91      		pop r16
+ 4059 153e FF90      		pop r15
+ 4060 1540 EF90      		pop r14
+ 4061 1542 0895      		ret
+ 4062               	.LFE15:
+ 4064               	.global	pxCurrentTCB
+ 4065               	.global	pxCurrentTCB
+ 4066               		.section .bss
+ 4069               	pxCurrentTCB:
+ 4070 0000 0000      		.skip 2,0
+ 4071               	.global	uxTopUsedPriority
+ 4072               		.data
+ 4075               	uxTopUsedPriority:
+ 4076 0005 03        		.byte	3
+ 4077               		.lcomm uxSchedulerSuspended,1
+ 4078               		.lcomm uxTopReadyPriority,1
+ 4079               		.lcomm xYieldPending,1
+ 4080               		.lcomm xTickCount,2
+ 4081               		.lcomm xNextTaskUnblockTime,2
+ 4082               		.lcomm xNumOfOverflows,1
+ 4083               		.lcomm xPendedTicks,2
+ 4084               		.lcomm uxCurrentNumberOfTasks,1
+ 4085               		.lcomm xSchedulerRunning,1
+ 4086               		.lcomm xIdleTaskHandle,2
+ 4087               		.lcomm uxDeletedTasksWaitingCleanUp,1
+ 4088               		.lcomm uxTaskNumber,1
+ 4089               		.lcomm pxReadyTasksLists,36
+ 4090               		.lcomm xDelayedTaskList1,9
+ 4091               		.lcomm xDelayedTaskList2,9
+ 4092               		.lcomm pxDelayedTaskList,2
+ 4093               		.lcomm pxOverflowDelayedTaskList,2
+ 4094               		.lcomm xPendingReadyList,9
+ 4095               		.lcomm xTasksWaitingTermination,9
+ 4096               		.lcomm xSuspendedTaskList,9
+ 4465               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 tasks.c
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:2      *ABS*:0000003f __SREG__
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:5      *ABS*:00000034 __CCP__
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:18     .text:00000000 uxTaskPriorityGet
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4069   .bss:00000000 pxCurrentTCB
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:66     .text:0000001e uxTaskPriorityGetFromISR
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:93     .text:00000032 vTaskSuspendAll
+                             .bss:00000002 uxSchedulerSuspended
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:109    .text:0000003e xTaskGetTickCount
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4079   .bss:00000005 xTickCount
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:148    .text:00000054 xTaskGetTickCountFromISR
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:166    .text:00000060 uxTaskGetNumberOfTasks
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4083   .bss:0000000c uxCurrentNumberOfTasks
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:180    .text:00000066 pcTaskGetName
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:205    .text:0000007c vTaskSwitchContext
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4078   .bss:00000004 xYieldPending
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4077   .bss:00000003 uxTopReadyPriority
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4088   .bss:00000012 pxReadyTasksLists
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:278    .text:000000f0 vTaskSetTimeOutState
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4081   .bss:00000009 xNumOfOverflows
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:322    .text:00000110 vTaskInternalSetTimeOutState
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:345    .text:00000126 xTaskCheckForTimeOut
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:452    .text:00000196 vTaskMissedYield
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:467    .text:0000019e xTaskGetCurrentTaskHandle
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:485    .text:000001aa uxTaskResetEventItemValue
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:519    .text:000001da pvTaskIncrementMutexHeldCount
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:547    .text:00000200 xTaskGenericNotifyStateClear
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:607    .text:0000022c ulTaskGenericNotifyValueClear
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:695    .text:00000294 vTaskGenericNotifyGiveFromISR
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4093   .bss:0000004c xPendingReadyList
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:820    .text:00000350 xTaskGenericNotifyFromISR
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:1041   .text:00000494 vTaskPriorityDisinheritAfterTimeout
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:1134   .text:00000518 xTaskPriorityDisinherit
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:1212   .text:00000582 xTaskPriorityInherit
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:1328   .text:00000640 vTaskRemoveFromUnorderedEventList
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:1395   .text:000006a4 xTaskRemoveFromEventList
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:1482   .text:00000724 xTaskIncrementTick
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4091   .bss:00000048 pxDelayedTaskList
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4092   .bss:0000004a pxOverflowDelayedTaskList
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4080   .bss:00000007 xNextTaskUnblockTime
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4082   .bss:0000000a xPendedTicks
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:1708   .text:000008ae xTaskResumeFromISR
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4095   .bss:0000005e xSuspendedTaskList
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:1818   .text:00000948 xTaskGenericNotify
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:2026   .text:00000a6a xTaskResumeAll
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:2212   .text:00000b7e xTaskCatchUpTicks
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:2243   .text:00000ba2 vTaskResume
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:2354   .text:00000c32 vTaskSuspend
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4084   .bss:0000000d xSchedulerRunning
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:2519   .text:00000d02 vTaskPrioritySet
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:2696   .text:00000de4 prvAddCurrentTaskToDelayedList
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:2794   .text:00000e94 xTaskGenericNotifyWait
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:3014   .text:00000fd4 ulTaskGenericNotifyTake
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:3180   .text:000010bc vTaskPlaceOnUnorderedEventList
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:3218   .text:000010ee vTaskDelay
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:3258   .text:00001114 xTaskDelayUntil
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:3349   .text:0000117a vTaskPlaceOnEventList
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:3380   .text:0000119e vTaskEndScheduler
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:3401   .text:000011aa prvIdleTask
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4094   .bss:00000055 xTasksWaitingTermination
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4086   .bss:00000010 uxDeletedTasksWaitingCleanUp
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:3486   .text:00001208 vTaskDelete
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4087   .bss:00000011 uxTaskNumber
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:3641   .text:000012ec xTaskCreate
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4089   .bss:00000036 xDelayedTaskList1
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4090   .bss:0000003f xDelayedTaskList2
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4008   .text:000014f0 vTaskStartScheduler
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4085   .bss:0000000e xIdleTaskHandle
+C:\Users\Aron\AppData\Local\Temp/ccyZowUP.s:4075   .data:00000005 uxTopUsedPriority
+
+UNDEFINED SYMBOLS
+uxListRemove
+vListInsertEnd
+vPortYield
+vListInsert
+vPortEndScheduler
+vPortFree
+pvPortMalloc
+vListInitialiseItem
+pxPortInitialiseStack
+vListInitialise
+xPortStartScheduler
+__do_copy_data
+__do_clear_bss
